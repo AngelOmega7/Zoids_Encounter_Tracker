@@ -12,4 +12,4 @@ dependencies = [
 [tool.flet]
 main-module = "main"
 [tool.flet.app]
-include = ["ZoidsDB.csv", "LootDB.csv"]
+include = ["ZoidsDB.csv", "zoids.json", "LootDB.csv", "Stats.csv", "Zoid_Abilities.csv"]

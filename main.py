@@ -2,6 +2,7 @@ import flet as ft
 import sys
 import generator  # Imports your core logic script safely
 import loot
+import enemy_stats
 
 def main(page: ft.Page):
     page.title = "Zoids TTRPG Tools"
@@ -33,13 +34,30 @@ def main(page: ft.Page):
     )
 
     # --- SHARED ENEMY/TRACKER DATA HOOKS ---
+    enemy_data = None
+    enemy_data_error = ""
+    enemy_name_list = []
+    ability_name_list = []
+    stats_type_list = []
     try:
-        import pandas as _pd
-        from data_paths import ZOIDS_CSV, validate_csv as _validate_csv
-        _enemy_df = _pd.read_csv(_validate_csv(ZOIDS_CSV))
-        enemy_name_list = sorted([str(n) for n in _enemy_df['Name 1'].dropna().tolist() if str(n).strip()])
-    except Exception:
-        enemy_name_list = []
+        from data_paths import (
+            ZOIDS_CSV,
+            ZOIDS_JSON,
+            STATS_CSV,
+            ABILITIES_CSV,
+            validate_csv as _validate_csv,
+        )
+        enemy_data = enemy_stats.load_enemy_data(
+            _validate_csv(ZOIDS_CSV),
+            _validate_csv(STATS_CSV),
+            _validate_csv(ABILITIES_CSV),
+            zoids_json=ZOIDS_JSON,
+        )
+        enemy_name_list = list(enemy_data.zoid_names)
+        ability_name_list = list(enemy_data.ability_names)
+        stats_type_list = list(enemy_data.stats_type_names)
+    except Exception as exc:
+        enemy_data_error = str(exc)
 
     # --- SHARED LOOT UI DATA HOOKS ---
     loot_results = ft.Column(spacing=10, horizontal_alignment=ft.CrossAxisAlignment.STRETCH)
@@ -482,19 +500,12 @@ def main(page: ft.Page):
     # --- ENEMY/TRACKER UI BUILDERS ---
     enemy_cards_column = ft.Column(spacing=12, horizontal_alignment=ft.CrossAxisAlignment.STRETCH)
 
-    def get_enemy_row_by_name(name):
-        if not name or not enemy_name_list:
-            return None
-        try:
-            import pandas as _pd
-            from data_paths import ZOIDS_CSV, validate_csv as _validate_csv
-            _df = _pd.read_csv(_validate_csv(ZOIDS_CSV))
-            _rows = _df[_df['Name 1'].astype(str) == str(name)]
-            if _rows.empty:
-                return None
-            return _rows.iloc[0]
-        except Exception:
-            return None
+    def event_value(control, event=None):
+        if event is not None:
+            candidate = getattr(event, "control", None)
+            if candidate is not None and hasattr(candidate, "value"):
+                return candidate.value
+        return getattr(control, "value", None)
 
     def make_enemy_card(index):
         card_title = ft.Text(f"Enemy {index}", size=20, weight=ft.FontWeight.BOLD, color=ft.Colors.BLUE_200)
@@ -502,8 +513,23 @@ def main(page: ft.Page):
             label="Select Zoid",
             options=[ft.dropdown.Option(n) for n in enemy_name_list],
             width=280,
+            editable=True,
             enable_filter=True,
         )
+        stats_type_dropdown = ft.Dropdown(
+            label="Stats Type",
+            value="",
+            options=[ft.dropdown.Option(key="", text="None")]
+            + [ft.dropdown.Option(name) for name in stats_type_list],
+            width=190,
+        )
+        level_field = ft.TextField(
+            label="Level (Stats)",
+            width=150,
+            keyboard_type=ft.KeyboardType.NUMBER,
+            text_align="center",
+        )
+
         hp_field = ft.TextField(label="HP / Health", width=150, keyboard_type=ft.KeyboardType.NUMBER, text_align="center")
         armor_field = ft.TextField(label="Armor", width=150, keyboard_type=ft.KeyboardType.NUMBER, text_align="center")
         defense_field = ft.TextField(label="Defense", width=150, keyboard_type=ft.KeyboardType.NUMBER, text_align="center")
@@ -511,14 +537,45 @@ def main(page: ft.Page):
         range_field = ft.TextField(label="Range", width=150, keyboard_type=ft.KeyboardType.NUMBER, text_align="center")
         reaction_field = ft.TextField(label="Reaction", width=150, keyboard_type=ft.KeyboardType.NUMBER, text_align="center")
 
+        ability_dropdowns = []
+        for slot in range(1, 7):
+            ability_dropdowns.append(
+                ft.Dropdown(
+                    label=f"Ability {slot}",
+                    value="",
+                    options=[ft.dropdown.Option(key="", text="None")]
+                    + [ft.dropdown.Option(name) for name in ability_name_list],
+                    width=245,
+                    editable=True,
+                    enable_filter=True,
+                )
+            )
+
         weapon_fields = []
-        for w in range(1, 5):
+        for w in range(1, 6):
             wname = ft.TextField(label=f"Weapon {w} Name", width=200)
             wtohit = ft.TextField(label=f"Weapon {w} To-Hit", width=140)
             wdamage = ft.TextField(label=f"Weapon {w} Damage", width=140)
             weapon_fields.append((wname, wtohit, wdamage))
 
-        zoid_dropdown.data = {
+        weapon_rows = []
+        for wname_f, wtohit_f, wdamage_f in weapon_fields:
+            weapon_rows.append(ft.Row([wname_f, wtohit_f, wdamage_f], wrap=True, alignment=ft.MainAxisAlignment.START))
+        unique_weapon_row = weapon_rows[-1]
+        unique_weapon_row.visible = False
+
+        effects_text = ft.Text(
+            "Select a Zoid to auto-populate stats.",
+            size=11,
+            italic=True,
+            color=ft.Colors.GREY_400,
+        )
+
+        card_data = {
+            "zoid": zoid_dropdown,
+            "stats_type": stats_type_dropdown,
+            "level": level_field,
+            "abilities": ability_dropdowns,
             "hp": hp_field,
             "armor": armor_field,
             "defense": defense_field,
@@ -526,88 +583,102 @@ def main(page: ft.Page):
             "range": range_field,
             "reaction": reaction_field,
             "weapons": weapon_fields,
+            "weapon_rows": weapon_rows,
+            "effects": effects_text,
         }
+        zoid_dropdown.data = card_data
 
-        def populate_from_value(val):
-            data = zoid_dropdown.data
-            row = get_enemy_row_by_name(val)
-            if row is None:
+        def recalculate():
+            zoid_name = zoid_dropdown.value
+            zoid = enemy_data.zoids.get(zoid_name) if enemy_data else None
+            if zoid is None:
+                for key in ("hp", "armor", "defense", "speed", "range", "reaction"):
+                    card_data[key].value = ""
+                for wname_f, wtohit_f, wdamage_f in weapon_fields:
+                    wname_f.value = ""
+                    wtohit_f.value = ""
+                    wdamage_f.value = ""
+                unique_weapon_row.visible = False
+                effects_text.value = "Select a Zoid to auto-populate stats."
+                try:
+                    page.update()
+                except Exception:
+                    pass
                 return
-            try:
-                data["hp"].value = str(row['Health 6'])
-            except Exception:
-                data["hp"].value = ''
-            try:
-                data["armor"].value = str(row['Armor 7'])
-            except Exception:
-                data["armor"].value = ''
-            try:
-                data["defense"].value = str(row['Defense 8'])
-            except Exception:
-                data["defense"].value = ''
-            try:
-                data["speed"].value = str(row['Speed 9'])
-            except Exception:
-                data["speed"].value = ''
-            try:
-                data["range"].value = str(row['Range 11'])
-            except Exception:
-                data["range"].value = ''
-            try:
-                data["reaction"].value = str(row['Reaction 10'])
-            except Exception:
-                data["reaction"].value = ''
-            try:
-                wf = data["weapons"]
-                wf[0][0].value = str(row['Weapon 1 13'])
-                wf[0][1].value = str(row['To Hit 1  17'])
-                wf[0][2].value = str(row['Damage 1 15'])
-                wf[1][0].value = str(row['Weapon 2 19'])
-                wf[1][1].value = str(row['To Hit 2  23'])
-                wf[1][2].value = str(row['Damage 2  21'])
-                wf[2][0].value = str(row['Weapon 3 30'])
-                wf[2][1].value = str(row['To Hit 3 34'])
-                wf[2][2].value = str(row['Damage 3 32'])
-                wf[3][0].value = str(row['Weapon 4 41'])
-                wf[3][1].value = str(row['To Hit 4 45'])
-                wf[3][2].value = str(row['Damage 4 43'])
-            except Exception:
-                pass
+
+            selected_abilities = [dropdown.value for dropdown in ability_dropdowns if dropdown.value]
+            result = enemy_stats.calculate_enemy_stats(
+                zoid,
+                level_field.value,
+                stats_type_dropdown.value,
+                selected_abilities,
+                enemy_data,
+            )
+            hp_field.value = result.health
+            armor_field.value = result.armor
+            defense_field.value = result.defense
+            speed_field.value = result.speed
+            range_field.value = result.range
+            reaction_field.value = result.reaction
+            for index, fields in enumerate(weapon_fields):
+                wname_f, wtohit_f, wdamage_f = fields
+                if index < len(result.weapons):
+                    weapon = result.weapons[index]
+                    wname_f.value = weapon.name
+                    wtohit_f.value = weapon.to_hit
+                    wdamage_f.value = weapon.damage
+                else:
+                    wname_f.value = ""
+                    wtohit_f.value = ""
+                    wdamage_f.value = ""
+            unique_weapon_row.visible = len(result.weapons) > 4
+            effects_text.value = result.summary
             try:
                 page.update()
             except Exception:
                 pass
 
         def on_zoid_selected(e=None):
-            val = getattr(zoid_dropdown, 'value', None)
-            if val is None and e is not None and hasattr(e, 'control'):
-                val = getattr(e.control, 'value', None)
-            populate_from_value(val)
+            value = event_value(zoid_dropdown, e)
+            if enemy_data is None or value not in enemy_data.zoids:
+                return
+            level_field.value = str(enemy_data.zoids[value].level_required)
+            recalculate()
 
-        def on_dropdown_change(e=None):
-            val = getattr(e, 'control', zoid_dropdown).value if e is not None else zoid_dropdown.value
-            populate_from_value(val)
+        def on_stats_type_change(e=None):
+            value = event_value(stats_type_dropdown, e)
+            if value and value not in stats_type_list:
+                return
+            recalculate()
+
+        def make_ability_handler(dropdown):
+            def on_ability_change(e=None):
+                value = event_value(dropdown, e)
+                if value and (enemy_data is None or value not in enemy_data.abilities):
+                    return
+                recalculate()
+            return on_ability_change
 
         zoid_dropdown.on_select = on_zoid_selected
-        zoid_dropdown.on_text_change = on_dropdown_change
-        try:
-            zoid_dropdown.on_change = on_zoid_selected
-        except Exception:
-            pass
+        stats_type_dropdown.on_select = on_stats_type_change
+        for ability_dropdown in ability_dropdowns:
+            ability_dropdown.on_select = make_ability_handler(ability_dropdown)
+        level_field.on_change = lambda e: recalculate()
 
         stats_row = ft.Row([hp_field, armor_field, defense_field], wrap=True, alignment=ft.MainAxisAlignment.START)
         misc_row = ft.Row([speed_field, range_field, reaction_field], wrap=True, alignment=ft.MainAxisAlignment.START)
-
-        weapon_rows = []
-        for wname_f, wtohit_f, wdamage_f in weapon_fields:
-            weapon_rows.append(ft.Row([wname_f, wtohit_f, wdamage_f], wrap=True, alignment=ft.MainAxisAlignment.START))
 
         content = ft.Container(
             padding=12,
             content=ft.Column([
                 card_title,
                 ft.Divider(height=5, color="transparent"),
-                zoid_dropdown,
+                ft.Row([zoid_dropdown, stats_type_dropdown, level_field], wrap=True, spacing=10, run_spacing=8),
+                ft.Divider(height=5, color="transparent"),
+                ft.Text("Abilities (up to 6)", weight=ft.FontWeight.BOLD),
+                ft.Row(ability_dropdowns[:3], wrap=True, spacing=10, run_spacing=8),
+                ft.Row(ability_dropdowns[3:], wrap=True, spacing=10, run_spacing=8),
+                effects_text,
                 ft.Divider(height=5, color="transparent"),
                 ft.Text("Stats", weight=ft.FontWeight.BOLD),
                 stats_row,
@@ -626,6 +697,10 @@ def main(page: ft.Page):
         enemy_heading,
         create_subtitle(),
         ft.Divider(height=20, color="transparent"),
+        *(
+            [ft.Text(f"Enemy data could not be loaded: {enemy_data_error}", color=ft.Colors.RED_400)]
+            if enemy_data_error else []
+        ),
         enemy_cards_column,
     ], horizontal_alignment=ft.CrossAxisAlignment.STRETCH, scroll=ft.ScrollMode.ADAPTIVE)
 
