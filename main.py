@@ -499,6 +499,7 @@ def main(page: ft.Page):
 
     # --- ENEMY/TRACKER UI BUILDERS ---
     enemy_cards_column = ft.Column(spacing=12, horizontal_alignment=ft.CrossAxisAlignment.STRETCH)
+    enemy_card_data = []
 
     def event_value(control, event=None):
         if event is not None:
@@ -587,6 +588,7 @@ def main(page: ft.Page):
             "effects": effects_text,
         }
         zoid_dropdown.data = card_data
+        enemy_card_data.append(card_data)
 
         def recalculate():
             zoid_name = zoid_dropdown.value
@@ -693,10 +695,35 @@ def main(page: ft.Page):
     for i in range(1, 7):
         enemy_cards_column.controls.append(make_enemy_card(i))
 
+    def on_clear_enemies_click(e):
+        for card in enemy_card_data:
+            card["zoid"].value = None
+            card["zoid"].text = ""
+            card["stats_type"].value = ""
+            for key in ("level", "hp", "armor", "defense", "speed", "range", "reaction"):
+                card[key].value = ""
+            for ability in card["abilities"]:
+                ability.value = ""
+                ability.text = ""
+            for fields in card["weapons"]:
+                for field in fields:
+                    field.value = ""
+            card["weapon_rows"][-1].visible = False
+            card["effects"].value = "Select a Zoid to auto-populate stats."
+        page.update()
+
+    clear_enemies_btn = ft.Button(
+        "Clear All Enemies",
+        on_click=on_clear_enemies_click,
+        color=ft.Colors.WHITE,
+        bgcolor=ft.Colors.GREY_800,
+    )
+
     enemy_layout = ft.Column([
         enemy_heading,
         create_subtitle(),
         ft.Divider(height=20, color="transparent"),
+        ft.Row([clear_enemies_btn], alignment=ft.MainAxisAlignment.CENTER),
         *(
             [ft.Text(f"Enemy data could not be loaded: {enemy_data_error}", color=ft.Colors.RED_400)]
             if enemy_data_error else []
