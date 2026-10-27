@@ -1,3 +1,5 @@
+CREDIT TO u/AdChemical1651 for the building blocks of this
+
 Installing Release:
 Download release and extract
 
