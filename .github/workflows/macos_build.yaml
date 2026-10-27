@@ -1,0 +1,37 @@
+name: Build macOS App
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: utf-8
+      FLET_CLI_NO_RICH_OUTPUT: '1'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt "flet-cli==0.86.0"
+
+      - name: Build macOS App (Apple Silicon and Intel)
+        run: flet build macos --arch arm64 x86_64 --yes --no-rich-output
+
+      # Archive first so artifact upload preserves app permissions and symlinks.
+      - name: Archive macOS App
+        run: tar -czf macos-app.tar.gz -C build/macos .
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-app
+          path: macos-app.tar.gz
+          if-no-files-found: error
