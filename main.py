@@ -3,6 +3,8 @@ import sys
 import generator  # Imports your core logic script safely
 import loot
 import enemy_stats
+import sqlite3
+from enemy_sets import EnemySetStore
 
 def main(page: ft.Page):
     page.title = "Zoids TTRPG Tools"
@@ -719,11 +721,130 @@ def main(page: ft.Page):
         bgcolor=ft.Colors.GREY_800,
     )
 
+    # Store exact field values: loading must not recalculate away damage or edits.
+    enemy_set_name = ft.TextField(label="Enemy set name", width=250)
+    saved_enemy_sets = ft.Dropdown(label="Saved enemy sets", width=250)
+    active_enemy_set_id = None
+    enemy_set_status = ft.Text("Save your changes before loading another set.", size=12)
+    enemy_store = None
+    try:
+        enemy_store = EnemySetStore()
+        saved_enemy_sets.options = [
+            ft.dropdown.Option(key=str(set_id), text=name)
+            for set_id, name in enemy_store.list_sets()
+        ]
+    except (OSError, sqlite3.Error) as exc:
+        enemy_store = None
+        enemy_set_status.value = f"Enemy set storage unavailable: {exc}"
+
+    enemy_value_keys = ("zoid", "stats_type", "level", "hp", "armor", "defense", "speed", "range", "reaction")
+
+    def snapshot_enemies():
+        return [
+            {
+                **{key: card[key].value for key in enemy_value_keys},
+                "abilities": [field.value for field in card["abilities"]],
+                "weapons": [[field.value for field in fields] for fields in card["weapons"]],
+                "unique_weapon_visible": card["weapon_rows"][-1].visible,
+                "effects": card["effects"].value,
+            }
+            for card in enemy_card_data
+        ]
+
+    def refresh_enemy_sets(selected=None):
+        saved_enemy_sets.options = [
+            ft.dropdown.Option(key=str(set_id), text=name)
+            for set_id, name in enemy_store.list_sets()
+        ]
+        saved_enemy_sets.value = str(selected) if selected is not None else None
+
+    def save_enemy_set(e, new=False):
+        nonlocal active_enemy_set_id
+        if not new and active_enemy_set_id is None:
+            show_message("Load a set first, or use Save New Set.")
+            return
+        try:
+            set_id = enemy_store.save(
+                enemy_set_name.value or "", snapshot_enemies(),
+                None if new else active_enemy_set_id,
+            )
+            active_enemy_set_id = set_id
+            refresh_enemy_sets(set_id)
+            enemy_set_status.value = f'Saved: {enemy_set_name.value.strip()}. Save again after editing.'
+        except sqlite3.IntegrityError:
+            show_message("An enemy set with that name already exists. Choose another name or load it to update it.")
+            return
+        except (OSError, sqlite3.Error, ValueError) as exc:
+            show_message(f"Could not save enemy set: {exc}")
+            return
+        page.update()
+
+    def load_enemy_set(e):
+        nonlocal active_enemy_set_id
+        if not saved_enemy_sets.value:
+            show_message("Select a saved enemy set to load.")
+            return
+        try:
+            name, cards = enemy_store.load(int(saved_enemy_sets.value))
+            if len(cards) != len(enemy_card_data):
+                raise ValueError("Unexpected number of enemy slots.")
+            for card, saved in zip(enemy_card_data, cards):
+                for key in enemy_value_keys:
+                    card[key].value = saved[key]
+                card["zoid"].text = saved["zoid"] or ""
+                for field, value in zip(card["abilities"], saved["abilities"]):
+                    field.value = value
+                    field.text = value or ""
+                for fields, values in zip(card["weapons"], saved["weapons"]):
+                    for field, value in zip(fields, values):
+                        field.value = value
+                card["weapon_rows"][-1].visible = saved["unique_weapon_visible"]
+                card["effects"].value = saved["effects"]
+            active_enemy_set_id = int(saved_enemy_sets.value)
+            enemy_set_name.value = name
+            enemy_set_status.value = f"Loaded: {name}. Save changes before switching sets or closing the app."
+        except (OSError, sqlite3.Error, ValueError, KeyError, TypeError) as exc:
+            show_message(f"Could not load enemy set: {exc}")
+            return
+        page.update()
+
+    def delete_enemy_set(e):
+        nonlocal active_enemy_set_id
+        if not saved_enemy_sets.value:
+            show_message("Select a saved enemy set to delete.")
+            return
+        try:
+            set_id = int(saved_enemy_sets.value)
+            enemy_store.delete(set_id)
+            if active_enemy_set_id == set_id:
+                active_enemy_set_id = None
+            refresh_enemy_sets()
+            enemy_set_status.value = "Saved set deleted. Current enemies can be saved as a new set."
+        except (OSError, sqlite3.Error, ValueError) as exc:
+            show_message(f"Could not delete enemy set: {exc}")
+            return
+        page.update()
+
+    enemy_set_controls = ft.Column([
+        ft.Row([
+            enemy_set_name,
+            ft.Button("Save New Set", on_click=lambda e: save_enemy_set(e, new=True)),
+            ft.Button("Save Changes", on_click=save_enemy_set),
+        ], wrap=True, alignment=ft.MainAxisAlignment.CENTER),
+        ft.Row([
+            saved_enemy_sets,
+            ft.Button("Load Set", on_click=load_enemy_set),
+            ft.Button("Delete Set", on_click=delete_enemy_set),
+        ], wrap=True, alignment=ft.MainAxisAlignment.CENTER),
+    ], disabled=enemy_store is None)
+
     enemy_layout = ft.Column([
         enemy_heading,
         create_subtitle(),
         ft.Divider(height=20, color="transparent"),
         ft.Row([clear_enemies_btn], alignment=ft.MainAxisAlignment.CENTER),
+        enemy_set_controls,
+        enemy_set_status,
         *(
             [ft.Text(f"Enemy data could not be loaded: {enemy_data_error}", color=ft.Colors.RED_400)]
             if enemy_data_error else []
