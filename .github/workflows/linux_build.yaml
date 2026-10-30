@@ -1,0 +1,68 @@
+name: Build Linux App
+on:
+  push:
+    branches: [master]
+    paths-ignore:
+      - README.txt
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: linux-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: utf-8
+      FLET_CLI_NO_RICH_OUTPUT: '1'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install Linux build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y binutils clang cmake ninja-build pkg-config lld llvm libgtk-3-dev libstdc++-12-dev libsecret-1-dev libunwind-dev
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt "flet-cli==0.86.0"
+
+      - name: Build Linux App
+        run: flet build linux --yes --no-rich-output
+
+      # Archive first to preserve executable permissions and symlinks.
+      - name: Archive Linux App
+        run: tar -czf linux-app.tar.gz -C build/linux .
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-app
+          path: linux-app.tar.gz
+          if-no-files-found: error
+          compression-level: 0
+
+      - name: Update Linux release
+        if: github.ref == 'refs/heads/master'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh release upload linux linux-app.tar.gz --clobber
+          # Remove the legacy download after successfully uploading its replacement.
+          assets=$(gh release view linux --json assets --jq '.assets[].name | select(. == "linux.zip")')
+          if [ -n "$assets" ]; then
+            gh release delete-asset linux linux.zip --yes
+          fi

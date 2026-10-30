@@ -1,10 +1,22 @@
 name: Build macOS App
 on:
+  push:
+    branches: [master]
+    paths-ignore:
+      - README.txt
   workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: macos-build-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: macos-latest
+    timeout-minutes: 60
     env:
       PYTHONUTF8: '1'
       PYTHONIOENCODING: utf-8
@@ -35,3 +47,16 @@ jobs:
           name: macos-app
           path: macos-app.tar.gz
           if-no-files-found: error
+
+      - name: Update macOS release
+        if: github.ref == 'refs/heads/master'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh release upload macOS macos-app.tar.gz --clobber
+          # Remove the legacy download after successfully uploading its replacement.
+          assets=$(gh release view macOS --json assets --jq '.assets[].name | select(. == "macos-app.1.zip")')
+          if [ -n "$assets" ]; then
+            gh release delete-asset macOS macos-app.1.zip --yes
+          fi

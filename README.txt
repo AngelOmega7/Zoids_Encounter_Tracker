@@ -6,6 +6,23 @@ Download release and extract
 To Build:
 Uses Python3 with Pandas and Flet
 
+Automatic Builds:
+Pushes to the default branch (master) build Windows, macOS, and Linux,
+except when only this README.txt changes. Manual builds are also available
+under Actions. Only builds from master publish to the existing releases:
+  windows: windows-app.zip
+  macOS: macos-app.tar.gz (Apple Silicon and Intel)
+  linux: linux-app.tar.gz (x64, built on Ubuntu 22.04)
+Each successful build replaces its release asset and removes the original
+legacy download. Release titles, notes, and tags are preserved; the source
+archives still point to the original tagged commit. No custom secrets are
+needed: workflows use GITHUB_TOKEN with contents: write permission.
+Extract the entire bundle and keep its files together. On Linux, extract
+with tar -xzf linux-app.tar.gz into a dedicated folder; compatible GTK 3
+and libsecret runtime libraries are required. This is not a .deb installer.
+If the default branch is renamed, update the branch filters and publishing
+conditions in all three workflows under .github/workflows.
+
 Saved Enemy Sets:
 On the Enemy page, fill in enemies, enter a set name, and click Save New Set.
 Select a saved set and click Load Set to restore it, including edited HP,

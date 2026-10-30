@@ -1,10 +1,22 @@
 name: Build Windows App
 on:
+  push:
+    branches: [master]
+    paths-ignore:
+      - README.txt
   workflow_dispatch: 
+
+permissions:
+  contents: write
+
+concurrency:
+  group: windows-build-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: windows-latest
+    timeout-minutes: 60
     env:
       PYTHONUTF8: '1'
       PYTHONIOENCODING: utf-8
@@ -32,3 +44,21 @@ jobs:
           name: windows-app
           path: build/windows
           if-no-files-found: error
+
+      - name: Archive Windows App for release
+        shell: pwsh
+        run: Compress-Archive -Path build/windows/* -DestinationPath windows-app.zip
+
+      - name: Update Windows release
+        if: github.ref == 'refs/heads/master'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh release upload windows windows-app.zip --clobber
+          # Remove the legacy download after successfully uploading its replacement.
+          assets=$(gh release view windows --json assets --jq '.assets[].name | select(. == "windows-app.1.zip")')
+          if [ -n "$assets" ]; then
+            gh release delete-asset windows windows-app.1.zip --yes
+          fi
