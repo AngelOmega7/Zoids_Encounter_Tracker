@@ -834,7 +834,7 @@
         "weapon_3_30": "Killer Saber:",
         "effect_4_31": "Bite attack. targets a single opponent",
         "damage_3_32": 160,
-        "type_3_33": "Melee, Piercing",
+        "type_3_33": "Melee",
         "to_hit_3_34": 13,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -909,7 +909,14 @@
       "legacy_ownership_base_id": "zoids:zaber_fang_at",
       "legacy_names": [
         "Zaber Fang AT"
-      ]
+      ],
+      "corrections": {
+        "type_3_33": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        }
+      }
     },
     {
       "id": "zoids:zaber_fang_ts",
@@ -952,7 +959,7 @@
         "weapon_3_30": "Killer Saber:",
         "effect_4_31": "Bite attack. Targets a single opponent. ",
         "damage_3_32": 160,
-        "type_3_33": "Melee, Piercing",
+        "type_3_33": "Melee",
         "to_hit_3_34": 13,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -1027,7 +1034,14 @@
       "legacy_ownership_base_id": "zoids:zaber_fang_ts",
       "legacy_names": [
         "Zaber Fang TS"
-      ]
+      ],
+      "corrections": {
+        "type_3_33": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        }
+      }
     },
     {
       "id": "zoids:proto_zaber",
@@ -1068,7 +1082,7 @@
         "range_increase_28": null,
         "active_passive_29": null,
         "weapon_3_30": "SR Vulcan:",
-        "effect_4_31": "Shoulder mounted machine gun. Targets up to two Zoids. Two bursts that deals 40 piercing. ",
+        "effect_4_31": "Shoulder mounted machine gun. Targets up to two Zoids. Two bursts that deals 40.",
         "damage_3_32": 80,
         "type_3_33": "Ranged, Bullet",
         "to_hit_3_34": 17,
@@ -1081,7 +1095,7 @@
         "weapon_4_41": "Killer Saber:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 180,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 17,
         "re_equip_slot_type_1_46": "Weapon and Assist",
         "removable_equipment_47": "Double Beam Cannon: back mounted energy cannon. Targets a single opponent. Ranged (Proto Fang Only)",
@@ -1144,6 +1158,16 @@
           "original": "Ranged, Energy",
           "corrected": "Ranged, Laser",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "effect_4_31": {
+          "original": "Shoulder mounted machine gun. Targets up to two Zoids. Two bursts that deals 40 piercing. ",
+          "corrected": "Shoulder mounted machine gun. Targets up to two Zoids. Two bursts that deals 40.",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:proto_zaber",
@@ -1216,7 +1240,7 @@
         "weapon_4_41": "Cyber Fang:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 400,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 13,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -1274,6 +1298,11 @@
           "original": "Melee, Slashing",
           "corrected": "Melee",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:diablo_tiger",
@@ -1605,7 +1634,7 @@
         "weapon_3_30": "Killer Fang:",
         "effect_4_31": "Bite attack. Targets a single opponent.",
         "damage_3_32": 130,
-        "type_3_33": "Melee, Piercing",
+        "type_3_33": "Melee",
         "to_hit_3_34": 13,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -1696,8 +1725,8 @@
         },
         "type_3_33": {
           "original": null,
-          "corrected": "Melee, Piercing",
-          "reason": "Owner moved unique removable weapon into fixed loadout",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt.",
           "copied_from_column": 22
         },
         "to_hit_3_34": {
@@ -1846,7 +1875,7 @@
         "weapon_3_30": "Killer Fang:",
         "effect_4_31": "Bite attack. Targets a single opponent. ",
         "damage_3_32": 130,
-        "type_3_33": "Melee, Piercing",
+        "type_3_33": "Melee",
         "to_hit_3_34": 13,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -1937,8 +1966,8 @@
         },
         "type_3_33": {
           "original": null,
-          "corrected": "Melee, Piercing",
-          "reason": "Owner moved unique removable weapon into fixed loadout",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt.",
           "copied_from_column": 22
         },
         "to_hit_3_34": {
@@ -3289,7 +3318,7 @@
         "weapon_3_30": "Laser Saber:",
         "effect_4_31": "Claw attack. Targets a single opponent.",
         "damage_3_32": 150,
-        "type_3_33": "Melee, Piercing",
+        "type_3_33": "Melee",
         "to_hit_3_34": 13,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -3364,7 +3393,14 @@
       "legacy_ownership_base_id": "zoids:shield_liger",
       "legacy_names": [
         "Shield Liger"
-      ]
+      ],
+      "corrections": {
+        "type_3_33": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        }
+      }
     },
     {
       "id": "zoids:shield_liger_dcs",
@@ -3418,7 +3454,7 @@
         "weapon_4_41": "Laser Saber:",
         "effect_5_42": "Claw attack. Targets a single opponent.",
         "damage_4_43": 150,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 13,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -3471,6 +3507,11 @@
           "original": "Ranged, Energy",
           "corrected": "Ranged, Laser",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:shield_liger",
@@ -3543,7 +3584,7 @@
         "weapon_4_41": "Laser Saber:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 200,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 13,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -3596,6 +3637,11 @@
           "original": "Ranged, Energy",
           "corrected": "Ranged, Laser",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:shield_liger",
@@ -3657,7 +3703,7 @@
         "weapon_3_30": "Potential Difference Generator:",
         "effect_4_31": "Head mounted lightning generator. Targets a single opponent.",
         "damage_3_32": 25,
-        "type_3_33": "Ranged, Freezing, Electrical",
+        "type_3_33": "Ranged, Electrical",
         "to_hit_3_34": 14,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -3668,7 +3714,7 @@
         "weapon_4_41": "Laser Saber:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 190,
-        "type_4_44": "Melee, Piercing, Energy",
+        "type_4_44": "Melee, Energy",
         "to_hit_4_45": 13,
         "re_equip_slot_type_1_46": "Weapon and Assist",
         "removable_equipment_47": null,
@@ -3721,6 +3767,16 @@
           "original": "Melee, Slashing",
           "corrected": "Melee",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_3_33": {
+          "original": "Ranged, Freezing, Electrical",
+          "corrected": "Ranged, Electrical",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing, Energy",
+          "corrected": "Melee, Energy",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:spark_liger",
@@ -3918,7 +3974,7 @@
         "weapon_4_41": "Laser Saber:",
         "effect_5_42": "Bite attack. Targets a single opponent. ",
         "damage_4_43": 230,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 15,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -3971,6 +4027,11 @@
           "original": "Ranged, Energy",
           "corrected": "Ranged, Laser",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:blade_liger",
@@ -4032,7 +4093,7 @@
         "weapon_3_30": "Laser Saber:",
         "effect_4_31": "Bite attack. Targets a single opponent. ",
         "damage_3_32": 200,
-        "type_3_33": "Melee, Piercing, Energy",
+        "type_3_33": "Melee",
         "to_hit_3_34": 17,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -4107,7 +4168,14 @@
       "legacy_ownership_base_id": "zoids:liger_aero",
       "legacy_names": [
         "Liger Aero"
-      ]
+      ],
+      "corrections": {
+        "type_3_33": {
+          "original": "Melee, Piercing, Energy",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        }
+      }
     },
     {
       "id": "zoids:saberlion",
@@ -4269,7 +4337,7 @@
         "weapon_2_19": "Bite Fang:",
         "effect_3_20": "Bite attack. Targets a single opponent. ",
         "damage_2_21": 60,
-        "type_2_22": "Melee, Piercing",
+        "type_2_22": "Melee",
         "to_hit_2_23": 13,
         "shield_health_24": null,
         "speed_increase_25": null,
@@ -4344,6 +4412,11 @@
           "original": "Energy",
           "corrected": "Ranged, Laser",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_2_22": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:command_wolf",
@@ -4405,7 +4478,7 @@
         "weapon_3_30": "Bite Fang:",
         "effect_4_31": "Bite attack. Targets a single opponent.",
         "damage_3_32": 85,
-        "type_3_33": "Melee, Piercing",
+        "type_3_33": "Melee",
         "to_hit_3_34": 17,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -4481,7 +4554,14 @@
       "legacy_names": [
         "Command Wolf Town",
         "Command Wolf UC"
-      ]
+      ],
+      "corrections": {
+        "type_3_33": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        }
+      }
     },
     {
       "id": "zoids:command_wolf_ac",
@@ -4524,7 +4604,7 @@
         "weapon_3_30": "Bite Fang:",
         "effect_4_31": "Bite attack. Targets a single opponent. ",
         "damage_3_32": 85,
-        "type_3_33": "Melee, Piercing",
+        "type_3_33": "Melee",
         "to_hit_3_34": 13,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -4599,7 +4679,14 @@
       "legacy_ownership_base_id": "zoids:command_wolf_ac",
       "legacy_names": [
         "Command Wolf AC"
-      ]
+      ],
+      "corrections": {
+        "type_3_33": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        }
+      }
     },
     {
       "id": "zoids:command_wolf_is",
@@ -4631,7 +4718,7 @@
         "weapon_2_19": "Bite Fang:",
         "effect_3_20": "Bite attack. Targets a single opponent. ",
         "damage_2_21": 120,
-        "type_2_22": "Melee, Piercing",
+        "type_2_22": "Melee",
         "to_hit_2_23": 14,
         "shield_health_24": null,
         "speed_increase_25": null,
@@ -4773,6 +4860,11 @@
           "corrected": null,
           "reason": "Owner moved unique removable weapon into fixed loadout",
           "copied_from_column": null
+        },
+        "type_2_22": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:command_wolf",
@@ -4959,7 +5051,7 @@
         "weapon_2_19": "Bite Fang:",
         "effect_3_20": "Bite attack. Targets a single opponent.",
         "damage_2_21": 85,
-        "type_2_22": "Melee, Piercing",
+        "type_2_22": "Melee",
         "to_hit_2_23": 13,
         "shield_health_24": null,
         "speed_increase_25": null,
@@ -5034,6 +5126,11 @@
           "original": "Ranged, Penetrate, Energy",
           "corrected": "Ranged, Penetrate, Laser",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_2_22": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:command_wolf",
@@ -5078,7 +5175,7 @@
         "weapon_1_13": "Electro-Magnetic Bite Fang:",
         "effect_2_14": "Bite attack. Targets a single opponent. ",
         "damage_1_15": 180,
-        "type_1_16": "Melee, Piercing",
+        "type_1_16": "Melee, Electrical",
         "to_hit_1_17": 14,
         "active_passive3_18": null,
         "weapon_2_19": "Smoke Unit:",
@@ -5262,6 +5359,11 @@
           "corrected": null,
           "reason": "Owner moved unique removable weapon into fixed loadout",
           "copied_from_column": null
+        },
+        "type_1_16": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee, Electrical",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "damage_notes": {
@@ -5333,7 +5435,7 @@
         "weapon_3_30": "Electron Bite Fang:",
         "effect_4_31": "Bite attack. Targets a single opponent. Melee",
         "damage_3_32": 180,
-        "type_3_33": "Melee, Piercing",
+        "type_3_33": "Melee, Electrical",
         "to_hit_3_34": 14,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -5397,6 +5499,11 @@
           "original": "Melee, Slashing",
           "corrected": "Melee",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_3_33": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee, Electrical",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:konig_wolf",
@@ -5469,7 +5576,7 @@
         "weapon_4_41": "Electron Bite Fang:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 180,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee, Electrical",
         "to_hit_4_45": 14,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -5527,6 +5634,11 @@
           "original": "Ranged, Piercing, Long Range",
           "corrected": "Ranged, Bullet, Long Range",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee, Electrical",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:konig_wolf",
@@ -6607,7 +6719,7 @@
         "weapon_1_13": "Large Electro-Magnetic Cannon:",
         "effect_2_14": "Back mounted electric cannon. Targets up to two opponents, the second must be within 50m of the first.",
         "damage_1_15": 25,
-        "type_1_16": "Ranged, Electrical, Electical",
+        "type_1_16": "Ranged, Electrical",
         "to_hit_1_17": 14,
         "active_passive3_18": null,
         "weapon_2_19": "Double Shock Cannon:",
@@ -6623,7 +6735,7 @@
         "active_passive_29": null,
         "weapon_3_30": "Hard Drill:",
         "effect_4_31": "Horn attack. Targets a single opponent. ",
-        "damage_3_32": 73,
+        "damage_3_32": 70,
         "type_3_33": "Melee, Piercing",
         "to_hit_3_34": 12,
         "shield_health_2_35": null,
@@ -6686,8 +6798,13 @@
       "corrections": {
         "type_1_16": {
           "original": "Ranged, Freeze, Electical",
-          "corrected": "Ranged, Electrical, Electical",
-          "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+          "corrected": "Ranged, Electrical",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        },
+        "damage_3_32": {
+          "original": 73,
+          "corrected": 70,
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:black_rhimos",
@@ -6992,7 +7109,7 @@
         "weapon_3_30": "Pulse Laser Gun:",
         "effect_4_31": "Back mounted energy gun. Targets a single opponents. If the damage exceeds there remaining health of the Zoid the beam pierces through and continues on dealing the reaming damage.",
         "damage_3_32": 100,
-        "type_3_33": "Ranged, Bullet, Anti-Air, Laser",
+        "type_3_33": "Ranged, Anti-Air, Laser",
         "to_hit_3_34": 18,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -7059,8 +7176,8 @@
         },
         "type_3_33": {
           "original": "Ranged, Piercing, Anti-Air, Energy",
-          "corrected": "Ranged, Bullet, Anti-Air, Laser",
-          "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+          "corrected": "Ranged, Anti-Air, Laser",
+          "reason": "Owner tag cleanup; laser weapon, not Bullet."
         },
         "type_2_22": {
           "original": "Ranged, Energy",
@@ -7272,7 +7389,7 @@
         "weapon_3_30": "Long Range Laser:",
         "effect_4_31": "Back mounted energy gun. Targets a single opponent. If damage exceeds the remaining health of the Zoid the attack continues through with the remaining damage.",
         "damage_3_32": 75,
-        "type_3_33": "Ranged, Bullet, Laser, Long Range",
+        "type_3_33": "Ranged, Laser, Long Range",
         "to_hit_3_34": 18,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -7339,8 +7456,8 @@
         },
         "type_3_33": {
           "original": "Ranged, Piercing, Energy, Long Range",
-          "corrected": "Ranged, Bullet, Laser, Long Range",
-          "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+          "corrected": "Ranged, Laser, Long Range",
+          "reason": "Owner tag cleanup; laser weapon, not Bullet."
         },
         "type_4_44": {
           "original": "Melee, Slashing",
@@ -7407,7 +7524,7 @@
         "weapon_3_30": "Long Range Laser:",
         "effect_4_31": "Back mounted energy cannon. Targets a single opponent. If damage exceeds the remaining health of the opponent the attack pierces through and continues on with remaining damage.",
         "damage_3_32": 75,
-        "type_3_33": "Ranged, Bullet, Laser, Long Range",
+        "type_3_33": "Ranged, Laser, Long Range",
         "to_hit_3_34": 18,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -7474,8 +7591,8 @@
         },
         "type_3_33": {
           "original": "Ranged, Piercing, Energy, Long Range",
-          "corrected": "Ranged, Bullet, Laser, Long Range",
-          "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+          "corrected": "Ranged, Laser, Long Range",
+          "reason": "Owner tag cleanup; laser weapon, not Bullet."
         },
         "type_4_44": {
           "original": "Melee, Slashing",
@@ -8325,7 +8442,7 @@
         "weapon_1_13": "X Breaker: ",
         "effect_2_14": "Slashing attack. Targets a single opponent. ",
         "damage_1_15": 360,
-        "type_1_16": "Melee",
+        "type_1_16": "Melee, Piercing",
         "to_hit_1_17": 15,
         "active_passive3_18": null,
         "weapon_2_19": "Diffuse Particle Cannon:",
@@ -8409,8 +8526,8 @@
         },
         "type_1_16": {
           "original": "Melee, Slashing",
-          "corrected": "Melee",
-          "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+          "corrected": "Melee, Piercing",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         },
         "type_3_33": {
           "original": "Melee, Slashing, Energy",
@@ -8991,7 +9108,7 @@
         "range": 800,
         "carry_capacity": 50,
         "weapon_1_13": "114mm Machine Gun: ",
-        "effect_2_14": "Back mounted machine gun. Targets up to two opponents. Shoots two bursts of 72 piercing. ",
+        "effect_2_14": "Back mounted machine gun. Targets up to two opponents. Shoots two bursts of 70.",
         "damage_1_15": 140,
         "type_1_16": "Ranged, Bullet",
         "to_hit_1_17": 19,
@@ -9021,7 +9138,7 @@
         "weapon_4_41": "Electro-Magnetic Fang:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 100,
-        "type_4_44": "Melee, Electrical, Piercing",
+        "type_4_44": "Melee, Electrical",
         "to_hit_4_45": 12,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -9087,8 +9204,13 @@
         },
         "type_4_44": {
           "original": "Melee, Freeze, Piercing, Electric",
-          "corrected": "Melee, Electrical, Piercing",
-          "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+          "corrected": "Melee, Electrical",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        },
+        "effect_2_14": {
+          "original": "Back mounted machine gun. Targets up to two opponents. Shoots two bursts of 72 piercing. ",
+          "corrected": "Back mounted machine gun. Targets up to two opponents. Shoots two bursts of 70.",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:dark_spiner",
@@ -9288,10 +9410,10 @@
         "reaction_increase_38": null,
         "increase_range_39": null,
         "active_passive_2_40": null,
-        "weapon_4_41": "Anchro Claw:",
+        "weapon_4_41": "Anchor Claw",
         "effect_5_42": "Claw attack. Targets a single opponent.",
         "damage_4_43": 65,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 13,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -9354,6 +9476,16 @@
           "original": "Ranged, Homing, Energy",
           "corrected": "Ranged, Homing, Laser",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "weapon_4_41": {
+          "original": "Anchro Claw:",
+          "corrected": "Anchor Claw",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:gun_sniper",
@@ -9811,7 +9943,7 @@
         "weapon_3_30": "Bite Fang:",
         "effect_4_31": "Bite attack. Targets a single opponent.",
         "damage_3_32": 85,
-        "type_3_33": "Melee, Piercing",
+        "type_3_33": "Melee",
         "to_hit_3_34": 13,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -9880,6 +10012,11 @@
           "original": "Ranged, Piercing, Long Range",
           "corrected": "Ranged, Bullet, Long Range",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_3_33": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:snipe_master",
@@ -9952,7 +10089,7 @@
         "weapon_4_41": "Bite Fang:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 95,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 13,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -10010,6 +10147,11 @@
           "original": "Ranged, Piercing, Long Range",
           "corrected": "Ranged, Bullet, Long Range",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:snipe_master",
@@ -10082,7 +10224,7 @@
         "weapon_4_41": "Bite Fang:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 95,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 13,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -10145,6 +10287,11 @@
           "original": "Ranged, Piercing, Long Range",
           "corrected": "Ranged, Bullet, Long Range",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:snipe_master",
@@ -10456,7 +10603,7 @@
         "weapon_2_19": "Hyper Claw:",
         "effect_3_20": "Claw attack. Targets a single opponent.",
         "damage_2_21": 120,
-        "type_2_22": "Melee, Piercing",
+        "type_2_22": "Melee",
         "to_hit_2_23": 17,
         "shield_health_24": null,
         "speed_increase_25": null,
@@ -10542,7 +10689,14 @@
       "legacy_ownership_base_id": "zoids:rev_hunter",
       "legacy_names": [
         "Rev Hunter"
-      ]
+      ],
+      "corrections": {
+        "type_2_22": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        }
+      }
     },
     {
       "id": "zoids:hellrunner",
@@ -10961,7 +11115,7 @@
         "weapon_4_41": "Hyper Bite Fang:",
         "effect_5_42": "Bite attack. Targets a single opponent. Melee",
         "damage_4_43": 80,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 12,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -11019,6 +11173,11 @@
           "original": "Ranged, Piercing, Long Range",
           "corrected": "Ranged, Bullet, Long Range",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:gordos",
@@ -11221,7 +11380,7 @@
         "weapon_4_41": "Hyper Bite Fang:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 150,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 12,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -11285,7 +11444,14 @@
       "legacy_ownership_base_id": "zoids:gordos_lr",
       "legacy_names": [
         "Gordos LR"
-      ]
+      ],
+      "corrections": {
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        }
+      }
     },
     {
       "id": "zoids:red_horn",
@@ -11339,7 +11505,7 @@
         "weapon_4_41": "Crusher Horn:",
         "effect_5_42": "Horn attack. Targets a single opponent.",
         "damage_4_43": 140,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 12,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -11392,6 +11558,11 @@
           "original": "Ranged, Anti-Air, Energy",
           "corrected": "Ranged, Anti-Air, Laser",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:red_horn",
@@ -11464,7 +11635,7 @@
         "weapon_4_41": "Crusher Horn:",
         "effect_5_42": "Horn attack. Targets a single opponent.",
         "damage_4_43": 170,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 12,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -11522,6 +11693,11 @@
           "original": "Ranged, Energy, Close Range",
           "corrected": "Ranged, Laser, Close Range",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:red_horn",
@@ -11984,7 +12160,7 @@
         "weapon_4_41": "Electromagnetic Bite Fang:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 180,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee, Electrical",
         "to_hit_4_45": 14,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -12037,6 +12213,11 @@
           "original": "Ranged, Penetrate, Piercing",
           "corrected": "Ranged, Penetrate, Bullet",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee, Electrical",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:gun_blaster",
@@ -12087,7 +12268,7 @@
         "weapon_2_19": "Bite Fang:",
         "effect_3_20": "Bite attack. Targets a single opponent.",
         "damage_2_21": 65,
-        "type_2_22": "Melee, Piercing",
+        "type_2_22": "Melee",
         "to_hit_2_23": 12,
         "shield_health_24": null,
         "speed_increase_25": null,
@@ -12162,6 +12343,11 @@
           "original": "Ranged, Penetrate, Energy",
           "corrected": "Ranged, Penetrate, Laser",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_2_22": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:brachios",
@@ -12336,7 +12522,7 @@
         "weapon_1_13": "Crusher Claw: ",
         "effect_2_14": "Claw attack. Targets a single opponent.",
         "damage_1_15": 150,
-        "type_1_16": "Melee, Piercing",
+        "type_1_16": "Melee",
         "to_hit_1_17": 14,
         "active_passive3_18": null,
         "weapon_2_19": "Beam Gun:",
@@ -12353,7 +12539,7 @@
         "weapon_3_30": "Hyper Fang:",
         "effect_4_31": "Bite attack. Targets a single opponent.",
         "damage_3_32": 200,
-        "type_3_33": "Melee, Piercing",
+        "type_3_33": "Melee",
         "to_hit_3_34": 13,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -12417,6 +12603,16 @@
           "original": "Ranged, Energy",
           "corrected": "Ranged, Laser",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_1_16": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        },
+        "type_3_33": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:gojulas",
@@ -12461,7 +12657,7 @@
         "weapon_1_13": "Crusher Claw: ",
         "effect_2_14": "Claw attack. Targets a single opponent.",
         "damage_1_15": 180,
-        "type_1_16": "Melee, Piercing",
+        "type_1_16": "Melee",
         "to_hit_1_17": 14,
         "active_passive3_18": null,
         "weapon_2_19": "4-Barrel Shock Cannon:",
@@ -12489,7 +12685,7 @@
         "weapon_4_41": "Hyper Fang:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 200,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 13,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -12553,7 +12749,19 @@
       "legacy_ownership_base_id": "zoids:gojulas_the_ogre",
       "legacy_names": [
         "Gojulas the Ogre"
-      ]
+      ],
+      "corrections": {
+        "type_1_16": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        }
+      }
     },
     {
       "id": "zoids:gojulas_gunner",
@@ -12579,7 +12787,7 @@
         "weapon_1_13": "Crusher Claw:",
         "effect_2_14": "Claw attack. Targets a single opponent.",
         "damage_1_15": 180,
-        "type_1_16": "Melee, Piercing",
+        "type_1_16": "Melee",
         "to_hit_1_17": 14,
         "active_passive3_18": null,
         "weapon_2_19": "4-Barrel Shock Cannon:",
@@ -12607,7 +12815,7 @@
         "weapon_4_41": "Hyper Fang:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 200,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 13,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -12671,7 +12879,19 @@
       "legacy_ownership_base_id": "zoids:gojulas_gunner",
       "legacy_names": [
         "Gojulas Gunner"
-      ]
+      ],
+      "corrections": {
+        "type_1_16": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        }
+      }
     },
     {
       "id": "zoids:gojulas_giga",
@@ -12697,7 +12917,7 @@
         "weapon_1_13": "Hyper Press Manipulator: ",
         "effect_2_14": "Claw attack. Targets a single opponent.",
         "damage_1_15": 280,
-        "type_1_16": "Melee, Piercing",
+        "type_1_16": "Melee",
         "to_hit_1_17": 15,
         "active_passive3_18": null,
         "weapon_2_19": "Crusher Tail:",
@@ -12725,7 +12945,7 @@
         "weapon_4_41": "Crusher Fang:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 320,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 13,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -12778,6 +12998,16 @@
           "original": "Melee, Slashing",
           "corrected": "Melee",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_1_16": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:gojulas_giga",
@@ -12822,7 +13052,7 @@
         "weapon_1_13": "Hyper Press Manipulator: ",
         "effect_2_14": "Claw attack. Targets a single opponent.",
         "damage_1_15": 300,
-        "type_1_16": "Melee, Piercing",
+        "type_1_16": "Melee",
         "to_hit_1_17": 15,
         "active_passive3_18": null,
         "weapon_2_19": "Crusher Tail:",
@@ -12850,7 +13080,7 @@
         "weapon_4_41": "Crusher Fang:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 320,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 13,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -12903,6 +13133,16 @@
           "original": "Melee, Slashing",
           "corrected": "Melee",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_1_16": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:gojulas_giga",
@@ -12953,7 +13193,7 @@
         "weapon_2_19": "Big Claw:",
         "effect_3_20": "Swiping claw attack. Hits in a 30m line.",
         "damage_2_21": 360,
-        "type_2_22": "Melee, Piercing",
+        "type_2_22": "Melee",
         "to_hit_2_23": 14,
         "shield_health_24": null,
         "speed_increase_25": null,
@@ -13033,6 +13273,11 @@
           "original": "Melee, Slashing",
           "corrected": "Melee",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_2_22": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:king_gojulas",
@@ -13105,7 +13350,7 @@
         "weapon_4_41": "Bite Fang:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 230,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 13,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -13163,6 +13408,11 @@
           "original": "Ranged, Energy",
           "corrected": "Ranged, Laser",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:death_saurer",
@@ -13235,7 +13485,7 @@
         "weapon_4_41": "Bite Fang:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 250,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 13,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -13293,6 +13543,11 @@
           "original": "Ranged, Piercing, Close Range",
           "corrected": "Ranged, Bullet, Close Range",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:bloody_demon",
@@ -13365,7 +13620,7 @@
         "weapon_4_41": "Killer Bite Fang:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 500,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 13,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -13428,6 +13683,11 @@
           "original": "Melee, Slashing",
           "corrected": "Melee",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:death_meteor",
@@ -13478,7 +13738,7 @@
         "weapon_2_19": "Crusher Claw:",
         "effect_3_20": "Claw attack. Targets a single opponent. ",
         "damage_2_21": 35,
-        "type_2_22": "Melee, Piercing",
+        "type_2_22": "Melee",
         "to_hit_2_23": 13,
         "shield_health_24": null,
         "speed_increase_25": null,
@@ -13553,6 +13813,11 @@
           "original": "Ranged, Energy",
           "corrected": "Ranged, Laser",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_2_22": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:godos",
@@ -13603,7 +13868,7 @@
         "weapon_2_19": "Electric Claw: ",
         "effect_3_20": "Claw attack. Targets a single opponent.",
         "damage_2_21": 70,
-        "type_2_22": "Melee, Piercing, Electrical",
+        "type_2_22": "Melee, Electrical",
         "to_hit_2_23": 16,
         "shield_health_24": null,
         "speed_increase_25": null,
@@ -13614,7 +13879,7 @@
         "weapon_3_30": "Energy Bite Fang: ",
         "effect_4_31": "Bite Attack. Targets a single opponent. ",
         "damage_3_32": 80,
-        "type_3_33": "Melee, Piercing",
+        "type_3_33": "Melee",
         "to_hit_3_34": 15,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -13681,8 +13946,13 @@
         },
         "type_2_22": {
           "original": "Melee, Piercing, Electric",
-          "corrected": "Melee, Piercing, Electrical",
-          "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+          "corrected": "Melee, Electrical",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        },
+        "type_3_33": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:allosaurer",
@@ -13744,7 +14014,7 @@
         "weapon_3_30": "Crusher Vice:",
         "effect_4_31": "Claw attack. Targets a single opponent. ",
         "damage_3_32": 40,
-        "type_3_33": "Melee, Piercing",
+        "type_3_33": "Melee",
         "to_hit_3_34": 14,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -13808,6 +14078,11 @@
           "original": "Ranged, Energy",
           "corrected": "Ranged, Laser",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_3_33": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:iguan",
@@ -13869,7 +14144,7 @@
         "weapon_3_30": "Hyper Laser Gun:",
         "effect_4_31": "Tail tip energy gun. Shoots a single piercing energy beam. If the damage exceeds the health remaining on the Zoid the energy beam pierces the Zoid and continues on until the remaining damage is expelled.",
         "damage_3_32": 160,
-        "type_3_33": "Ranged, Laser",
+        "type_3_33": "Ranged, Laser, Piercing",
         "to_hit_3_34": 19,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -13880,7 +14155,7 @@
         "weapon_4_41": "SB Scissors:",
         "effect_5_42": "Claw attack. Targets a single opponent.",
         "damage_4_43": 300,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 15,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -13931,8 +14206,13 @@
       "corrections": {
         "type_3_33": {
           "original": "Ranged, Energy",
-          "corrected": "Ranged, Laser",
-          "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+          "corrected": "Ranged, Laser, Piercing",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:death_stinger",
@@ -14005,7 +14285,7 @@
         "weapon_4_41": "Strike Laser Bite Scissors:",
         "effect_5_42": "Energy claw attack. Targets a single opponent.",
         "damage_4_43": 300,
-        "type_4_44": "Melee, Piercing, Energy",
+        "type_4_44": "Melee",
         "to_hit_4_45": 15,
         "re_equip_slot_type_1_46": "Assist",
         "removable_equipment_47": null,
@@ -14058,6 +14338,11 @@
           "original": "Ranged, Energy",
           "corrected": "Ranged, Laser",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_4_44": {
+          "original": "Melee, Piercing, Energy",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:jagged_stinger",
@@ -14119,7 +14404,7 @@
         "weapon_3_30": "Laser Claw:",
         "effect_4_31": "Claw energy attack. Targets a single opponent.",
         "damage_3_32": 37,
-        "type_3_33": "Melee, Piercing, Energy",
+        "type_3_33": "Melee",
         "to_hit_3_34": 13,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -14183,6 +14468,11 @@
           "original": "Ranged, Energy",
           "corrected": "Ranged, Laser",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_3_33": {
+          "original": "Melee, Piercing, Energy",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:guysack",
@@ -14244,7 +14534,7 @@
         "weapon_3_30": "Laser Claw:",
         "effect_4_31": "Claw energy attack. Targets a single opponent.",
         "damage_3_32": 140,
-        "type_3_33": "Melee, Piercing, Energy",
+        "type_3_33": "Melee",
         "to_hit_3_34": 13,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -14313,6 +14603,11 @@
           "original": "Ranged, Freeze, Electrical",
           "corrected": "Ranged, Electrical",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_3_33": {
+          "original": "Melee, Piercing, Energy",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:guysack",
@@ -15544,7 +15839,7 @@
         "weapon_2_19": "Bite Fang:",
         "effect_3_20": "Bite attack. Targets a single opponent.",
         "damage_2_21": 35,
-        "type_2_22": "Melee, Piercing",
+        "type_2_22": "Melee",
         "to_hit_2_23": 13,
         "shield_health_24": null,
         "speed_increase_25": null,
@@ -15630,7 +15925,14 @@
       "legacy_ownership_base_id": "zoids:barigator",
       "legacy_names": [
         "Barigator"
-      ]
+      ],
+      "corrections": {
+        "type_2_22": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        }
+      }
     },
     {
       "id": "zoids:stealth_viper",
@@ -16458,7 +16760,7 @@
         "weapon_3_30": "Strike Claw:",
         "effect_4_31": "Claw attack. Targets a single opponent.",
         "damage_3_32": 100,
-        "type_3_33": "Melee, Piercing",
+        "type_3_33": "Melee",
         "to_hit_3_34": 15,
         "shield_health_2_35": null,
         "speed_increase_2_36": null,
@@ -16522,6 +16824,11 @@
           "original": "Ranged, Anti-Air, Energy",
           "corrected": "Ranged, Anti-Air, Laser",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_3_33": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:redler",
@@ -17608,7 +17915,7 @@
         "weapon_2_19": "Hyper Claw:",
         "effect_3_20": "Claw attack. Targets a single opponent.",
         "damage_2_21": 65,
-        "type_2_22": "Melee, Anti-Air, Piercing",
+        "type_2_22": "Melee, Anti-Air",
         "to_hit_2_23": 15,
         "shield_health_24": null,
         "speed_increase_25": null,
@@ -17683,6 +17990,11 @@
           "original": "Ranged, Anti-Air, Energy",
           "corrected": "Ranged, Anti-Air, Laser",
           "reason": "Owner tag cleanup; explicit Ranged classification; ranged Piercing to Bullet and Energy to Laser"
+        },
+        "type_2_22": {
+          "original": "Melee, Anti-Air, Piercing",
+          "corrected": "Melee, Anti-Air",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
         }
       },
       "ownership_base_id": "zoids:zabat",
@@ -18011,7 +18323,7 @@
         "weapon_4_41": "Killer Saber:",
         "effect_5_42": "Bite attack. Targets a single opponent.",
         "damage_4_43": 240,
-        "type_4_44": "Melee, Piercing",
+        "type_4_44": "Melee",
         "to_hit_4_45": 19,
         "re_equip_slot_type_1_46": "Weapon and Assist",
         "removable_equipment_47": "Double Beam Cannon: back mounted energy cannon. Targets a single opponent. Ranged (Great Zaber Only)",
@@ -18059,7 +18371,13 @@
         "column_83": null
       },
       "dynamic_fields": {},
-      "corrections": {},
+      "corrections": {
+        "type_4_44": {
+          "original": "Melee, Piercing",
+          "corrected": "Melee",
+          "reason": "Owner revision in ZOIDS_Companion.txt."
+        }
+      },
       "ownership_base_id": "zoids:great_zaber",
       "fixed_weapon_ids": [
         "zoids:great_zaber:weapon:triple_impact_cannon",
