@@ -1,5 +1,25 @@
 CREDIT TO u/AdChemical1651 for the building blocks of this
 
+Enemy Energy:
+Each enemy has editable Current Energy, Maximum Energy, and EPT (Energy Per
+Turn). Selecting a Zoid starts it at half maximum Energy, rounded down.
+Start Turn adds EPT up to maximum. Rest sets Energy to half maximum, even
+when the current value is higher. Each weapon's Use button spends its editable
+Energy Cost; insufficient Energy or an invalid cost leaves Energy unchanged.
+Economized Shooting ranks 1-4 reduce Ranged costs by 2/4/6/8 (minimum zero).
+Up to eight rows display fixed weapons and Zoid-specific removable equipment.
+Equipment effects and GM stat adjustments are managed through editable fields.
+Ability/stat recalculation preserves current Energy and edited maximum/EPT.
+Saved sets retain Energy, EPT, costs, and weapon visibility. Older sets gain
+half-maximum Energy and catalog costs matched by weapon name while retaining
+saved HP and manual edits. Unknown custom weapons need a GM-entered cost.
+The bundled catalog includes Energy rules for Zoids and transports; legacy
+Heat provenance in catalog metadata is historical only.
+To refresh catalog data from the sibling Character Sheet app, run:
+  python3 tools/sync_character_energy.py
+To run tests (including headless Flet controls):
+  .venv/bin/python -m unittest discover -s tests -q
+
 Installing Release:
 Download release and extract
 

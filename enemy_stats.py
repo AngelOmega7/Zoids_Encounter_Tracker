@@ -5,8 +5,8 @@ The Enemy page uses the same data ideas as the Character Sheet app:
 * ``ZoidsDB.csv`` supplies the Zoid's base stats and fixed weapons.
 * ``zoids.json`` is the corrected Character Sheet catalog.  Matching records
   override the CSV values, including weapon layout and tag corrections.
-* A removable weapon marked as usable only by its Zoid is appended as that
-  Zoid's optional extra weapon.
+* All named Zoid-specific removable weapons/equipment are available alongside
+  fixed weapons. Energy costs follow item identity, not the displayed row.
 * ``Stats.csv`` supplies the Tank / Fighter / Scout / Almighty level tables.
 * ``Zoid_Abilities.csv`` supplies level, size, flat-stat, and Expert bonuses.
 
@@ -188,6 +188,7 @@ class WeaponRecord:
     tags: frozenset[str]
     to_hit: Decimal
     has_to_hit: bool
+    energy_cost: int | None = None
 
 
 @dataclass(frozen=True)
@@ -204,6 +205,9 @@ class ZoidRecord:
     range: Decimal
     weapons: tuple[WeaponRecord, ...]
     unique_weapon: WeaponRecord | None = None
+    energy: int | None = None
+    ept: int | None = None
+    removable_equipment: tuple[WeaponRecord, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -242,6 +246,7 @@ class WeaponStats:
     name: str
     damage: str
     to_hit: str
+    energy_cost: str = ""
 
 
 @dataclass(frozen=True)
@@ -255,6 +260,8 @@ class EnemyStats:
     weapons: tuple[WeaponStats, ...]
     effective_level: int
     summary: str
+    energy: str = ""
+    ept: str = ""
 
 
 @dataclass(frozen=True)
@@ -273,6 +280,7 @@ def _weapon_from_values(
     damage: object,
     type_value: object,
     hit: object,
+    energy_cost: int | None = None,
 ) -> WeaponRecord:
     weapon_name = _clean(name)
     damage_text = format_number(damage)
@@ -304,6 +312,7 @@ def _weapon_from_values(
         tags=parse_weapon_tags(type_value),
         to_hit=_decimal(hit_text),
         has_to_hit=bool(hit_text),
+        energy_cost=energy_cost,
     )
 
 
@@ -383,7 +392,16 @@ def _unique_removable_weapon(
     return None
 
 
-def _zoid_from_json(name: str, fields: dict[str, object]) -> ZoidRecord:
+def _zoid_from_json(name: str, record: dict[str, object]) -> ZoidRecord:
+    fields = record["fields"]
+    costs = record.get("energy_costs", [None] * 8)
+    removable = []
+    for index, (name_key, effect_key, damage_key, type_key, hit_key) in enumerate(JSON_REMOVABLE_WEAPON_COLUMNS, 4):
+        if not _clean(fields.get(name_key)):
+            continue
+        item_name, effect = _unique_weapon_display(fields.get(name_key), _field_value(fields, effect_key))
+        removable.append(_weapon_from_values(item_name, effect, fields.get(damage_key),
+                                             _field_value(fields, type_key), fields.get(hit_key), costs[index]))
     return ZoidRecord(
         name=name,
         type=_clean(fields.get("type")),
@@ -402,10 +420,14 @@ def _zoid_from_json(name: str, fields: dict[str, object]) -> ZoidRecord:
                 fields.get(damage_key),
                 fields.get(type_key),
                 fields.get(hit_key),
+                costs[index],
             )
-            for name_key, effect_key, damage_key, type_key, hit_key in JSON_WEAPON_COLUMNS
+            for index, (name_key, effect_key, damage_key, type_key, hit_key) in enumerate(JSON_WEAPON_COLUMNS)
         ),
         unique_weapon=_unique_removable_weapon(fields, JSON_REMOVABLE_WEAPON_COLUMNS),
+        energy=record.get("energy"),
+        ept=record.get("energy_recharge"),
+        removable_equipment=tuple(removable),
     )
 
 
@@ -474,12 +496,18 @@ def _load_zoids(path: Path, zoids_json: Path | None = None) -> dict[str, ZoidRec
             json_by_name[_normalise_key(csv_key)] = record
 
     csv_by_key = {_normalise_key(name): name for name in zoids}
+    matched_ids = set()
     for key, record in json_by_name.items():
         csv_name = csv_by_key.get(key)
         if csv_name is None:
             continue
-        fields = record["fields"]
-        zoids[csv_name] = _zoid_from_json(csv_name, fields)
+        zoids[csv_name] = _zoid_from_json(csv_name, record)
+        matched_ids.add(record.get("id"))
+    for record in records:
+        if record.get("kind", "record") == "record" and record.get("id") not in matched_ids:
+            name = _clean(record["fields"].get("name"))
+            if name:
+                zoids[name] = _zoid_from_json(name, record)
     return zoids
 
 
@@ -770,7 +798,8 @@ def calculate_enemy_stats(
     range_value = zoid.range * (1 + perception_percent + size_bonus) + range_bonus
 
     weapon_stats: list[WeaponStats] = []
-    weapons = zoid.weapons + ((zoid.unique_weapon,) if zoid.unique_weapon else ())
+    weapons = zoid.weapons + (zoid.removable_equipment or ((zoid.unique_weapon,) if zoid.unique_weapon else ()))
+    energy_reduction = max((ability.rank * 2 for ability in selected if ability.family == "economized shooting"), default=0)
     for weapon in weapons:
         if not weapon.has_to_hit and not weapon.name and not weapon.damage:
             weapon_stats.append(WeaponStats(name="", damage="", to_hit=""))
@@ -788,6 +817,8 @@ def calculate_enemy_stats(
                 name=weapon.name,
                 damage=format_number(weapon.damage),
                 to_hit=to_hit_text,
+                energy_cost=(str(max(0, weapon.energy_cost - (energy_reduction if "ranged" in weapon.tags else 0)))
+                             if weapon.energy_cost is not None else ""),
             )
         )
 
@@ -811,4 +842,6 @@ def calculate_enemy_stats(
         weapons=tuple(weapon_stats),
         effective_level=effective_level,
         summary=summary,
+        energy=format_number(zoid.energy),
+        ept=format_number(zoid.ept),
     )

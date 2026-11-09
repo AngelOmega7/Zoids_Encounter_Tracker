@@ -3,6 +3,7 @@ import sys
 import generator  # Imports your core logic script safely
 import loot
 import enemy_stats
+import energy
 import sqlite3
 from enemy_sets import EnemySetStore
 
@@ -539,6 +540,21 @@ def main(page: ft.Page):
         speed_field = ft.TextField(label="Speed", width=150, keyboard_type=ft.KeyboardType.NUMBER, text_align="center")
         range_field = ft.TextField(label="Range", width=150, keyboard_type=ft.KeyboardType.NUMBER, text_align="center")
         reaction_field = ft.TextField(label="Reaction", width=150, keyboard_type=ft.KeyboardType.NUMBER, text_align="center")
+        energy_field = ft.TextField(label="Current Energy", width=150)
+        max_energy_field = ft.TextField(label="Maximum Energy", width=150)
+        ept_field = ft.TextField(label="EPT", width=150)
+
+        def energy_action(action, amount=None):
+            try:
+                value = energy.act(energy_field.value, max_energy_field.value, action, amount)
+            except ValueError as exc:
+                show_message(str(exc))
+                return
+            energy_field.value = str(value)
+            page.update()
+
+        start_button = ft.Button("Start Turn", on_click=lambda e: energy_action("start", ept_field.value))
+        rest_button = ft.Button("Rest", on_click=lambda e: energy_action("rest"))
 
         ability_dropdowns = []
         for slot in range(1, 7):
@@ -555,17 +571,20 @@ def main(page: ft.Page):
             )
 
         weapon_fields = []
-        for w in range(1, 6):
+        for w in range(1, 9):
             wname = ft.TextField(label=f"Weapon {w} Name", width=200)
             wtohit = ft.TextField(label=f"Weapon {w} To-Hit", width=140)
             wdamage = ft.TextField(label=f"Weapon {w} Damage", width=140)
             weapon_fields.append((wname, wtohit, wdamage))
 
         weapon_rows = []
+        weapon_costs = []
         for wname_f, wtohit_f, wdamage_f in weapon_fields:
-            weapon_rows.append(ft.Row([wname_f, wtohit_f, wdamage_f], wrap=True, alignment=ft.MainAxisAlignment.START))
-        unique_weapon_row = weapon_rows[-1]
-        unique_weapon_row.visible = False
+            cost = ft.TextField(label="Energy Cost", width=140)
+            weapon_costs.append(cost)
+            use = ft.Button("Use", on_click=lambda e, field=cost: energy_action("use", field.value))
+            weapon_rows.append(ft.Row([wname_f, wtohit_f, wdamage_f, cost, use], wrap=True, alignment=ft.MainAxisAlignment.START,
+                                      visible=len(weapon_rows) < 4))
 
         effects_text = ft.Text(
             "Select a Zoid to auto-populate stats.",
@@ -587,12 +606,16 @@ def main(page: ft.Page):
             "reaction": reaction_field,
             "weapons": weapon_fields,
             "weapon_rows": weapon_rows,
+            "weapon_costs": weapon_costs,
+            "energy": energy_field,
+            "max_energy": max_energy_field,
+            "ept": ept_field,
             "effects": effects_text,
         }
         zoid_dropdown.data = card_data
         enemy_card_data.append(card_data)
 
-        def recalculate():
+        def recalculate(reset_energy=False):
             zoid_name = zoid_dropdown.value
             zoid = enemy_data.zoids.get(zoid_name) if enemy_data else None
             if zoid is None:
@@ -602,7 +625,10 @@ def main(page: ft.Page):
                     wname_f.value = ""
                     wtohit_f.value = ""
                     wdamage_f.value = ""
-                unique_weapon_row.visible = False
+                for row in weapon_rows[4:]:
+                    row.visible = False
+                for field in [energy_field, max_energy_field, ept_field, *weapon_costs]:
+                    field.value = ""
                 effects_text.value = "Select a Zoid to auto-populate stats."
                 try:
                     page.update()
@@ -624,6 +650,10 @@ def main(page: ft.Page):
             speed_field.value = result.speed
             range_field.value = result.range
             reaction_field.value = result.reaction
+            if reset_energy:
+                max_energy_field.value = result.energy
+                energy_field.value = str(int(result.energy) // 2) if result.energy else ""
+                ept_field.value = result.ept
             for index, fields in enumerate(weapon_fields):
                 wname_f, wtohit_f, wdamage_f = fields
                 if index < len(result.weapons):
@@ -631,11 +661,13 @@ def main(page: ft.Page):
                     wname_f.value = weapon.name
                     wtohit_f.value = weapon.to_hit
                     wdamage_f.value = weapon.damage
+                    weapon_costs[index].value = weapon.energy_cost
                 else:
                     wname_f.value = ""
                     wtohit_f.value = ""
                     wdamage_f.value = ""
-            unique_weapon_row.visible = len(result.weapons) > 4
+                    weapon_costs[index].value = ""
+                weapon_rows[index].visible = index < 4 or index < len(result.weapons)
             effects_text.value = result.summary
             try:
                 page.update()
@@ -647,7 +679,7 @@ def main(page: ft.Page):
             if enemy_data is None or value not in enemy_data.zoids:
                 return
             level_field.value = str(enemy_data.zoids[value].level_required)
-            recalculate()
+            recalculate(reset_energy=True)
 
         def on_stats_type_change(e=None):
             value = event_value(stats_type_dropdown, e)
@@ -687,6 +719,7 @@ def main(page: ft.Page):
                 ft.Text("Stats", weight=ft.FontWeight.BOLD),
                 stats_row,
                 misc_row,
+                ft.Row([energy_field, max_energy_field, ept_field, start_button, rest_button], wrap=True),
                 ft.Divider(height=5, color="transparent"),
                 ft.Text("Weapons", weight=ft.FontWeight.BOLD),
                 *weapon_rows,
@@ -702,7 +735,7 @@ def main(page: ft.Page):
             card["zoid"].value = None
             card["zoid"].text = ""
             card["stats_type"].value = ""
-            for key in ("level", "hp", "armor", "defense", "speed", "range", "reaction"):
+            for key in ("level", "hp", "armor", "defense", "speed", "range", "reaction", "energy", "max_energy", "ept"):
                 card[key].value = ""
             for ability in card["abilities"]:
                 ability.value = ""
@@ -710,7 +743,10 @@ def main(page: ft.Page):
             for fields in card["weapons"]:
                 for field in fields:
                     field.value = ""
-            card["weapon_rows"][-1].visible = False
+            for field in card["weapon_costs"]:
+                field.value = ""
+            for row in card["weapon_rows"][4:]:
+                row.visible = False
             card["effects"].value = "Select a Zoid to auto-populate stats."
         page.update()
 
@@ -737,7 +773,7 @@ def main(page: ft.Page):
         enemy_store = None
         enemy_set_status.value = f"Enemy set storage unavailable: {exc}"
 
-    enemy_value_keys = ("zoid", "stats_type", "level", "hp", "armor", "defense", "speed", "range", "reaction")
+    enemy_value_keys = ("zoid", "stats_type", "level", "hp", "armor", "defense", "speed", "range", "reaction", "energy", "max_energy", "ept")
 
     def snapshot_enemies():
         return [
@@ -745,7 +781,9 @@ def main(page: ft.Page):
                 **{key: card[key].value for key in enemy_value_keys},
                 "abilities": [field.value for field in card["abilities"]],
                 "weapons": [[field.value for field in fields] for fields in card["weapons"]],
-                "unique_weapon_visible": card["weapon_rows"][-1].visible,
+                "unique_weapon_visible": card["weapon_rows"][4].visible,
+                "weapon_visibility": [row.visible for row in card["weapon_rows"]],
+                "weapon_costs": [field.value for field in card["weapon_costs"]],
                 "effects": card["effects"].value,
             }
             for card in enemy_card_data
@@ -789,16 +827,24 @@ def main(page: ft.Page):
             if len(cards) != len(enemy_card_data):
                 raise ValueError("Unexpected number of enemy slots.")
             for card, saved in zip(enemy_card_data, cards):
+                zoid = enemy_data.zoids.get(saved["zoid"]) if enemy_data else None
+                result = enemy_stats.calculate_enemy_stats(zoid, saved["level"], saved["stats_type"],
+                    saved["abilities"], enemy_data) if zoid else None
+                saved = energy.migrate(saved, result)
                 for key in enemy_value_keys:
                     card[key].value = saved[key]
                 card["zoid"].text = saved["zoid"] or ""
                 for field, value in zip(card["abilities"], saved["abilities"]):
                     field.value = value
                     field.text = value or ""
-                for fields, values in zip(card["weapons"], saved["weapons"]):
+                for index, fields in enumerate(card["weapons"]):
+                    values = saved["weapons"][index] if index < len(saved["weapons"]) else ["", "", ""]
                     for field, value in zip(fields, values):
                         field.value = value
-                card["weapon_rows"][-1].visible = saved["unique_weapon_visible"]
+                for index, field in enumerate(card["weapon_costs"]):
+                    field.value = saved["weapon_costs"][index] if index < len(saved["weapon_costs"]) else ""
+                    card["weapon_rows"][index].visible = (saved["weapon_visibility"][index]
+                        if index < len(saved["weapon_visibility"]) else False)
                 card["effects"].value = saved["effects"]
             active_enemy_set_id = int(saved_enemy_sets.value)
             enemy_set_name.value = name
