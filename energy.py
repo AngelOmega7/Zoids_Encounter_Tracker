@@ -30,6 +30,12 @@ def migrate(saved, result=None):
     """Add missing Energy fields without changing saved combat/manual edits."""
     saved = deepcopy(saved)
     maximum = result.energy if result else ""
+    bonus = result.energy_level_bonus if result else 0
+    if "max_energy" in saved and result and maximum:
+        delta = bonus - saved.get("energy_level_bonus", 0)
+        if delta:
+            saved["max_energy"] = str(max(0, whole(saved["max_energy"], "Maximum Energy") + delta))
+    saved["energy_level_bonus"] = bonus
     saved.setdefault("max_energy", maximum)
     saved.setdefault("energy", str(int(maximum) // 2) if maximum else "")
     saved.setdefault("ept", result.ept if result else "")

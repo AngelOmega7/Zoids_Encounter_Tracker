@@ -56,7 +56,7 @@ class EnergyTests(unittest.TestCase):
         self.assertEqual(migrated['hp'], '7')
         self.assertEqual(migrated['weapons'], saved['weapons'])
         self.assertEqual(migrated['weapon_costs'], ['2', ''])
-        self.assertEqual((migrated['energy'], migrated['max_energy'], migrated['ept']), ('12', '25', '3'))
+        self.assertEqual((migrated['energy'], migrated['max_energy'], migrated['ept']), ('13', '26', '3'))
         migrated.update(energy='1', max_energy='41', ept='9')
         with tempfile.TemporaryDirectory() as directory:
             store = EnemySetStore(Path(directory) / 'test.db')
@@ -64,6 +64,19 @@ class EnergyTests(unittest.TestCase):
             loaded = store.load(key)[1][0]
             self.assertEqual(energy.migrate(loaded, result), migrated)
         self.assertNotIn('energy', saved)
+
+    def test_actual_level_excludes_type_bonus_and_migrates_old_energy_once(self):
+        zoid = self.data.zoids['Shield Liger']
+        plain = enemy_stats.calculate_enemy_stats(zoid, 10, '', [], self.data)
+        ability = next(a.name for a in self.data.abilities.values() if a.type_bonus == zoid.type and a.level_bonus > 0)
+        boosted = enemy_stats.calculate_enemy_stats(zoid, 10, '', [ability], self.data)
+        self.assertGreater(boosted.effective_level, plain.effective_level)
+        self.assertEqual((plain.energy, boosted.energy), ('35', '35'))
+        self.assertEqual(plain.ept, boosted.ept)
+        old = dict(energy='7', max_energy='45', ept='9', weapons=[])
+        migrated = energy.migrate(old, boosted)
+        self.assertEqual((migrated['energy'], migrated['max_energy'], migrated['ept']), ('7', '55', '9'))
+        self.assertEqual(energy.migrate(migrated, boosted), migrated)
 
 
 def walk(control):
@@ -101,10 +114,10 @@ class EnemyEnergyUITests(unittest.TestCase):
         first, second = self.cards[:2]
         self.select(first)
         self.select(second)
-        self.assertEqual(first['energy'].value, '12')
+        self.assertEqual(first['energy'].value, '16')
         self.button('Start Turn').on_click(None)
-        self.assertEqual(first['energy'].value, '15')
-        self.assertEqual(second['energy'].value, '12')
+        self.assertEqual(first['energy'].value, '19')
+        self.assertEqual(second['energy'].value, '16')
         first['energy'].value = '1'
         self.button('Use', 2).on_click(None)
         self.assertEqual(first['energy'].value, '1')
@@ -115,7 +128,20 @@ class EnemyEnergyUITests(unittest.TestCase):
         first['level'].on_change(None)
         self.assertEqual((first['energy'].value, first['ept'].value), ('6', '10'))
         self.button('Rest').on_click(None)
-        self.assertEqual(first['energy'].value, '12')
+        self.assertEqual(first['energy'].value, '16')
+
+    def test_level_changes_preserve_manual_bonus_and_clamp_without_refill(self):
+        card = self.cards[0]
+        self.select(card)
+        card['max_energy'].value = str(25 + int(card['level'].value) + 20)
+        card['energy'].value = '7'
+        card['level'].value = '10'
+        card['level'].on_change(None)
+        self.assertEqual((card['max_energy'].value, card['energy'].value, card['ept'].value), ('55', '7', '3'))
+        card['energy'].value = '55'
+        card['level'].value = '2'
+        card['level'].on_change(None)
+        self.assertEqual((card['max_energy'].value, card['energy'].value), ('47', '47'))
 
     def test_save_load_and_clear(self):
         card = self.cards[0]
@@ -150,7 +176,7 @@ class EnemyEnergyUITests(unittest.TestCase):
         next(c for c in self.controls if getattr(c, 'label', '') == 'Saved enemy sets').value = str(key)
         self.button('Load Set').on_click(None)
         for card in self.cards:
-            self.assertEqual((card['hp'].value, card['energy'].value), ('7', '12'))
+            self.assertEqual((card['hp'].value, card['energy'].value), ('7', '16'))
             self.assertEqual(card['weapons'][2][2].value, 'GM damage')
             self.assertEqual(card['weapon_costs'][2].value, '2')
             self.assertFalse(card['weapon_rows'][7].visible)

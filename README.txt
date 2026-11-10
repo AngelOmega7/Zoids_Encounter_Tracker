@@ -9,7 +9,12 @@ Energy Cost; insufficient Energy or an invalid cost leaves Energy unchanged.
 Economized Shooting ranks 1-4 reduce Ranged costs by 2/4/6/8 (minimum zero).
 Up to eight rows display fixed weapons and Zoid-specific removable equipment.
 Equipment effects and GM stat adjustments are managed through editable fields.
-Ability/stat recalculation preserves current Energy and edited maximum/EPT.
+Maximum Energy is base Zoid Energy + actual Level + manual equipment/GM bonuses.
+Type abilities' bonus levels do not contribute. Changing Level adjusts maximum
+Energy by the level difference, preserving manual bonuses and EPT. It does not
+refill Energy; reducing the maximum clamps current Energy when necessary.
+Older Energy-enabled saved sets gain the actual-level bonus once on load,
+preserving recorded current Energy and manual maximum-Energy adjustments.
 Saved sets retain Energy, EPT, costs, and weapon visibility. Older sets gain
 half-maximum Energy and catalog costs matched by weapon name while retaining
 saved HP and manual edits. Unknown custom weapons need a GM-entered cost.

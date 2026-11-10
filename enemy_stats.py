@@ -262,6 +262,7 @@ class EnemyStats:
     summary: str
     energy: str = ""
     ept: str = ""
+    energy_level_bonus: int = 0
 
 
 @dataclass(frozen=True)
@@ -842,6 +843,7 @@ def calculate_enemy_stats(
         weapons=tuple(weapon_stats),
         effective_level=effective_level,
         summary=summary,
-        energy=format_number(zoid.energy),
+        energy=format_number(zoid.energy + base_level if zoid.energy is not None else None),
         ept=format_number(zoid.ept),
+        energy_level_bonus=base_level,
     )

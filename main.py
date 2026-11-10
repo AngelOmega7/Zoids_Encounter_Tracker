@@ -654,6 +654,19 @@ def main(page: ft.Page):
                 max_energy_field.value = result.energy
                 energy_field.value = str(int(result.energy) // 2) if result.energy else ""
                 ept_field.value = result.ept
+            elif result.energy and card_data.get("calculated_energy"):
+                delta = int(result.energy) - int(card_data["calculated_energy"])
+                if delta:
+                    try:
+                        maximum = max(0, energy.whole(max_energy_field.value, "Maximum Energy") + delta)
+                        current = energy.whole(energy_field.value, "Current Energy")
+                    except ValueError as exc:
+                        show_message(str(exc))
+                        return
+                    max_energy_field.value = str(maximum)
+                    energy_field.value = str(min(current, maximum))
+            card_data["calculated_energy"] = result.energy
+            card_data["energy_level_bonus"] = result.energy_level_bonus
             for index, fields in enumerate(weapon_fields):
                 wname_f, wtohit_f, wdamage_f = fields
                 if index < len(result.weapons):
@@ -732,6 +745,8 @@ def main(page: ft.Page):
 
     def on_clear_enemies_click(e):
         for card in enemy_card_data:
+            card["calculated_energy"] = ""
+            card["energy_level_bonus"] = 0
             card["zoid"].value = None
             card["zoid"].text = ""
             card["stats_type"].value = ""
@@ -784,6 +799,7 @@ def main(page: ft.Page):
                 "unique_weapon_visible": card["weapon_rows"][4].visible,
                 "weapon_visibility": [row.visible for row in card["weapon_rows"]],
                 "weapon_costs": [field.value for field in card["weapon_costs"]],
+                "energy_level_bonus": card.get("energy_level_bonus", 0),
                 "effects": card["effects"].value,
             }
             for card in enemy_card_data
@@ -831,6 +847,8 @@ def main(page: ft.Page):
                 result = enemy_stats.calculate_enemy_stats(zoid, saved["level"], saved["stats_type"],
                     saved["abilities"], enemy_data) if zoid else None
                 saved = energy.migrate(saved, result)
+                card["calculated_energy"] = result.energy if result else ""
+                card["energy_level_bonus"] = saved["energy_level_bonus"]
                 for key in enemy_value_keys:
                     card[key].value = saved[key]
                 card["zoid"].text = saved["zoid"] or ""
