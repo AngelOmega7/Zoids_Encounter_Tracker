@@ -27,6 +27,8 @@ def sync():
     # Keep the CSV fallback and generator's gear fields aligned as well.
     restored = {alias.casefold(): record for record in zoids["records"] if record.get("removable_weapon_restore")
                 for alias in (record["name"], *record.get("legacy_names", []))}
+    by_name = {alias.casefold(): record for record in zoids["records"]
+               for alias in (record["name"], *record.get("legacy_names", []))}
     path = ROOT / "ZoidsDB.csv"
     with path.open(newline="", encoding="utf-8-sig") as handle:
         reader = csv.DictReader(handle)
@@ -38,6 +40,12 @@ def sync():
                 if header in row:
                     value = record["fields"].get(key)
                     row[header] = "" if value is None else value
+        record = by_name.get(row["Name 1"].strip().casefold())
+        if record:
+            for key, header in zip(zoids["columns"], zoids["source_headers"]):
+                value = record["fields"].get(key)
+                if header in row and isinstance(value, str) and "cannot be targeted by attacks" in value:
+                    row[header] = value
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, columns, lineterminator="\n")
         writer.writeheader()
