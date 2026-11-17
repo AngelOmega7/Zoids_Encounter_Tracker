@@ -247,6 +247,7 @@ class WeaponStats:
     damage: str
     to_hit: str
     energy_cost: str = ""
+    details: str = ""
 
 
 @dataclass(frozen=True)
@@ -399,10 +400,13 @@ def _zoid_from_json(name: str, record: dict[str, object]) -> ZoidRecord:
     removable = []
     for index, (name_key, effect_key, damage_key, type_key, hit_key) in enumerate(JSON_REMOVABLE_WEAPON_COLUMNS, 4):
         if not _clean(fields.get(name_key)):
+            removable.append(_weapon_from_values("", "", None, "", None))
             continue
         item_name, effect = _unique_weapon_display(fields.get(name_key), _field_value(fields, effect_key))
         removable.append(_weapon_from_values(item_name, effect, fields.get(damage_key),
-                                             _field_value(fields, type_key), fields.get(hit_key), costs[index]))
+                                              _field_value(fields, type_key), fields.get(hit_key), costs[index]))
+    while removable and not removable[-1].name:
+        removable.pop()
     return ZoidRecord(
         name=name,
         type=_clean(fields.get("type")),
@@ -819,7 +823,8 @@ def calculate_enemy_stats(
                 damage=format_number(weapon.damage),
                 to_hit=to_hit_text,
                 energy_cost=(str(max(0, weapon.energy_cost - (energy_reduction if "ranged" in weapon.tags else 0)))
-                             if weapon.energy_cost is not None else ""),
+                              if weapon.energy_cost is not None else ""),
+                details="\n".join(part for part in (", ".join(sorted(tag.title() for tag in weapon.tags)), weapon.effect) if part),
             )
         )
 

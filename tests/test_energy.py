@@ -158,6 +158,22 @@ class EnemyEnergyUITests(unittest.TestCase):
         self.assertEqual((card['energy'].value, card['ept'].value, card['hp'].value), ('4', '11', '7'))
         self.assertEqual(card['weapon_costs'][2].value, '5')
 
+    def test_shadow_fox_slot_five_details_and_energy_spending(self):
+        card = self.cards[0]
+        card['zoid'].value = 'Shadow Fox'
+        card['zoid'].on_select(None)
+        self.assertEqual(card['weapons'][4][0].value, 'Laser Vulcan Gun')
+        self.assertEqual(card['weapons'][4][2].value, '90')
+        self.assertEqual(card['weapon_costs'][4].value, '8')
+        self.assertIn('30m by 90m', card['weapons'][4][0].tooltip)
+        self.assertIn('Close Range', card['weapons'][4][0].tooltip)
+        self.assertTrue(card['weapon_rows'][7].visible)
+        self.assertFalse(card['weapon_rows'][5].visible)
+        self.assertFalse(card['weapon_rows'][6].visible)
+        card['energy'].value = '20'
+        self.button('Use', 4).on_click(None)
+        self.assertEqual(card['energy'].value, '12')
+
     def test_legacy_load_preserves_manual_values_and_clears_extra_rows(self):
         saved = []
         for card in self.cards:

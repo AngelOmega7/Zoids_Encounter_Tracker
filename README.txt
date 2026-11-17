@@ -22,6 +22,19 @@ The bundled catalog includes Energy rules for Zoids and transports; legacy
 Heat provenance in catalog metadata is historical only.
 To refresh catalog data from the sibling Character Sheet app, run:
   python3 tools/sync_character_energy.py
+This sync retains the Encounter Tracker's required-level values.
+
+Current Zoid-specific gear:
+- Lightning Saix: Slot 5 Pulse Laser Gun, damage 110, Energy 6.
+- Lightning Saix BS: Slot 5 Pulse Laser Gun, damage 130, Energy 8.
+- Command Wolf IS: Slot 5 Long Range Rifle, damage 130, Energy 6.
+- Shadow Fox: Slot 5 Laser Vulcan Gun, damage 90, Energy 8; AoE 30m by 90m;
+  Ranged, Laser, Close Range. Optical Camouflage remains in Slot 8.
+Weapon-name tooltips show tags and effect descriptions. Empty removable slots
+are hidden while preserving their slot numbers. Older saved enemy sets retain
+their saved manual stats: reselect the Zoid to refresh its catalog loadout,
+then save the set again.
+
 To run tests (including headless Flet controls):
   .venv/bin/python -m unittest discover -s tests -q
 

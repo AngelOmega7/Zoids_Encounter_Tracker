@@ -623,6 +623,7 @@ def main(page: ft.Page):
                     card_data[key].value = ""
                 for wname_f, wtohit_f, wdamage_f in weapon_fields:
                     wname_f.value = ""
+                    wname_f.tooltip = None
                     wtohit_f.value = ""
                     wdamage_f.value = ""
                 for row in weapon_rows[4:]:
@@ -672,15 +673,17 @@ def main(page: ft.Page):
                 if index < len(result.weapons):
                     weapon = result.weapons[index]
                     wname_f.value = weapon.name
+                    wname_f.tooltip = weapon.details or None
                     wtohit_f.value = weapon.to_hit
                     wdamage_f.value = weapon.damage
                     weapon_costs[index].value = weapon.energy_cost
                 else:
                     wname_f.value = ""
+                    wname_f.tooltip = None
                     wtohit_f.value = ""
                     wdamage_f.value = ""
                     weapon_costs[index].value = ""
-                weapon_rows[index].visible = index < 4 or index < len(result.weapons)
+                weapon_rows[index].visible = index < 4 or (index < len(result.weapons) and bool(result.weapons[index].name))
             effects_text.value = result.summary
             try:
                 page.update()
@@ -859,6 +862,7 @@ def main(page: ft.Page):
                     values = saved["weapons"][index] if index < len(saved["weapons"]) else ["", "", ""]
                     for field, value in zip(fields, values):
                         field.value = value
+                    fields[0].tooltip = next((w.details for w in result.weapons if w.name == values[0]), None) if result else None
                 for index, field in enumerate(card["weapon_costs"]):
                     field.value = saved["weapon_costs"][index] if index < len(saved["weapon_costs"]) else ""
                     card["weapon_rows"][index].visible = (saved["weapon_visibility"][index]
