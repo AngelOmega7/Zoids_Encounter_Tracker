@@ -44,7 +44,10 @@ def sync():
         if record:
             for key, header in zip(zoids["columns"], zoids["source_headers"]):
                 value = record["fields"].get(key)
-                if header in row and isinstance(value, str) and "cannot be targeted by attacks" in value:
+                if header in row and isinstance(value, str) and (
+                    "cannot be targeted by attacks" in value
+                    or "A d20 + Reaction total equal to or greater" in value
+                ):
                     row[header] = value
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, columns, lineterminator="\n")

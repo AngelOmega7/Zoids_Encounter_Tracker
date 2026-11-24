@@ -10,6 +10,7 @@ FAMILIES = {
     "evasion_master", "anti_air_pro", "laser_expert", "missile_expert",
     "particle_expert", "melee_expert", "rifle_expert", "melee_multi_attack",
     "ranged_multi_attack", "sniper", "true_tank", "smoke_master", "fleet_footed",
+    "small_expert", "counter_attack",
 }
 RANK_FOUR_FAMILIES = {"small_expert", "medium_expert", "medium_under_expert"}
 RANK_TWO_FAMILIES = {"small_expert"}

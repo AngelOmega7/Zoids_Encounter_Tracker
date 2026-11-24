@@ -29,8 +29,8 @@ To refresh catalog data from the sibling Character Sheet app, run:
 This sync retains the Encounter Tracker's required-level values.
 
 Ability rules:
-To refresh the revised abilities (72 ranks, including the three size-Expert
-rank 4 critical-range effects and Small Expert 2's critical-hit protection) from the Character Sheet:
+To refresh the revised abilities (76 ranks, including Small Expert's inherited
+critical-hit protection and Counter Attack) from the Character Sheet:
   python3 tools/sync_character_abilities.py
 Iron Defense, Fleet Footed, Expert to-hit, and Economized Shooting bonuses are
 calculated automatically. Expert matching uses the same tags as the sheet:
@@ -59,6 +59,19 @@ Rest removes these modifiers, preserving other manual edits. Modifiers survive
 recalculation and saving/loading; selecting a new Zoid or clearing resets them.
 Old saved sets retain their recorded numeric values; reselect the Zoid and
 save again to refresh calculated values. Ability descriptions refresh on load.
+
+Handbook corrections:
+- Small Expert ranks 2-4 retain protection against critical hits from L or
+  larger enemies. Counter Attack 2 triggers on an enemy roll of 5 or lower.
+- Smoke Master coverage is +15/+15/+45/+45m. Ranged Multi Attack grants
+  1/2/3/4 extra attacks as part of the attack action.
+- AoE dodge: d20 + Reaction equal to or greater than the modified attack roll
+  avoids half damage, rather than all damage. The card and weapon tooltips
+  display this rule; rolls and damage resolution remain GM-managed.
+- Normal OS level is half actual pilot level, rounded down (supported cap 40).
+  The tracker uses manually entered Organoid bonuses and shield HP.
+- Pit Stop takes one action for a CAS swap; return to battle on the next turn.
+  CAS timing remains table-managed.
 
 Current Zoid-specific gear:
 - Lightning Saix: Slot 5 Pulse Laser Gun, damage 110, Energy 6.

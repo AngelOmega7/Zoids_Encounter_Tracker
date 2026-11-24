@@ -829,6 +829,7 @@ def main(page: ft.Page):
                 ft.Text("Stats", weight=ft.FontWeight.BOLD),
                 stats_row,
                 misc_row,
+                ft.Text("AoE dodge: d20 + Reaction >= modified attack roll avoids half damage; a lower total takes full damage. Resolve defenses and record damage manually.", size=11),
                 ft.Row([energy_field, max_energy_field, ept_field, start_button, rest_button], wrap=True),
                 ft.Row([shield_damage, organoid_shields], wrap=True),
                 shield_summary,
