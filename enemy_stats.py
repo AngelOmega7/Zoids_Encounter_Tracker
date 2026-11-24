@@ -647,6 +647,8 @@ def _selected_abilities(
     for name in ability_names:
         record = abilities.get(name)
         if record is None:
+            record = next((a for key, a in abilities.items() if _normalise_key(key) == _normalise_key(name)), None)
+        if record is None:
             continue
         current = seen.get(record.family)
         if current is None:
@@ -663,32 +665,12 @@ def _weapon_expert_bonus(weapon: WeaponRecord, abilities: Sequence[AbilityRecord
     for ability in abilities:
         if ability.to_hit == 0 or not ability.damage_tags:
             continue
-        family = ability.family
-        # The ability CSV uses the older Energy/Piercing wording.  The
-        # Character Sheet catalog uses Laser/Bullet in weapon tags.
-        if "laser expert" in family:
-            if "ranged" not in weapon.tags or "melee" in weapon.tags:
-                continue
-            if not (weapon.tags & {"laser", "energy"}):
-                continue
-            applicable.append(ability)
-            continue
-        if "rifle expert" in family:
-            if "ranged" in weapon.tags and (weapon.tags & {"bullet", "piercing"}):
-                applicable.append(ability)
+        if ability.family == "anti-air pro":
             continue
         if ability.damage_tags.issubset(weapon.tags):
             applicable.append(ability)
 
-    strongest = max(
-        (ability.to_hit for ability in applicable if "anti-air pro" not in ability.family),
-        default=Decimal(0),
-    )
-    anti_air = sum(
-        (ability.to_hit for ability in applicable if "anti-air pro" in ability.family),
-        Decimal(0),
-    )
-    return strongest + anti_air
+    return max((ability.to_hit for ability in applicable), default=Decimal(0))
 
 
 def _summary(
@@ -727,7 +709,9 @@ def _summary(
         notes.append("Flat: " + ", ".join(flat_parts))
     if any(a.damage_bonus for a in selected):
         notes.append("Comeback damage applies only at 20% HP or less")
-    return " · ".join(notes)
+    summary = " · ".join(notes)
+    descriptions = [f"{a.name}: {a.description}" for a in selected if a.description]
+    return "\n".join([summary, *descriptions])
 
 
 def calculate_enemy_stats(
@@ -817,13 +801,15 @@ def calculate_enemy_stats(
             to_hit_text = str(to_hit)
         else:
             to_hit_text = ""
+        cost = weapon.energy_cost
+        if cost is not None and energy_reduction and "ranged" in weapon.tags:
+            cost = min(cost, max(2, cost - energy_reduction))
         weapon_stats.append(
             WeaponStats(
                 name=weapon.name,
                 damage=format_number(weapon.damage),
                 to_hit=to_hit_text,
-                energy_cost=(str(max(0, weapon.energy_cost - (energy_reduction if "ranged" in weapon.tags else 0)))
-                              if weapon.energy_cost is not None else ""),
+                energy_cost=str(cost) if cost is not None else "",
                 details="\n".join(part for part in (", ".join(sorted(tag.title() for tag in weapon.tags)), weapon.effect) if part),
             )
         )

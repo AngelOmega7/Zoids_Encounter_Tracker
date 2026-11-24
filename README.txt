@@ -6,7 +6,8 @@ Turn). Selecting a Zoid starts it at half maximum Energy, rounded down.
 Start Turn adds EPT up to maximum. Rest sets Energy to half maximum, even
 when the current value is higher. Each weapon's Use button spends its editable
 Energy Cost; insufficient Energy or an invalid cost leaves Energy unchanged.
-Economized Shooting ranks 1-4 reduce Ranged costs by 2/4/6/8 (minimum zero).
+Economized Shooting ranks 1-4 reduce Ranged costs by 2/4/6/8 (minimum 2).
+Costs already below 2 remain unchanged.
 Up to eight rows display fixed weapons and Zoid-specific removable equipment.
 Equipment effects and GM stat adjustments are managed through editable fields.
 Maximum Energy is base Zoid Energy + actual Level + manual equipment/GM bonuses.
@@ -23,6 +24,25 @@ Heat provenance in catalog metadata is historical only.
 To refresh catalog data from the sibling Character Sheet app, run:
   python3 tools/sync_character_energy.py
 This sync retains the Encounter Tracker's required-level values.
+
+Ability rules:
+To refresh the 17 revised ability families (68 ranks) from the Character Sheet:
+  python3 tools/sync_character_abilities.py
+Iron Defense, Fleet Footed, Expert to-hit, and Economized Shooting bonuses are
+calculated automatically. Expert matching uses the same tags as the sheet:
+Laser requires Laser, and Rifle requires both Ranged and Bullet. Only the
+strongest matching Expert bonus applies (+2/+3/+4/+5).
+Selected ability descriptions show the current rules, including cumulative
+Smoke/Shield/Fleet perks and Expert critical hits (ranks 2/3/4: 19/18/18;
+rank 4 critical hits deal double damage).
+Anti-Air Pro, Evasion Master, Sniper, True Tank, shield bonuses and shield
+damage rules, critical hits, and multi-attack restrictions are GM-managed:
+the tracker has no target/range, shield-pool, or equipment-defense calculator.
+Armor/Defense +/- buttons change the stat by 1 and track a temporary modifier.
+Rest removes these modifiers, preserving other manual edits. Modifiers survive
+recalculation and saving/loading; selecting a new Zoid or clearing resets them.
+Old saved sets retain their recorded numeric values; reselect the Zoid and
+save again to refresh calculated values. Ability descriptions refresh on load.
 
 Current Zoid-specific gear:
 - Lightning Saix: Slot 5 Pulse Laser Gun, damage 110, Energy 6.

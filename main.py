@@ -547,10 +547,19 @@ def main(page: ft.Page):
         def energy_action(action, amount=None):
             try:
                 value = energy.act(energy_field.value, max_energy_field.value, action, amount)
+                restored = {}
+                if action == "rest":
+                    for key, modifier in card_data["stat_modifiers"].items():
+                        if modifier:
+                            restored[key] = str(int(card_data[key].value) - modifier)
             except ValueError as exc:
                 show_message(str(exc))
                 return
             energy_field.value = str(value)
+            if action == "rest":
+                for key, stat in restored.items():
+                    card_data[key].value = stat
+                card_data["stat_modifiers"] = {"armor": 0, "defense": 0}
             page.update()
 
         start_button = ft.Button("Start Turn", on_click=lambda e: energy_action("start", ept_field.value))
@@ -611,11 +620,14 @@ def main(page: ft.Page):
             "max_energy": max_energy_field,
             "ept": ept_field,
             "effects": effects_text,
+            "stat_modifiers": {"armor": 0, "defense": 0},
         }
         zoid_dropdown.data = card_data
         enemy_card_data.append(card_data)
 
         def recalculate(reset_energy=False):
+            if reset_energy:
+                card_data["stat_modifiers"] = {"armor": 0, "defense": 0}
             zoid_name = zoid_dropdown.value
             zoid = enemy_data.zoids.get(zoid_name) if enemy_data else None
             if zoid is None:
@@ -646,8 +658,8 @@ def main(page: ft.Page):
                 enemy_data,
             )
             hp_field.value = result.health
-            armor_field.value = result.armor
-            defense_field.value = result.defense
+            armor_field.value = str(int(result.armor) + card_data["stat_modifiers"]["armor"])
+            defense_field.value = str(int(result.defense) + card_data["stat_modifiers"]["defense"])
             speed_field.value = result.speed
             range_field.value = result.range
             reaction_field.value = result.reaction
@@ -717,7 +729,25 @@ def main(page: ft.Page):
             ability_dropdown.on_select = make_ability_handler(ability_dropdown)
         level_field.on_change = lambda e: recalculate()
 
-        stats_row = ft.Row([hp_field, armor_field, defense_field], wrap=True, alignment=ft.MainAxisAlignment.START)
+        def adjust_stat(key, delta):
+            try:
+                value = int(card_data[key].value)
+            except (ValueError, TypeError):
+                show_message(f"{key.title()} must be a whole number.")
+                return
+            card_data[key].value = str(value + delta)
+            card_data["stat_modifiers"][key] += delta
+            page.update()
+
+        def stat_controls(key):
+            return ft.Row([card_data[key],
+                ft.IconButton(ft.Icons.REMOVE, tooltip=f"Decrease {key} by 1 (until Rest)",
+                              on_click=lambda e: adjust_stat(key, -1)),
+                ft.IconButton(ft.Icons.ADD, tooltip=f"Increase {key} by 1 (until Rest)",
+                              on_click=lambda e: adjust_stat(key, 1)),
+            ], tight=True, spacing=0)
+
+        stats_row = ft.Row([hp_field, stat_controls("armor"), stat_controls("defense")], wrap=True, alignment=ft.MainAxisAlignment.START)
         misc_row = ft.Row([speed_field, range_field, reaction_field], wrap=True, alignment=ft.MainAxisAlignment.START)
 
         content = ft.Container(
@@ -748,6 +778,7 @@ def main(page: ft.Page):
 
     def on_clear_enemies_click(e):
         for card in enemy_card_data:
+            card["stat_modifiers"] = {"armor": 0, "defense": 0}
             card["calculated_energy"] = ""
             card["energy_level_bonus"] = 0
             card["zoid"].value = None
@@ -803,6 +834,7 @@ def main(page: ft.Page):
                 "weapon_visibility": [row.visible for row in card["weapon_rows"]],
                 "weapon_costs": [field.value for field in card["weapon_costs"]],
                 "energy_level_bonus": card.get("energy_level_bonus", 0),
+                "stat_modifiers": dict(card["stat_modifiers"]),
                 "effects": card["effects"].value,
             }
             for card in enemy_card_data
@@ -850,12 +882,14 @@ def main(page: ft.Page):
                 result = enemy_stats.calculate_enemy_stats(zoid, saved["level"], saved["stats_type"],
                     saved["abilities"], enemy_data) if zoid else None
                 saved = energy.migrate(saved, result)
+                card["stat_modifiers"] = dict(saved.get("stat_modifiers", {"armor": 0, "defense": 0}))
                 card["calculated_energy"] = result.energy if result else ""
                 card["energy_level_bonus"] = saved["energy_level_bonus"]
                 for key in enemy_value_keys:
                     card[key].value = saved[key]
                 card["zoid"].text = saved["zoid"] or ""
                 for field, value in zip(card["abilities"], saved["abilities"]):
+                    value = next((name for name in ability_name_list if name.casefold() == (value or "").strip().casefold()), value)
                     field.value = value
                     field.text = value or ""
                 for index, fields in enumerate(card["weapons"]):
@@ -867,7 +901,7 @@ def main(page: ft.Page):
                     field.value = saved["weapon_costs"][index] if index < len(saved["weapon_costs"]) else ""
                     card["weapon_rows"][index].visible = (saved["weapon_visibility"][index]
                         if index < len(saved["weapon_visibility"]) else False)
-                card["effects"].value = saved["effects"]
+                card["effects"].value = result.summary if result else saved["effects"]
             active_enemy_set_id = int(saved_enemy_sets.value)
             enemy_set_name.value = name
             enemy_set_status.value = f"Loaded: {name}. Save changes before switching sets or closing the app."

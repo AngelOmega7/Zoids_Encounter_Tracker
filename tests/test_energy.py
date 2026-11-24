@@ -45,8 +45,8 @@ class EnergyTests(unittest.TestCase):
                 for source, weapon in zip(records, result.weapons):
                     if source.name:
                         self.assertIsNotNone(source.energy_cost, (zoid.name, source.name))
-                        self.assertEqual(int(weapon.energy_cost), max(0, source.energy_cost -
-                            (rank * 2 if 'ranged' in source.tags else 0)))
+                        expected = min(source.energy_cost, max(2, source.energy_cost - rank * 2)) if 'ranged' in source.tags else source.energy_cost
+                        self.assertEqual(int(weapon.energy_cost), expected)
 
     def test_old_and_new_snapshots_preserve_edits(self):
         result = enemy_stats.calculate_enemy_stats(self.data.zoids['Shield Liger'], 1, '', [], self.data)
@@ -157,6 +157,29 @@ class EnemyEnergyUITests(unittest.TestCase):
         self.button('Load Set').on_click(None)
         self.assertEqual((card['energy'].value, card['ept'].value, card['hp'].value), ('4', '11', '7'))
         self.assertEqual(card['weapon_costs'][2].value, '5')
+
+    def test_temporary_stats_save_recalculate_and_rest_independently(self):
+        first, second = self.cards[:2]
+        self.select(first)
+        self.select(second)
+        armor, defense = int(first['armor'].value), int(first['defense'].value)
+        def click(tooltip):
+            next(c for c in self.controls if getattr(c, 'tooltip', None) == tooltip).on_click(None)
+        click('Decrease armor by 1 (until Rest)')
+        click('Decrease armor by 1 (until Rest)')
+        click('Increase defense by 1 (until Rest)')
+        first['level'].on_change(None)
+        self.assertEqual((int(first['armor'].value), int(first['defense'].value)), (armor - 2, defense + 1))
+        self.assertEqual(int(second['armor'].value), armor)
+        next(c for c in self.controls if getattr(c, 'label', '') == 'Enemy set name').value = 'Modifiers'
+        self.button('Save New Set').on_click(None)
+        self.button('Clear All Enemies').on_click(None)
+        self.button('Load Set').on_click(None)
+        self.assertEqual(first['stat_modifiers'], {'armor': -2, 'defense': 1})
+        first['defense'].value = str(defense + 11)  # Independent GM adjustment.
+        self.button('Rest').on_click(None)
+        self.assertEqual((int(first['armor'].value), int(first['defense'].value)), (armor, defense + 10))
+        self.assertEqual(first['stat_modifiers'], {'armor': 0, 'defense': 0})
 
     def test_shadow_fox_slot_five_details_and_energy_spending(self):
         card = self.cards[0]
