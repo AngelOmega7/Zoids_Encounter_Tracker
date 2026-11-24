@@ -11,11 +11,15 @@ FAMILIES = {
     "particle_expert", "melee_expert", "rifle_expert", "melee_multi_attack",
     "ranged_multi_attack", "sniper", "true_tank", "smoke_master", "fleet_footed",
 }
+RANK_FOUR_FAMILIES = {"small_expert", "medium_expert", "medium_under_expert"}
+RANK_TWO_FAMILIES = {"small_expert"}
 
 
 def sync(source=SOURCE, destination=ROOT / "Zoid_Abilities.csv"):
     catalog = json.loads(Path(source).read_text(encoding="utf-8"))
-    records = [a for a in catalog["records"] if a.get("family") in FAMILIES]
+    records = [a for a in catalog["records"] if a.get("family") in FAMILIES
+               or (a.get("family") in RANK_FOUR_FAMILIES and a.get("rank") == 4)
+               or (a.get("family") in RANK_TWO_FAMILIES and a.get("rank") == 2)]
     by_name = {name.strip().casefold(): a for a in records
                for name in (a["name"], *a.get("legacy_names", []))}
     with Path(destination).open(newline="", encoding="utf-8-sig") as handle:

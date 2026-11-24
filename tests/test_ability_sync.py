@@ -6,7 +6,7 @@ from pathlib import Path
 import unittest
 
 import enemy_stats
-from tools.sync_character_abilities import FAMILIES, SOURCE
+from tools.sync_character_abilities import FAMILIES, RANK_FOUR_FAMILIES, RANK_TWO_FAMILIES, SOURCE
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -26,7 +26,9 @@ class AbilitySyncTests(unittest.TestCase):
             headers = reader.fieldnames
             rows = {row[headers[0]]: row for row in reader}
         for record in source['records']:
-            if record.get('family') not in FAMILIES:
+            if not (record.get('family') in FAMILIES or
+                    (record.get('family') in RANK_FOUR_FAMILIES and record.get('rank') == 4) or
+                    (record.get('family') in RANK_TWO_FAMILIES and record.get('rank') == 2)):
                 continue
             for header, key in zip(headers, source['columns']):
                 value = record['name'] if key == 'name' else record['fields'].get(key)

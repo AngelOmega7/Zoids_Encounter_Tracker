@@ -189,6 +189,8 @@ class WeaponRecord:
     to_hit: Decimal
     has_to_hit: bool
     energy_cost: int | None = None
+    shield_hp: int = 0
+    invisibility: bool = False
 
 
 @dataclass(frozen=True)
@@ -248,6 +250,8 @@ class WeaponStats:
     to_hit: str
     energy_cost: str = ""
     details: str = ""
+    shield_hp: int = 0
+    invisibility: bool = False
 
 
 @dataclass(frozen=True)
@@ -264,6 +268,7 @@ class EnemyStats:
     energy: str = ""
     ept: str = ""
     energy_level_bonus: int = 0
+    shield_bonus: int = 0
 
 
 @dataclass(frozen=True)
@@ -283,6 +288,7 @@ def _weapon_from_values(
     type_value: object,
     hit: object,
     energy_cost: int | None = None,
+    shield_hp: int = 0,
 ) -> WeaponRecord:
     weapon_name = _clean(name)
     damage_text = format_number(damage)
@@ -315,6 +321,8 @@ def _weapon_from_values(
         to_hit=_decimal(hit_text),
         has_to_hit=bool(hit_text),
         energy_cost=energy_cost,
+        shield_hp=shield_hp,
+        invisibility=any(term in f"{weapon_name} {_clean(effect)}".casefold() for term in ("invisib", "optical cam")),
     )
 
 
@@ -326,6 +334,7 @@ def _weapon_from_row(row: dict[str, str], columns: tuple[str, str, str, str, str
         row.get(damage_col),
         row.get(type_col),
         row.get(hit_col),
+        shield_hp=max(0, _integer(row.get({"Weapon 2 19": "Shield Health 24", "Weapon 3 30": "Shield Health 2 35"}.get(name_col, "")))),
     )
 
 
@@ -426,6 +435,7 @@ def _zoid_from_json(name: str, record: dict[str, object]) -> ZoidRecord:
                 fields.get(type_key),
                 fields.get(hit_key),
                 costs[index],
+                max(0, _integer(fields.get({1: "shield_health_24", 2: "shield_health_2_35"}.get(index, "")))),
             )
             for index, (name_key, effect_key, damage_key, type_key, hit_key) in enumerate(JSON_WEAPON_COLUMNS)
         ),
@@ -811,6 +821,8 @@ def calculate_enemy_stats(
                 to_hit=to_hit_text,
                 energy_cost=str(cost) if cost is not None else "",
                 details="\n".join(part for part in (", ".join(sorted(tag.title() for tag in weapon.tags)), weapon.effect) if part),
+                shield_hp=weapon.shield_hp,
+                invisibility=weapon.invisibility,
             )
         )
 
@@ -837,4 +849,5 @@ def calculate_enemy_stats(
         energy=format_number(zoid.energy + base_level if zoid.energy is not None else None),
         ept=format_number(zoid.ept),
         energy_level_bonus=base_level,
+        shield_bonus=int(sum((a.shield for a in selected), Decimal(0))),
     )

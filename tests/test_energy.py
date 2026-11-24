@@ -32,6 +32,14 @@ class EnergyTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             energy.act('26', '25', 'start', '3')
 
+    def test_start_turn_pays_upkeep_after_capped_recharge(self):
+        self.assertEqual(energy.act('25', '25', 'start', '3', upkeep=2), 23)
+        self.assertEqual(energy.act('0', '25', 'start', '3', upkeep=2), 1)
+        with self.assertRaisesRegex(ValueError, 'Deactivate equipment'):
+            energy.act('0', '25', 'start', '3', upkeep=4)
+        with self.assertRaises(ValueError):
+            energy.act('5', '25', 'start', '3', upkeep=-1)
+
     def test_catalog_and_economized_ranks(self):
         for zoid in self.data.zoids.values():
             base = enemy_stats.calculate_enemy_stats(zoid, 1, '', [], self.data)
@@ -130,6 +138,62 @@ class EnemyEnergyUITests(unittest.TestCase):
         self.button('Rest').on_click(None)
         self.assertEqual(first['energy'].value, '16')
 
+    def test_active_shields_invisibility_and_organoid_upkeep(self):
+        card = self.cards[0]
+        self.select(card)
+        index = next(i for i, hp in enumerate(card['shield_hp']) if int(hp.value) > 0)
+        card['equipment_active'][index].value = True
+        card['abilities'][0].value = 'Shield Master 4'
+        card['abilities'][0].on_select(None)
+        card['organoid_shields'].value = '100'
+        card['shield_damage'].value = '30'
+        card['refresh_shields'](None)
+        self.assertEqual(card['shield_summary'].value, 'Shields 470 / 500 · Upkeep 2/turn')
+        card['energy'].value = card['max_energy'].value
+        maximum = int(card['max_energy'].value)
+        self.button('Start Turn').on_click(None)
+        self.assertEqual(int(card['energy'].value), maximum - 2)
+        card['equipment_active'][index].value = False
+        card['refresh_shields'](None)
+        self.assertEqual(card['shield_summary'].value, 'Shields 320 / 350 · Upkeep 0/turn')
+        self.button('Start Turn').on_click(None)
+        self.assertEqual(int(card['energy'].value), maximum)
+        card['zoid'].value = 'Shadow Fox'
+        card['zoid'].on_select(None)
+        invisible = next(i for i, flag in enumerate(card['invisibility']) if flag.value)
+        self.assertEqual(invisible, 7)
+        card['equipment_active'][invisible].value = True
+        card['energy'].value = '10'
+        card['ept'].value = '1'
+        self.button('Start Turn').on_click(None)
+        self.assertEqual(card['energy'].value, '8')
+        card['energy'].value = '0'
+        self.button('Start Turn').on_click(None)
+        self.assertEqual(card['energy'].value, '0')
+        self.assertTrue(card['equipment_active'][invisible].value)
+
+    def test_shield_state_persists_and_old_sets_default_inactive(self):
+        card = self.cards[0]
+        self.select(card)
+        index = next(i for i, hp in enumerate(card['shield_hp']) if int(hp.value) > 0)
+        card['equipment_active'][index].value = True
+        card['shield_hp'][index].value = '220'
+        card['shield_damage'].value = '40'
+        card['organoid_shields'].value = '60'
+        card['invisibility'][index].value = True  # Same item pays upkeep only once.
+        card['refresh_shields'](None)
+        next(c for c in self.controls if getattr(c, 'label', '') == 'Enemy set name').value = 'Shields'
+        self.button('Save New Set').on_click(None)
+        self.button('Clear All Enemies').on_click(None)
+        self.assertEqual(card['shield_summary'].value, 'Shields 0 / 0 · Upkeep 0/turn')
+        self.button('Load Set').on_click(None)
+        self.assertEqual(card['shield_summary'].value, 'Shields 240 / 280 · Upkeep 2/turn')
+        self.assertTrue(card['equipment_active'][index].value)
+        self.assertTrue(card['invisibility'][index].value)
+        card['level'].on_change(None)
+        self.assertEqual(card['shield_hp'][index].value, '220')
+        self.assertEqual(card['shield_damage'].value, '40')
+
     def test_level_changes_preserve_manual_bonus_and_clamp_without_refill(self):
         card = self.cards[0]
         self.select(card)
@@ -216,6 +280,8 @@ class EnemyEnergyUITests(unittest.TestCase):
         self.button('Load Set').on_click(None)
         for card in self.cards:
             self.assertEqual((card['hp'].value, card['energy'].value), ('7', '16'))
+            self.assertFalse(any(field.value for field in card['equipment_active']))
+            self.assertEqual(card['shield_damage'].value, '0')
             self.assertEqual(card['weapons'][2][2].value, 'GM damage')
             self.assertEqual(card['weapon_costs'][2].value, '2')
             self.assertFalse(card['weapon_rows'][7].visible)

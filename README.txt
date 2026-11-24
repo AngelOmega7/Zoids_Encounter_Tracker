@@ -3,7 +3,10 @@ CREDIT TO u/AdChemical1651 for the building blocks of this
 Enemy Energy:
 Each enemy has editable Current Energy, Maximum Energy, and EPT (Energy Per
 Turn). Selecting a Zoid starts it at half maximum Energy, rounded down.
-Start Turn adds EPT up to maximum. Rest sets Energy to half maximum, even
+Start Turn adds EPT up to maximum, then pays upkeep for active shields and
+invisibility equipment. If the Energy after recharge cannot pay all upkeep,
+the turn action changes nothing; deactivate equipment and try again.
+Rest sets Energy to half maximum, even
 when the current value is higher. Each weapon's Use button spends its editable
 Energy Cost; insufficient Energy or an invalid cost leaves Energy unchanged.
 Economized Shooting ranks 1-4 reduce Ranged costs by 2/4/6/8 (minimum 2).
@@ -26,7 +29,8 @@ To refresh catalog data from the sibling Character Sheet app, run:
 This sync retains the Encounter Tracker's required-level values.
 
 Ability rules:
-To refresh the 17 revised ability families (68 ranks) from the Character Sheet:
+To refresh the revised abilities (72 ranks, including the three size-Expert
+rank 4 critical-range effects and Small Expert 2's critical-hit protection) from the Character Sheet:
   python3 tools/sync_character_abilities.py
 Iron Defense, Fleet Footed, Expert to-hit, and Economized Shooting bonuses are
 calculated automatically. Expert matching uses the same tags as the sheet:
@@ -35,9 +39,21 @@ strongest matching Expert bonus applies (+2/+3/+4/+5).
 Selected ability descriptions show the current rules, including cumulative
 Smoke/Shield/Fleet perks and Expert critical hits (ranks 2/3/4: 19/18/18;
 rank 4 critical hits deal double damage).
-Anti-Air Pro, Evasion Master, Sniper, True Tank, shield bonuses and shield
-damage rules, critical hits, and multi-attack restrictions are GM-managed:
-the tracker has no target/range, shield-pool, or equipment-defense calculator.
+Anti-Air Pro, Evasion Master, Sniper, True Tank, shield damage-reduction rules,
+critical hits, and multi-attack restrictions are GM-managed: the tracker has
+no target/range or equipment-defense calculator.
+Each equipment row has Active, Shield HP, and Grants invisibility controls.
+Known shields/invisibility are filled from the catalog; custom gear can be
+entered manually. Active shields add to one pool. Shield Master adds its
+100/150/200/250 HP bonus once when the combined pool is positive.
+Shield damage taken is tracked against this pool. Organoid shield HP has no
+upkeep; each other active shield/invisibility item pays its displayed Energy
+Cost per Start Turn (only once if it grants both). Smoke alone has no upkeep.
+Deactivate expired/destroyed equipment explicitly. Use still spends Energy
+for an individual use; changing Active does not spend Energy immediately.
+Shield damage, equipment activation, custom shield HP, invisibility flags, and
+Organoid shields are saved with each enemy. Older sets default to inactive
+equipment and zero shield damage; known shield HP is recovered by item name.
 Armor/Defense +/- buttons change the stat by 1 and track a temporary modifier.
 Rest removes these modifiers, preserving other manual edits. Modifiers survive
 recalculation and saving/loading; selecting a new Zoid or clearing resets them.

@@ -543,10 +543,41 @@ def main(page: ft.Page):
         energy_field = ft.TextField(label="Current Energy", width=150)
         max_energy_field = ft.TextField(label="Maximum Energy", width=150)
         ept_field = ft.TextField(label="EPT", width=150)
+        shield_damage = ft.TextField(label="Shield damage taken", value="0", width=180)
+        organoid_shields = ft.TextField(label="Organoid shield HP (no upkeep)", value="0", width=240)
+        shield_summary = ft.Text("Shields 0 / 0 · Upkeep 0/turn")
+
+        def equipment_totals():
+            capacity = energy.whole(organoid_shields.value, "Organoid shield HP")
+            upkeep = 0
+            for active, hp, invisible, cost in zip(equipment_active, shield_hp_fields, invisibility_flags, weapon_costs):
+                if not active.value:
+                    continue
+                hp_value = energy.whole(hp.value, "Equipment shield HP")
+                capacity += hp_value
+                if hp_value or invisible.value:
+                    upkeep += energy.whole(cost.value, "Equipment Energy Cost")
+            if capacity:
+                capacity += card_data.get("shield_bonus", 0)
+            damage = energy.whole(shield_damage.value, "Shield damage taken")
+            return max(0, capacity - damage), capacity, upkeep
+
+        def refresh_shields(e=None):
+            try:
+                remaining, maximum, upkeep = equipment_totals()
+                shield_summary.value = f"Shields {remaining} / {maximum} · Upkeep {upkeep}/turn"
+            except ValueError as exc:
+                shield_summary.value = str(exc)
+            if e is not False:
+                page.update()
+
+        shield_damage.on_change = refresh_shields
+        organoid_shields.on_change = refresh_shields
 
         def energy_action(action, amount=None):
             try:
-                value = energy.act(energy_field.value, max_energy_field.value, action, amount)
+                upkeep = equipment_totals()[2] if action == "start" else 0
+                value = energy.act(energy_field.value, max_energy_field.value, action, amount, upkeep=upkeep)
                 restored = {}
                 if action == "rest":
                     for key, modifier in card_data["stat_modifiers"].items():
@@ -588,11 +619,20 @@ def main(page: ft.Page):
 
         weapon_rows = []
         weapon_costs = []
+        equipment_active = []
+        shield_hp_fields = []
+        invisibility_flags = []
         for wname_f, wtohit_f, wdamage_f in weapon_fields:
-            cost = ft.TextField(label="Energy Cost", width=140)
+            cost = ft.TextField(label="Energy Cost", width=140, on_change=refresh_shields)
             weapon_costs.append(cost)
+            active = ft.Checkbox(label="Active", value=False, on_change=refresh_shields)
+            hp = ft.TextField(label="Shield HP", value="0", width=120, on_change=refresh_shields)
+            invisible = ft.Checkbox(label="Grants invisibility", value=False, on_change=refresh_shields)
+            equipment_active.append(active)
+            shield_hp_fields.append(hp)
+            invisibility_flags.append(invisible)
             use = ft.Button("Use", on_click=lambda e, field=cost: energy_action("use", field.value))
-            weapon_rows.append(ft.Row([wname_f, wtohit_f, wdamage_f, cost, use], wrap=True, alignment=ft.MainAxisAlignment.START,
+            weapon_rows.append(ft.Row([wname_f, wtohit_f, wdamage_f, cost, use, active, hp, invisible], wrap=True, alignment=ft.MainAxisAlignment.START,
                                       visible=len(weapon_rows) < 4))
 
         effects_text = ft.Text(
@@ -621,6 +661,14 @@ def main(page: ft.Page):
             "ept": ept_field,
             "effects": effects_text,
             "stat_modifiers": {"armor": 0, "defense": 0},
+            "equipment_active": equipment_active,
+            "shield_hp": shield_hp_fields,
+            "invisibility": invisibility_flags,
+            "shield_damage": shield_damage,
+            "organoid_shields": organoid_shields,
+            "shield_summary": shield_summary,
+            "refresh_shields": refresh_shields,
+            "shield_bonus": 0,
         }
         zoid_dropdown.data = card_data
         enemy_card_data.append(card_data)
@@ -628,9 +676,17 @@ def main(page: ft.Page):
         def recalculate(reset_energy=False):
             if reset_energy:
                 card_data["stat_modifiers"] = {"armor": 0, "defense": 0}
+                shield_damage.value = "0"
+                organoid_shields.value = "0"
+                for active in equipment_active:
+                    active.value = False
             zoid_name = zoid_dropdown.value
             zoid = enemy_data.zoids.get(zoid_name) if enemy_data else None
             if zoid is None:
+                card_data["shield_bonus"] = 0
+                for active, hp, invisible in zip(equipment_active, shield_hp_fields, invisibility_flags):
+                    active.value, hp.value, invisible.value = False, "0", False
+                refresh_shields(False)
                 for key in ("hp", "armor", "defense", "speed", "range", "reaction"):
                     card_data[key].value = ""
                 for wname_f, wtohit_f, wdamage_f in weapon_fields:
@@ -658,6 +714,7 @@ def main(page: ft.Page):
                 enemy_data,
             )
             hp_field.value = result.health
+            card_data["shield_bonus"] = result.shield_bonus
             armor_field.value = str(int(result.armor) + card_data["stat_modifiers"]["armor"])
             defense_field.value = str(int(result.defense) + card_data["stat_modifiers"]["defense"])
             speed_field.value = result.speed
@@ -689,14 +746,21 @@ def main(page: ft.Page):
                     wtohit_f.value = weapon.to_hit
                     wdamage_f.value = weapon.damage
                     weapon_costs[index].value = weapon.energy_cost
+                    if reset_energy:
+                        shield_hp_fields[index].value = str(weapon.shield_hp)
+                        invisibility_flags[index].value = weapon.invisibility
                 else:
                     wname_f.value = ""
                     wname_f.tooltip = None
                     wtohit_f.value = ""
                     wdamage_f.value = ""
                     weapon_costs[index].value = ""
+                    shield_hp_fields[index].value = "0"
+                    invisibility_flags[index].value = False
+                    equipment_active[index].value = False
                 weapon_rows[index].visible = index < 4 or (index < len(result.weapons) and bool(result.weapons[index].name))
             effects_text.value = result.summary
+            refresh_shields(False)
             try:
                 page.update()
             except Exception:
@@ -766,6 +830,9 @@ def main(page: ft.Page):
                 stats_row,
                 misc_row,
                 ft.Row([energy_field, max_energy_field, ept_field, start_button, rest_button], wrap=True),
+                ft.Row([shield_damage, organoid_shields], wrap=True),
+                shield_summary,
+                ft.Text("Active shields and invisibility spend Energy each Start Turn after recharge. Deactivate expired or destroyed equipment.", size=11),
                 ft.Divider(height=5, color="transparent"),
                 ft.Text("Weapons", weight=ft.FontWeight.BOLD),
                 *weapon_rows,
@@ -781,6 +848,12 @@ def main(page: ft.Page):
             card["stat_modifiers"] = {"armor": 0, "defense": 0}
             card["calculated_energy"] = ""
             card["energy_level_bonus"] = 0
+            card["shield_bonus"] = 0
+            card["shield_damage"].value = "0"
+            card["organoid_shields"].value = "0"
+            for active, hp, invisible in zip(card["equipment_active"], card["shield_hp"], card["invisibility"]):
+                active.value, hp.value, invisible.value = False, "0", False
+            card["refresh_shields"](False)
             card["zoid"].value = None
             card["zoid"].text = ""
             card["stats_type"].value = ""
@@ -835,6 +908,11 @@ def main(page: ft.Page):
                 "weapon_costs": [field.value for field in card["weapon_costs"]],
                 "energy_level_bonus": card.get("energy_level_bonus", 0),
                 "stat_modifiers": dict(card["stat_modifiers"]),
+                "equipment_active": [field.value for field in card["equipment_active"]],
+                "shield_hp": [field.value for field in card["shield_hp"]],
+                "invisibility": [field.value for field in card["invisibility"]],
+                "shield_damage": card["shield_damage"].value,
+                "organoid_shields": card["organoid_shields"].value,
                 "effects": card["effects"].value,
             }
             for card in enemy_card_data
@@ -883,6 +961,12 @@ def main(page: ft.Page):
                     saved["abilities"], enemy_data) if zoid else None
                 saved = energy.migrate(saved, result)
                 card["stat_modifiers"] = dict(saved.get("stat_modifiers", {"armor": 0, "defense": 0}))
+                card["shield_bonus"] = result.shield_bonus if result else 0
+                card["shield_damage"].value = saved["shield_damage"]
+                card["organoid_shields"].value = saved["organoid_shields"]
+                for key, default in (("equipment_active", False), ("shield_hp", "0"), ("invisibility", False)):
+                    for index, field in enumerate(card[key]):
+                        field.value = saved[key][index] if index < len(saved[key]) else default
                 card["calculated_energy"] = result.energy if result else ""
                 card["energy_level_bonus"] = saved["energy_level_bonus"]
                 for key in enemy_value_keys:
@@ -902,6 +986,7 @@ def main(page: ft.Page):
                     card["weapon_rows"][index].visible = (saved["weapon_visibility"][index]
                         if index < len(saved["weapon_visibility"]) else False)
                 card["effects"].value = result.summary if result else saved["effects"]
+                card["refresh_shields"](False)
             active_enemy_set_id = int(saved_enemy_sets.value)
             enemy_set_name.value = name
             enemy_set_status.value = f"Loaded: {name}. Save changes before switching sets or closing the app."

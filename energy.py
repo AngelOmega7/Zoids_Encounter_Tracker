@@ -9,7 +9,7 @@ def whole(value, label):
     return int(value)
 
 
-def act(current, maximum, action, amount=None):
+def act(current, maximum, action, amount=None, *, upkeep=0):
     maximum = whole(maximum, "Maximum Energy")
     if action == "rest":
         return maximum // 2
@@ -18,7 +18,11 @@ def act(current, maximum, action, amount=None):
         raise ValueError("Current Energy cannot exceed maximum Energy.")
     amount = whole(amount, "EPT" if action == "start" else "Energy Cost")
     if action == "start":
-        return min(maximum, current + amount)
+        upkeep = whole(upkeep, "Shield/invisibility upkeep")
+        available = min(maximum, current + amount)
+        if available < upkeep:
+            raise ValueError(f"Not enough Energy for shield/invisibility upkeep: need {upkeep}, have {available} after recharge. Deactivate equipment before starting the turn.")
+        return available - upkeep
     if action == "use":
         if current < amount:
             raise ValueError(f"Not enough Energy: need {amount}, have {current}.")
@@ -42,4 +46,12 @@ def migrate(saved, result=None):
     costs = {w.name.casefold(): w.energy_cost for w in result.weapons} if result else {}
     saved.setdefault("weapon_costs", [costs.get(str(w[0]).casefold(), "") for w in saved["weapons"]])
     saved.setdefault("weapon_visibility", [True] * 4 + [saved.get("unique_weapon_visible", False)])
+    equipment = {w.name.casefold(): w for w in result.weapons} if result else {}
+    saved.setdefault("equipment_active", [False] * len(saved["weapons"]))
+    saved.setdefault("shield_hp", [str(equipment[str(w[0]).casefold()].shield_hp) if str(w[0]).casefold() in equipment else "0"
+                                    for w in saved["weapons"]])
+    saved.setdefault("invisibility", [equipment[str(w[0]).casefold()].invisibility if str(w[0]).casefold() in equipment else False
+                                      for w in saved["weapons"]])
+    saved.setdefault("shield_damage", "0")
+    saved.setdefault("organoid_shields", "0")
     return saved
