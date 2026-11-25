@@ -2,13 +2,11 @@
 
 The Enemy page uses the same data ideas as the Character Sheet app:
 
-* ``ZoidsDB.csv`` supplies the Zoid's base stats and fixed weapons.
-* ``zoids.json`` is the corrected Character Sheet catalog.  Matching records
-  override the CSV values, including weapon layout and tag corrections.
+* ``zoids.json`` supplies corrected base stats, weapons, and saved-name aliases.
 * All named Zoid-specific removable weapons/equipment are available alongside
   fixed weapons. Energy costs follow item identity, not the displayed row.
-* ``Stats.csv`` supplies the Tank / Fighter / Scout / Almighty level tables.
-* ``Zoid_Abilities.csv`` supplies level, size, flat-stat, and Expert bonuses.
+* ``stats.json`` supplies the Tank / Fighter / Scout / Almighty level tables.
+* ``abilities.json`` supplies level, size, flat-stat, and Expert bonuses.
 
 Only the standard library is used here so the calculation layer can be tested
 without Flet or pandas.
@@ -16,7 +14,6 @@ without Flet or pandas.
 
 from __future__ import annotations
 
-import csv
 import json
 import re
 from dataclasses import dataclass
@@ -26,16 +23,9 @@ from typing import Iterable, Mapping, Sequence
 
 STATS_TYPE_NAMES = ("Tank", "Fighter", "Scout", "Almighty")
 
-# ZoidsDB stores one older spelling of this size.
+# Historical catalogs store one older spelling of this size.
 SIZE_ALIASES = {
     "extra lare": "extra large",
-}
-
-# A few names differ between the CSV and the Character Sheet catalog beyond the
-# aliases stored in zoids.json itself.
-CSV_TO_JSON_NAME_OVERRIDES = {
-    "strum fury (cau)": "sturm fury (cau)",
-    "zero jeager (cau)": "zero jager (cau)",
 }
 
 JSON_WEAPON_COLUMNS = (
@@ -54,14 +44,6 @@ JSON_REMOVABLE_WEAPON_COLUMNS = (
     ("removable_equipment_3_61", None, "damage_7_62", None, "to_hit_7_63"),
     ("removable_equipment_4_66", "effect_69", "damage_8_67", None, "to_hit_8_68"),
 )
-
-CSV_REMOVABLE_WEAPON_COLUMNS = (
-    ("Removable Equipment 47", "Effect 6 48", "Damage 5 49", "Damage Type 50", "To Hit 5 51"),
-    ("Removable Equipment 2 54", "Effect 7 56", "Damage 6 55", "Type 5 58", "To Hit 6 57"),
-    ("Removable Equipment 3 61", None, "Damage 7 62", None, "To Hit 7 63"),
-    ("Removable Equipment 4 66", "Effect 69", "Damage 8 67", None, "To Hit 8 68"),
-)
-
 
 def _clean(value: object) -> str:
     if value is None:
@@ -326,18 +308,6 @@ def _weapon_from_values(
     )
 
 
-def _weapon_from_row(row: dict[str, str], columns: tuple[str, str, str, str, str]) -> WeaponRecord:
-    name_col, effect_col, damage_col, type_col, hit_col = columns
-    return _weapon_from_values(
-        row.get(name_col),
-        row.get(effect_col),
-        row.get(damage_col),
-        row.get(type_col),
-        row.get(hit_col),
-        shield_hp=max(0, _integer(row.get({"Weapon 2 19": "Shield Health 24", "Weapon 3 30": "Shield Health 2 35"}.get(name_col, "")))),
-    )
-
-
 def _field_value(fields: Mapping[str, object], key: str | None) -> object:
     return fields.get(key) if key else None
 
@@ -459,114 +429,26 @@ def _load_json_records(path: Path) -> list[dict[str, object]]:
     ]
 
 
-def _load_zoids(path: Path, zoids_json: Path | None = None) -> dict[str, ZoidRecord]:
-    with path.open(newline="", encoding="utf-8-sig") as handle:
-        reader = csv.DictReader(handle)
-        if reader.fieldnames:
-            fieldnames = [str(name).strip() for name in reader.fieldnames]
-            reader.fieldnames = fieldnames
-        zoids: dict[str, ZoidRecord] = {}
-        weapon_columns = (
-            ("Weapon 1 13", "Effect 2 14", "Damage 1 15", "Type 1 16", "To Hit 1  17"),
-            ("Weapon 2 19", "Effect 3 20", "Damage 2  21", "Type 2 22", "To Hit 2  23"),
-            ("Weapon 3 30", "Effect 4 31", "Damage 3 32", "Type 3 33", "To Hit 3 34"),
-            ("Weapon 4 41", "Effect 5 42", "Damage 4 43", "Type 4 44", "To Hit 4 45"),
-        )
-        for row in reader:
-            name = _clean(row.get("Name 1"))
-            if not name:
-                continue
-            zoids[name] = ZoidRecord(
-                name=name,
-                type=_clean(row.get("Type 3")),
-                size=_normalise_size(row.get("Size 4")),
-                level_required=max(1, _integer(row.get("Level Required 5"), 1)),
-                health=_decimal(row.get("Health 6")),
-                armor=_decimal(row.get("Armor 7")),
-                defense=_decimal(row.get("Defense 8")),
-                speed=_decimal(row.get("Speed 9")),
-                reaction=_decimal(row.get("Reaction 10")),
-                range=_decimal(row.get("Range 11")),
-                weapons=tuple(_weapon_from_row(row, columns) for columns in weapon_columns),
-                unique_weapon=_unique_removable_weapon(row, CSV_REMOVABLE_WEAPON_COLUMNS),
-            )
-
-    if zoids_json is None or not Path(zoids_json).is_file():
-        return zoids
-
-    records = _load_json_records(Path(zoids_json))
-    json_by_name: dict[str, dict[str, object]] = {}
-    for record in records:
-        fields = record["fields"]
-        json_name = _clean(fields.get("name"))
-        aliases = [json_name, *(record.get("legacy_names") or [])]
-        for alias in aliases:
-            key = _normalise_key(alias)
-            if key:
-                json_by_name.setdefault(key, record)
-
-    for csv_key, json_key in CSV_TO_JSON_NAME_OVERRIDES.items():
-        record = json_by_name.get(_normalise_key(json_key))
-        if record is not None:
-            json_by_name[_normalise_key(csv_key)] = record
-
-    csv_by_key = {_normalise_key(name): name for name in zoids}
-    matched_ids = set()
-    for key, record in json_by_name.items():
-        csv_name = csv_by_key.get(key)
-        if csv_name is None:
-            continue
-        zoids[csv_name] = _zoid_from_json(csv_name, record)
-        matched_ids.add(record.get("id"))
-    for record in records:
-        if record.get("kind", "record") == "record" and record.get("id") not in matched_ids:
-            name = _clean(record["fields"].get("name"))
-            if name:
-                zoids[name] = _zoid_from_json(name, record)
-    return zoids
+def _load_zoids(path: Path) -> dict[str, ZoidRecord]:
+    return {name: _zoid_from_json(name, record)
+            for record in _load_json_records(path)
+            if record.get("kind", "record") == "record"
+            for name in record.get("tracker_names", [record["fields"]["name"]])}
 
 
 def _load_stats(path: Path) -> dict[str, dict[int, StatsRow]]:
-    blocks: list[dict[int, StatsRow]] = []
-    current: dict[int, StatsRow] | None = None
-    with path.open(newline="", encoding="utf-8-sig") as handle:
-        for row in csv.reader(handle):
-            if not row:
-                continue
-            first = _clean(row[0]) if row else ""
-            if not first:
-                continue
-            if first.casefold() == "level":
-                current = {}
-                blocks.append(current)
-                continue
-            if current is None or len(row) < 6:
-                continue
-            level = _integer(row[0], -1)
-            if level < 1:
-                continue
-            current[level] = StatsRow(
-                health=_percent(row[1]),
-                armor=_percent(row[2]),
-                react=_percent(row[3]),
-                perception=_percent(row[4]),
-                to_hit=_percent(row[5]),
-            )
-
-    stats: dict[str, dict[int, StatsRow]] = {}
-    for index, block in enumerate(blocks):
-        if not block:
-            continue
-        name = STATS_TYPE_NAMES[index] if index < len(STATS_TYPE_NAMES) else f"Block {index + 1}"
-        stats[name] = block
-    return stats
+    with path.open(encoding="utf-8") as handle:
+        styles = json.load(handle)["styles"]
+    return {name: {int(row["level"]): StatsRow(**{
+                key: _percent(row[key]) for key in ("health", "armor", "react", "perception", "to_hit")
+            }) for row in rows} for name, rows in styles.items()}
 
 
 def _type_bonus_candidates(zoid_type: str) -> tuple[str, ...]:
     """Return source spellings that refer to a catalog Zoid type."""
     candidates = [zoid_type]
     if _normalise_key(zoid_type) == "liger":
-        # The ability CSV still uses the older Lion terminology.
+        # Some ability names still use the older Lion terminology.
         candidates.append("Lion")
     return tuple(candidates)
 
@@ -574,12 +456,8 @@ def _type_bonus_candidates(zoid_type: str) -> tuple[str, ...]:
 def _load_abilities(path: Path, zoid_types: Iterable[str]) -> dict[str, AbilityRecord]:
     type_list = sorted({_clean(value) for value in zoid_types if _clean(value)}, key=len, reverse=True)
     abilities: dict[str, AbilityRecord] = {}
-    with path.open(newline="", encoding="utf-8-sig") as handle:
-        reader = csv.DictReader(handle)
-        if reader.fieldnames:
-            fieldnames = [str(name).strip() for name in reader.fieldnames]
-            reader.fieldnames = fieldnames
-        for row in reader:
+    with path.open(encoding="utf-8") as handle:
+        for row in json.load(handle)["records"]:
             name = _clean(row.get("Skills 1"))
             if not name or name.startswith("- - -"):
                 continue
@@ -627,17 +505,13 @@ def _load_abilities(path: Path, zoid_types: Iterable[str]) -> dict[str, AbilityR
 
 
 def load_enemy_data(
-    zoids_csv: str | Path,
-    stats_csv: str | Path,
-    abilities_csv: str | Path,
-    zoids_json: str | Path | None = None,
+    zoids_json: str | Path,
+    stats_json: str | Path,
+    abilities_json: str | Path,
 ) -> EnemyData:
-    zoids = _load_zoids(
-        Path(zoids_csv),
-        Path(zoids_json) if zoids_json is not None else None,
-    )
-    stats = _load_stats(Path(stats_csv))
-    abilities = _load_abilities(Path(abilities_csv), (zoid.type for zoid in zoids.values()))
+    zoids = _load_zoids(Path(zoids_json))
+    stats = _load_stats(Path(stats_json))
+    abilities = _load_abilities(Path(abilities_json), (zoid.type for zoid in zoids.values()))
     return EnemyData(
         zoids=zoids,
         abilities=abilities,

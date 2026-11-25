@@ -15,7 +15,7 @@ class EnergyTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.data = enemy_stats.load_enemy_data(*(ROOT / name for name in
-            ('ZoidsDB.csv', 'Stats.csv', 'Zoid_Abilities.csv', 'zoids.json')))
+            ('zoids.json', 'stats.json', 'abilities.json')))
 
     def test_actions_and_invalid_inputs(self):
         self.assertEqual(energy.act('23', '25', 'start', '3'), 25)

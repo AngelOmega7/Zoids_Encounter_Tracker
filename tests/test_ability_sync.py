@@ -1,4 +1,3 @@
-import csv
 import json
 from dataclasses import replace
 from decimal import Decimal
@@ -15,16 +14,15 @@ class AbilitySyncTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.data = enemy_stats.load_enemy_data(*(ROOT / name for name in
-            ('ZoidsDB.csv', 'Stats.csv', 'Zoid_Abilities.csv', 'zoids.json')))
+            ('zoids.json', 'stats.json', 'abilities.json')))
 
     def test_revised_catalog_fields_match_character_sheet(self):
         if not SOURCE.exists():
             self.skipTest('Sibling Character Sheet catalog is unavailable')
         source = json.loads(SOURCE.read_text())
-        with (ROOT / 'Zoid_Abilities.csv').open(newline='') as handle:
-            reader = csv.DictReader(handle)
-            headers = reader.fieldnames
-            rows = {row[headers[0]]: row for row in reader}
+        catalog = json.loads((ROOT / 'abilities.json').read_text())
+        headers = catalog['columns']
+        rows = {row[headers[0]]: row for row in catalog['records']}
         for record in source['records']:
             if not (record.get('family') in FAMILIES or
                     (record.get('family') in RANK_FOUR_FAMILIES and record.get('rank') == 4) or

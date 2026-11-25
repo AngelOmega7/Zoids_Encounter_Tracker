@@ -1,0 +1,2777 @@
+{
+  "schema_version": 1,
+  "columns": [
+    "Item",
+    "Category",
+    "Tier",
+    "Weight",
+    "BLOX"
+  ],
+  "records": [
+    {
+      "Item": "Particle Cannon",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Mini Laser",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "2-Set Laser",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "70",
+      "BLOX": ""
+    },
+    {
+      "Item": "3-Set Laser",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Laser Machine Gun",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "50",
+      "BLOX": ""
+    },
+    {
+      "Item": "Beam Rifle",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Assault Beam Cannon",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "50",
+      "BLOX": ""
+    },
+    {
+      "Item": "Beam Cannon",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "50",
+      "BLOX": ""
+    },
+    {
+      "Item": "Accelerated Cannons",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "Double Cannon",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "Impact Cannon",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "Shock Gun",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "Close-Range Rail Gun",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "Machine Gun",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Anti-Air Machine Gun",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "50",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gatling Cannon",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Anti-Air Gatling",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "50",
+      "BLOX": ""
+    },
+    {
+      "Item": "2-Set Missile",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "70",
+      "BLOX": ""
+    },
+    {
+      "Item": "4-Set Missile",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Anti-Air 2-Set Missile",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Spark Cannon",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Poison Gas Cannon",
+      "Category": "Weapon",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Heavy Particle Cannon",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Hyper Particle Cannon",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "4-Set Laser",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "Anti-Air Laser",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "2-Set Anti-Air Laser",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "70",
+      "BLOX": ""
+    },
+    {
+      "Item": "3-Set Anti-Air Laser",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Pulse Laser Gun",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Beam Needle",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "50",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gatling Beam",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "50",
+      "BLOX": ""
+    },
+    {
+      "Item": "2-Set High Speed Cannon",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Triple Cannon",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Accelerated Impact Cannon",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "3-Set Impact Cannon",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "Assault Rifle",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Rail Gun",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Heavy Machine Gun",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Hyper Machine Gun",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Vulcan Gun",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Anti-Air Vulcan",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Heavy Gatling",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "50",
+      "BLOX": ""
+    },
+    {
+      "Item": "High Speed Gatling",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "6-Set Missile",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "8-Set Missile",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Anti-Air 4-Set Missile",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "50",
+      "BLOX": ""
+    },
+    {
+      "Item": "Long-Range Missile",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "Large Missile",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Super Spark Cannon",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Poison Mist Cannon",
+      "Category": "Weapon",
+      "Tier": "2",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Plasma Particle Cannon",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Photon Paticle Cannon",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Charge Particle Cannon",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "4-Set Anti-Air Laser",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Ray Storm",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Rolling Cannon",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Hybrid Cannon",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "Linear Cannon",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Long-Range Rifle",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "50",
+      "BLOX": ""
+    },
+    {
+      "Item": "High Speed Rail Gun",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Super Speed Rail Gun",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "50",
+      "BLOX": ""
+    },
+    {
+      "Item": "Mega Vulcan",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Anti-Air Mega Vulcan",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "Accelerated Gatling",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "16-Set Missile",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Anti-Air 8-Set Missile",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Anti-Air 16-Set Missile",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Napalm Missile",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Neutron Missile",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Spread Missile",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Sonic Cannon",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Acid Cannon",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Extra Electro Magnetic Cannon",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Poison Cloud Cannon",
+      "Category": "Weapon",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "External Charge Particle Cannon",
+      "Category": "Weapon",
+      "Tier": "4",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Focus Charge Particle Cannon",
+      "Category": "Weapon",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Hyper Cannon",
+      "Category": "Weapon",
+      "Tier": "4",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Assault Cannon",
+      "Category": "Weapon",
+      "Tier": "4",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Hyper Rail Gun",
+      "Category": "Weapon",
+      "Tier": "4",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Hyper Missile",
+      "Category": "Weapon",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Super Sonic Cannon",
+      "Category": "Weapon",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Concentrate Acid Cannon",
+      "Category": "Weapon",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Ele Shot",
+      "Category": "Weapon",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gravity Cannon",
+      "Category": "Weapon",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Spread Charge Particle Cannon",
+      "Category": "Weapon",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Great Charge Particle Cannon",
+      "Category": "Weapon",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Buster Cannon",
+      "Category": "Weapon",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Ultra Cannon",
+      "Category": "Weapon",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Reaction Missile",
+      "Category": "Weapon",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Extension Armor",
+      "Category": "Armor",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "Multiple Armor",
+      "Category": "Armor",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "Super-Heavy Armor",
+      "Category": "Armor",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "Small E-Shield Generator",
+      "Category": "Armor",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "Smokescreen Generator",
+      "Category": "Armor",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "Micro Sensor",
+      "Category": "Armor",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "Enhanced Micro Sensor",
+      "Category": "Armor",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "Laser Sensor",
+      "Category": "Armor",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "Turbo Charger",
+      "Category": "Armor",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "Large Extension Armor",
+      "Category": "Armor",
+      "Tier": "2",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Large Multiple Armor",
+      "Category": "Armor",
+      "Tier": "2",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "E-Protector",
+      "Category": "Armor",
+      "Tier": "2",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "E-Shield Generator",
+      "Category": "Armor",
+      "Tier": "2",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Large Smokescreen Generator",
+      "Category": "Armor",
+      "Tier": "2",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Electro-Magnetic Jammer",
+      "Category": "Armor",
+      "Tier": "2",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Enhanced Laser Sensor",
+      "Category": "Armor",
+      "Tier": "2",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Composite Sensor",
+      "Category": "Armor",
+      "Tier": "2",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Magnetism Detector",
+      "Category": "Armor",
+      "Tier": "2",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Thruster",
+      "Category": "Armor",
+      "Tier": "2",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Large Super-Heavy Armor",
+      "Category": "Armor",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Chobam Armor",
+      "Category": "Armor",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Laser Diffusion Equipment",
+      "Category": "Armor",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "F-Round Shield",
+      "Category": "Armor",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Large E-Shield Generator",
+      "Category": "Armor",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Optical Camouflage",
+      "Category": "Armor",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "ECM",
+      "Category": "Armor",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Enhanced Composite Sensor",
+      "Category": "Armor",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Infra-Red Scanner",
+      "Category": "Armor",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Radar System",
+      "Category": "Armor",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Large Magnetism Detector",
+      "Category": "Armor",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "GPS Magnetism Detector",
+      "Category": "Armor",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Sonic Detector",
+      "Category": "Armor",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "High Mobility Thruster",
+      "Category": "Armor",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Ion Projector",
+      "Category": "Armor",
+      "Tier": "3",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "Enhanced Chobam Armor",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "70",
+      "BLOX": ""
+    },
+    {
+      "Item": "Full Armor System",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "70",
+      "BLOX": ""
+    },
+    {
+      "Item": "Rare Metal Armor",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Fused Armor",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "50",
+      "BLOX": ""
+    },
+    {
+      "Item": "Enhanced Optical Camouflage",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "50",
+      "BLOX": ""
+    },
+    {
+      "Item": "Stealth System",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "Electron Disruptor Equipment",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "Radar",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Large Radar",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Enhanced Radar System",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "3D Radar",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Large GPS Magnetism Detector",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "Large Sonic Detector",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "After Burner",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "Core Enhance Unit",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Acid Neutralizer Unit",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "I-Field Generator",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Self Recovery Unit",
+      "Category": "Armor",
+      "Tier": "4",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Anti-Laser Armor",
+      "Category": "Armor",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "EMP Hardened Circuits",
+      "Category": "Armor",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Anti Charge Particle Shield",
+      "Category": "Armor",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Enhanced Fused Armor",
+      "Category": "Armor",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Infra-Red Scope",
+      "Category": "Armor",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "All-Weather Radar",
+      "Category": "Armor",
+      "Tier": "5",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Radome Unit",
+      "Category": "Armor",
+      "Tier": "5",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Accelerator Equipment",
+      "Category": "Armor",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "ZOS Prototype",
+      "Category": "Armor",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "ZOS Enhanced Type",
+      "Category": "Armor",
+      "Tier": "5",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "ZOS Mass Produced",
+      "Category": "Armor",
+      "Tier": "5",
+      "Weight": "15",
+      "BLOX": ""
+    },
+    {
+      "Item": "BX",
+      "Category": "Core",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": "1"
+    },
+    {
+      "Item": "H1",
+      "Category": "Core",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "IS",
+      "Category": "Core",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "SS",
+      "Category": "Core",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "ZN",
+      "Category": "Core",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "FL",
+      "Category": "Core",
+      "Tier": "2",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "H2",
+      "Category": "Core",
+      "Tier": "2",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "WT",
+      "Category": "Core",
+      "Tier": "2",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "CR",
+      "Category": "Core",
+      "Tier": "3",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "GS",
+      "Category": "Core",
+      "Tier": "3",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "SP",
+      "Category": "Core",
+      "Tier": "3",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "ZG",
+      "Category": "Core",
+      "Tier": "3",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "DS",
+      "Category": "Core",
+      "Tier": "4",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "DT",
+      "Category": "Core",
+      "Tier": "4",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "GB",
+      "Category": "Core",
+      "Tier": "4",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "GG",
+      "Category": "Core",
+      "Tier": "4",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "GH",
+      "Category": "Core",
+      "Tier": "4",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "KW",
+      "Category": "Core",
+      "Tier": "4",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "SL",
+      "Category": "Core",
+      "Tier": "4",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "BT",
+      "Category": "Core",
+      "Tier": "5",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "DZ",
+      "Category": "Core",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "GV",
+      "Category": "Core",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "KG",
+      "Category": "Core",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "MT",
+      "Category": "Core",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "TL",
+      "Category": "Core",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "US",
+      "Category": "Core",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "UX",
+      "Category": "Core",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "CA Ion S",
+      "Category": "Item",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "CA Ion M",
+      "Category": "Item",
+      "Tier": "2",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Shock Wave Unit",
+      "Category": "Item",
+      "Tier": "2",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Code Cleaner",
+      "Category": "Item",
+      "Tier": "2",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "CA Ion L",
+      "Category": "Item",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "CA Ion Z",
+      "Category": "Item",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Evacuation Unit",
+      "Category": "Item",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Reactivation Unit",
+      "Category": "Item",
+      "Tier": "5",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Return Transmat Unit",
+      "Category": "Item",
+      "Tier": "5",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Hellrunner",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Molga",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "80",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gator",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Godos",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Iguan",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Molga Cannonry",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Saicurtis",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Double Sworder",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Cannon Tortoise",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Barigator",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Sea Striker",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Pteras",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gun Tiger",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Saberlion",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Black Rhimos",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Brachios",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Cannon Tortoise BC",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Stealth Viper",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Zabat",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Command Wolf",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Guysack",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Killer Dome",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Pteras Bomber",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Command Wolf Town",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gun Sniper",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Rev Raptor",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Rev Raptor Pile Bunker",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Zaber Fang Old",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "Hammer Rock",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gustav",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Atak Kat",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Zaber Fang",
+      "Category": "ZiData",
+      "Tier": "1",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Redler",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Pteras Radome",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gun Sniper Weasel",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Shield Liger",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Allosaurer",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Zaber Fang TS",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Shield Liger DCS",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Command Wolf AC",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Climber Wolf",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Snipe Master",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gordos",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Red Horn",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Dark Poison",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Raynos",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gorhecks",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Redler BoostC",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Zaber Fang AT",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Iron Kong",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Snipe Master FB",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Snipe Master AS",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gordos LR",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Red Horn BG",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Guysack Stinger",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Hammer Head",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Hover Cargo",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "60",
+      "BLOX": ""
+    },
+    {
+      "Item": "Lightning Saix",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Hammer Head VL",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Shield Liger DCS-J",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Storm Sworder",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Dibison",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Wardick",
+      "Category": "ZiData",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Unenlagia",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Mosasledge",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Nightwise",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Flyscissors",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Shell Karn",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Diplo Gun",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Demon's Head",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Leo Blaze",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Jet Falcon",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Redler Interceptor",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Zaber Fang SS",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Command Wolf IS",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Rev Hunter",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Iron Kong Maneuver",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gun sniper LS",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gun Sniper NS",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Zaber Fang RS",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Lightning Saix BS",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Blade Liger",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Liger Aero",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Dark Horn",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Iron Kong SS",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Elephander",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Dark Spiner",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Dark Horn HS",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Stormsworder F",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Spark Liger",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Iron Kong PK",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Iron Drill",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Geno Saurer",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Griffin",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Bloodler",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Blade Liger AB",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Cerberus",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gravity Bison",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Elephander AG",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Proto Breaker",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Stormsworder FX",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Proto Zaber",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gojulas",
+      "Category": "ZiData",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Fire Phoenix",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Buster Eagle",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Shadow Fox",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "2-Arm Lizard",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Lord Gale",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Konig Wolf",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Konig Wolf DSR",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Fuzor Dragon",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Chimera Dragon",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Psycho Geno Saurer",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Geno Breaker",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Dragon Nest",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Geno Scissors",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Geno Trooper",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Whale King",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gun Blaster",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gojulas the Ogre",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gojulas Gunner",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Pteramander",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Killer Spiner",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Trinity Liger BA",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gojulas Giga",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Geno Flame",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Geno Hydra",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gojulas Giga Cannon",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gojulox",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "5",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Diablo Tiger",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Cyclops",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Cyclops 2",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Geno Hydra KA",
+      "Category": "ZiData",
+      "Tier": "4",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Liger Zero",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Zero Empire (CAU)",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Zero X (CAU)",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Zero Phoenix",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Zero Falcon",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": "1"
+    },
+    {
+      "Item": "Zero Schneider (CAU)",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Zero Jeager (CAU)",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Zero Panzer (CAU)",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Trinity Liger",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Berserk Fury",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Strum Fury (CAU)",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Jagd Fury (CAU)",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Berserk Fury Z (CAU)",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Mad Thunder",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Death Stinger",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Ultra Saurus",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Jagged Stinger",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Ultra Phalanx",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Death Saurer",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Bloody Demon",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "5",
+      "BLOX": ""
+    },
+    {
+      "Item": "Gilvader",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "1",
+      "BLOX": ""
+    },
+    {
+      "Item": "Death Meteor",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "1",
+      "BLOX": ""
+    },
+    {
+      "Item": "King Gojulas",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "1",
+      "BLOX": ""
+    },
+    {
+      "Item": "Blitz Tiger",
+      "Category": "ZiData",
+      "Tier": "5",
+      "Weight": "1",
+      "BLOX": ""
+    },
+    {
+      "Item": "AS Unit",
+      "Category": "Part",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "BA Unit",
+      "Category": "Part",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "BC Unit",
+      "Category": "Part",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "BG Unit",
+      "Category": "Part",
+      "Tier": "1",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "DCS Unit",
+      "Category": "Part",
+      "Tier": "1",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Bomber Unit",
+      "Category": "Part",
+      "Tier": "1",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Radome Unit",
+      "Category": "Part",
+      "Tier": "1",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "AB Unit",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "AG Unit",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "FB Unit",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "GC Set",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "HS Set",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "KA Unit",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "LM Set",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "MS Unit",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "PB Unit",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "PK Unit",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "VL Unit",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "WW Unit",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Assault Unit",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Attack Unit",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Cannonry Unit",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Lg Cal. BC",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "EM Unit",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Rokt Gun",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Climb Eng.",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Dmgd Rifle",
+      "Category": "Part",
+      "Tier": "2",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "LG Head",
+      "Category": "Part",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "DSR Unit",
+      "Category": "Part",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Tiger Spirit",
+      "Category": "Part",
+      "Tier": "3",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "Lmt. OS",
+      "Category": "Part",
+      "Tier": "3",
+      "Weight": "40",
+      "BLOX": ""
+    },
+    {
+      "Item": "Sciss Part",
+      "Category": "Part",
+      "Tier": "4",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Flight Part",
+      "Category": "Part",
+      "Tier": "4",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Norm. OS",
+      "Category": "Part",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": ""
+    },
+    {
+      "Item": "DA Gatt. D",
+      "Category": "Part",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": "1"
+    },
+    {
+      "Item": "MD Gatt. D",
+      "Category": "Part",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": "1"
+    },
+    {
+      "Item": "CD Gatt. D",
+      "Category": "Part",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": "1"
+    },
+    {
+      "Item": "GX Gatt. D",
+      "Category": "Part",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": "1"
+    },
+    {
+      "Item": "GF Gatt. D",
+      "Category": "Part",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": "1"
+    },
+    {
+      "Item": "KS Gatt. D",
+      "Category": "Part",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": "1"
+    },
+    {
+      "Item": "GC Gatt. D",
+      "Category": "Part",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": "1"
+    },
+    {
+      "Item": "LG Gatt. D",
+      "Category": "Part",
+      "Tier": "4",
+      "Weight": "20",
+      "BLOX": "1"
+    },
+    {
+      "Item": "WildZ OS",
+      "Category": "Part",
+      "Tier": "5",
+      "Weight": "30",
+      "BLOX": ""
+    },
+    {
+      "Item": "Jaegar Unit",
+      "Category": "Part",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Schneider Unit",
+      "Category": "Part",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Panzer Unit",
+      "Category": "Part",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "X Unit",
+      "Category": "Part",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Sturm Unit",
+      "Category": "Part",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "Jagd Unit",
+      "Category": "Part",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    },
+    {
+      "Item": "ZF Unit",
+      "Category": "Part",
+      "Tier": "5",
+      "Weight": "10",
+      "BLOX": ""
+    }
+  ]
+}

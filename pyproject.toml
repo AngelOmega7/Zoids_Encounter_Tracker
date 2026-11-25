@@ -6,10 +6,10 @@ description = "Zoids TTRPG Random Encounter Generator"
 requires-python = ">=3.13,<3.14"
 dependencies = [
     "flet==0.86.0",
-    "pandas>=2.0.0",
 ]
 
 [tool.flet]
 main-module = "main"
 [tool.flet.app]
-include = ["ZoidsDB.csv", "zoids.json", "LootDB.csv", "Stats.csv", "Zoid_Abilities.csv"]
+include = ["zoids.json", "stats.json", "abilities.json", "encounters.json", "loot.json", "assets/icon.png", "assets/icon.ico"]
+exclude = ["source", "tests", "tools", ".git", ".idea", ".venv", "build", "__pycache__", "**/__pycache__", "*.csv", "*.sqlite3", "*.sqlite3-*"]

@@ -1,4 +1,3 @@
-import csv
 import json
 from pathlib import Path
 import unittest
@@ -12,7 +11,7 @@ class GearSyncTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.data = enemy_stats.load_enemy_data(*(ROOT / name for name in
-            ('ZoidsDB.csv', 'Stats.csv', 'Zoid_Abilities.csv', 'zoids.json')))
+            ('zoids.json', 'stats.json', 'abilities.json')))
 
     def test_restored_weapons_use_slot_five_with_current_damage_and_energy(self):
         cases = (('Lightning Saix', 'Pulse Laser Gun:', 1, '110', '6'),
@@ -37,16 +36,10 @@ class GearSyncTests(unittest.TestCase):
         economized = enemy_stats.calculate_enemy_stats(zoid, 1, '', ['Economized Shooting'], self.data)
         self.assertEqual(economized.weapons[4].energy_cost, '6')
 
-    def test_tracker_required_levels_remain_consistent_with_csv(self):
-        with (ROOT / 'ZoidsDB.csv').open(newline='') as handle:
-            rows = {row['Name 1']: row for row in csv.DictReader(handle)}
+    def test_tracker_required_levels_remain_consistent_with_encounters(self):
+        rows = {row['name']: row for row in json.loads((ROOT / 'encounters.json').read_text())['records']}
         for name in ('Lightning Saix', 'Lightning Saix BS', 'Command Wolf IS', 'Shadow Fox'):
-            self.assertEqual(self.data.zoids[name].level_required, int(rows[name]['Level Required 5']))
-        fox = rows['Shadow Fox']
-        self.assertEqual(fox['Weapon 3 30'], '')
-        self.assertEqual(fox['Removable Equipment 47'], 'Laser Vulcan Gun')
-        self.assertEqual(fox['Damage 5 49'], '90')
-        self.assertIn('Close Range', fox['Damage Type 50'])
+            self.assertEqual(self.data.zoids[name].level_required, int(rows[name]['level']))
 
     def test_bundled_gear_matches_character_sheet_catalog(self):
         source = ROOT.parent / 'Character_Sheet_app/zoids_app/data/zoids.json'

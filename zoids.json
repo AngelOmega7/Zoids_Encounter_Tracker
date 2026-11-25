@@ -323,7 +323,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Zaber Fang Old"
+      ]
     },
     {
       "id": "zoids:zaber_fang",
@@ -533,7 +536,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Zaber Fang"
+      ]
     },
     {
       "id": "zoids:zaber_fang_rs",
@@ -678,7 +684,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Zaber Fang RS"
+      ]
     },
     {
       "id": "zoids:zaber_fang_ss",
@@ -823,7 +832,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Zaber Fang SS"
+      ]
     },
     {
       "id": "zoids:zaber_fang_at",
@@ -958,7 +970,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Zaber Fang AT"
+      ]
     },
     {
       "id": "zoids:zaber_fang_ts",
@@ -1093,7 +1108,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Zaber Fang TS"
+      ]
     },
     {
       "id": "zoids:proto_zaber",
@@ -1248,7 +1266,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Proto Zaber"
+      ]
     },
     {
       "id": "zoids:great_zaber",
@@ -1389,7 +1410,10 @@
         "armaments:zoid_equipment_slot_2": [
           "left"
         ]
-      }
+      },
+      "tracker_names": [
+        "Great Zaber"
+      ]
     },
     {
       "id": "zoids:diablo_tiger",
@@ -1534,7 +1558,10 @@
         null,
         3
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Diablo Tiger"
+      ]
     },
     {
       "id": "zoids:blitz_tiger",
@@ -1679,7 +1706,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Blitz Tiger"
+      ]
     },
     {
       "id": "zoids:atak_kat",
@@ -1824,7 +1854,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Atak Kat"
+      ]
     },
     {
       "id": "zoids:lightning_saix",
@@ -2086,7 +2119,10 @@
         "fixed_weapon_id": "zoids:lightning_saix:weapon:pulse_laser_gun",
         "template": "armaments:zoid_equipment_slot_1",
         "slot": "back"
-      }
+      },
+      "tracker_names": [
+        "Lightning Saix"
+      ]
     },
     {
       "id": "zoids:lightning_saix_bs",
@@ -2348,7 +2384,10 @@
         "fixed_weapon_id": "zoids:lightning_saix_bs:weapon:pulse_laser_gun",
         "template": "armaments:zoid_equipment_slot_1",
         "slot": "back"
-      }
+      },
+      "tracker_names": [
+        "Lightning Saix BS"
+      ]
     },
     {
       "id": "zoids:gun_tiger",
@@ -2488,7 +2527,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gun Tiger"
+      ]
     },
     {
       "id": "zoids:liger_zero",
@@ -2630,7 +2672,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Liger Zero"
+      ]
     },
     {
       "id": "zoids:zero_schneider_cau",
@@ -2771,7 +2816,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Zero Schneider (CAU)"
+      ]
     },
     {
       "id": "zoids:zero_jager_cau",
@@ -2917,7 +2965,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Zero Jeager (CAU)"
+      ]
     },
     {
       "id": "zoids:zero_panzer_cau",
@@ -3063,7 +3114,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Zero Panzer (CAU)"
+      ]
     },
     {
       "id": "zoids:zero_empire_cau",
@@ -3204,7 +3258,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Zero Empire (CAU)"
+      ]
     },
     {
       "id": "zoids:zero_x_cau",
@@ -3355,7 +3412,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Zero X (CAU)"
+      ]
     },
     {
       "id": "zoids:trinity_liger",
@@ -3495,7 +3555,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Trinity Liger"
+      ]
     },
     {
       "id": "zoids:trinity_liger_ba",
@@ -3640,7 +3703,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Trinity Liger BA"
+      ]
     },
     {
       "id": "zoids:shield_liger",
@@ -3775,7 +3841,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Shield Liger"
+      ]
     },
     {
       "id": "zoids:shield_liger_dcs",
@@ -3915,7 +3984,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Shield Liger DCS"
+      ]
     },
     {
       "id": "zoids:shield_liger_dcs_j",
@@ -4055,7 +4127,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Shield Liger DCS-J"
+      ]
     },
     {
       "id": "zoids:spark_liger",
@@ -4200,7 +4275,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Spark Liger"
+      ]
     },
     {
       "id": "zoids:blade_liger",
@@ -4335,7 +4413,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Blade Liger"
+      ]
     },
     {
       "id": "zoids:blade_liger_ab",
@@ -4475,7 +4556,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Blade Liger AB"
+      ]
     },
     {
       "id": "zoids:liger_aero",
@@ -4610,7 +4694,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Liger Aero"
+      ]
     },
     {
       "id": "zoids:saberlion",
@@ -4750,7 +4837,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Saberlion"
+      ]
     },
     {
       "id": "zoids:command_wolf",
@@ -4890,7 +4980,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Command Wolf"
+      ]
     },
     {
       "id": "zoids:command_wolf_town",
@@ -5026,7 +5119,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Command Wolf Town"
+      ]
     },
     {
       "id": "zoids:command_wolf_ac",
@@ -5161,7 +5257,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Command Wolf AC"
+      ]
     },
     {
       "id": "zoids:command_wolf_is",
@@ -5385,7 +5484,10 @@
         "fixed_weapon_id": "zoids:command_wolf_is:weapon:long_range_rifle",
         "template": "armaments:zoid_equipment_slot_1",
         "slot": "back"
-      }
+      },
+      "tracker_names": [
+        "Command Wolf IS"
+      ]
     },
     {
       "id": "zoids:cerberus",
@@ -5525,7 +5627,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Cerberus"
+      ]
     },
     {
       "id": "zoids:climber_wolf",
@@ -5665,7 +5770,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Climber Wolf"
+      ]
     },
     {
       "id": "zoids:shadow_fox",
@@ -5927,7 +6035,10 @@
         "fixed_weapon_id": "zoids:shadow_fox:weapon:laser_vulcan_gun",
         "template": "armaments:zoid_equipment_slot_1",
         "slot": "back"
-      }
+      },
+      "tracker_names": [
+        "Shadow Fox"
+      ]
     },
     {
       "id": "zoids:konig_wolf",
@@ -6067,7 +6178,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Konig Wolf"
+      ]
     },
     {
       "id": "zoids:konig_wolf_dsr_cau",
@@ -6213,7 +6327,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Konig Wolf DSR"
+      ]
     },
     {
       "id": "zoids:iron_kong",
@@ -6348,7 +6465,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Iron Kong"
+      ]
     },
     {
       "id": "zoids:iron_kong_pk",
@@ -6493,7 +6613,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Iron Kong PK"
+      ]
     },
     {
       "id": "zoids:iron_kong_maneuver",
@@ -6628,7 +6751,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Iron Kong Maneuver"
+      ]
     },
     {
       "id": "zoids:iron_kong_ss",
@@ -6773,7 +6899,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Iron Kong SS"
+      ]
     },
     {
       "id": "zoids:iron_drill",
@@ -6913,7 +7042,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Iron Drill"
+      ]
     },
     {
       "id": "zoids:hammer_rock",
@@ -7053,7 +7185,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Hammer Rock"
+      ]
     },
     {
       "id": "zoids:dibison",
@@ -7193,7 +7328,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Dibison"
+      ]
     },
     {
       "id": "zoids:gravity_bison",
@@ -7328,7 +7466,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gravity Bison"
+      ]
     },
     {
       "id": "zoids:black_rhimos",
@@ -7468,7 +7609,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Black Rhimos"
+      ]
     },
     {
       "id": "zoids:cyclops",
@@ -7596,7 +7740,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Cyclops"
+      ]
     },
     {
       "id": "zoids:cyclops_2",
@@ -7731,7 +7878,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Cyclops 2"
+      ]
     },
     {
       "id": "zoids:elephander",
@@ -7881,7 +8031,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Elephander"
+      ]
     },
     {
       "id": "zoids:elephander_ag",
@@ -8031,7 +8184,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Elephander AG"
+      ]
     },
     {
       "id": "zoids:geno_saurer",
@@ -8176,7 +8332,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Geno Saurer"
+      ]
     },
     {
       "id": "zoids:psycho_geno_saurer",
@@ -8321,7 +8480,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Psycho Geno Saurer"
+      ]
     },
     {
       "id": "zoids:geno_breaker",
@@ -8461,7 +8623,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Geno Breaker"
+      ]
     },
     {
       "id": "zoids:proto_breaker",
@@ -8606,7 +8771,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Proto Breaker"
+      ]
     },
     {
       "id": "zoids:geno_scissors",
@@ -8751,7 +8919,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Geno Scissors"
+      ]
     },
     {
       "id": "zoids:geno_trooper",
@@ -8896,7 +9067,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Geno Trooper"
+      ]
     },
     {
       "id": "zoids:geno_flame",
@@ -9036,7 +9210,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Geno Flame"
+      ]
     },
     {
       "id": "zoids:berserk_fury",
@@ -9181,7 +9358,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Berserk Fury"
+      ]
     },
     {
       "id": "zoids:sturm_fury_cau",
@@ -9327,7 +9507,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Strum Fury (CAU)"
+      ]
     },
     {
       "id": "zoids:jagd_fury_cau",
@@ -9468,7 +9651,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Jagd Fury (CAU)"
+      ]
     },
     {
       "id": "zoids:berserk_fury_z_cau",
@@ -9609,7 +9795,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Berserk Fury Z (CAU)"
+      ]
     },
     {
       "id": "zoids:geno_hydra",
@@ -9759,7 +9948,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Geno Hydra"
+      ]
     },
     {
       "id": "zoids:geno_hydra_ka",
@@ -9899,7 +10091,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Geno Hydra KA"
+      ]
     },
     {
       "id": "zoids:dark_spiner",
@@ -10054,7 +10249,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Dark Spiner"
+      ]
     },
     {
       "id": "zoids:killer_spiner",
@@ -10194,7 +10392,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Killer Spiner"
+      ]
     },
     {
       "id": "zoids:gun_sniper",
@@ -10349,7 +10550,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gun Sniper"
+      ]
     },
     {
       "id": "zoids:gun_sniper_weasel",
@@ -10489,7 +10693,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gun Sniper Weasel"
+      ]
     },
     {
       "id": "zoids:gun_sniper_ls",
@@ -10630,7 +10837,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gun sniper LS"
+      ]
     },
     {
       "id": "zoids:gun_sniper_ns",
@@ -10775,7 +10985,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gun Sniper NS"
+      ]
     },
     {
       "id": "zoids:snipe_master",
@@ -10920,7 +11133,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Snipe Master"
+      ]
     },
     {
       "id": "zoids:snipe_master_fb",
@@ -11065,7 +11281,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Snipe Master FB"
+      ]
     },
     {
       "id": "zoids:snipe_master_as",
@@ -11215,7 +11434,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Snipe Master AS"
+      ]
     },
     {
       "id": "zoids:rev_raptor",
@@ -11355,7 +11577,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Rev Raptor"
+      ]
     },
     {
       "id": "zoids:rev_raptor_pile_bunker",
@@ -11496,7 +11721,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Rev Raptor Pile Bunker"
+      ]
     },
     {
       "id": "zoids:rev_hunter",
@@ -11631,7 +11859,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Rev Hunter"
+      ]
     },
     {
       "id": "zoids:hellrunner",
@@ -11766,7 +11997,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Hellrunner"
+      ]
     },
     {
       "id": "zoids:ultra_saurus",
@@ -11894,7 +12128,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Ultra Saurus"
+      ]
     },
     {
       "id": "zoids:ultra_phalanx",
@@ -12026,7 +12263,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Ultra Phalanx"
+      ]
     },
     {
       "id": "zoids:gordos",
@@ -12171,7 +12411,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gordos"
+      ]
     },
     {
       "id": "zoids:gorhecks",
@@ -12311,7 +12554,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gorhecks"
+      ]
     },
     {
       "id": "zoids:gordos_lr",
@@ -12446,7 +12692,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gordos LR"
+      ]
     },
     {
       "id": "zoids:red_horn",
@@ -12586,7 +12835,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Red Horn"
+      ]
     },
     {
       "id": "zoids:red_horn_bg",
@@ -12731,7 +12983,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Red Horn BG"
+      ]
     },
     {
       "id": "zoids:dark_horn",
@@ -12871,7 +13126,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Dark Horn"
+      ]
     },
     {
       "id": "zoids:dark_horn_hs",
@@ -13016,7 +13274,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Dark Horn HS"
+      ]
     },
     {
       "id": "zoids:mad_thunder",
@@ -13151,7 +13412,10 @@
         null,
         2
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Mad Thunder"
+      ]
     },
     {
       "id": "zoids:gun_blaster",
@@ -13291,7 +13555,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gun Blaster"
+      ]
     },
     {
       "id": "zoids:brachios",
@@ -13431,7 +13698,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Brachios"
+      ]
     },
     {
       "id": "zoids:gilvader",
@@ -13571,7 +13841,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gilvader"
+      ]
     },
     {
       "id": "zoids:gojulas",
@@ -13716,7 +13989,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gojulas"
+      ]
     },
     {
       "id": "zoids:gojulas_the_ogre",
@@ -13856,7 +14132,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gojulas the Ogre"
+      ]
     },
     {
       "id": "zoids:gojulas_gunner",
@@ -13996,7 +14275,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gojulas Gunner"
+      ]
     },
     {
       "id": "zoids:gojulas_giga",
@@ -14141,7 +14423,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gojulas Giga"
+      ]
     },
     {
       "id": "zoids:gojulas_giga_cannon",
@@ -14286,7 +14571,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gojulas Giga Cannon"
+      ]
     },
     {
       "id": "zoids:king_gojulas",
@@ -14431,7 +14719,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "King Gojulas"
+      ]
     },
     {
       "id": "zoids:death_saurer",
@@ -14576,7 +14867,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Death Saurer"
+      ]
     },
     {
       "id": "zoids:bloody_demon",
@@ -14721,7 +15015,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Bloody Demon"
+      ]
     },
     {
       "id": "zoids:death_meteor",
@@ -14871,7 +15168,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Death Meteor"
+      ]
     },
     {
       "id": "zoids:godos",
@@ -15011,7 +15311,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Godos"
+      ]
     },
     {
       "id": "zoids:allosaurer",
@@ -15156,7 +15459,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Allosaurer"
+      ]
     },
     {
       "id": "zoids:iguan",
@@ -15296,7 +15602,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Iguan"
+      ]
     },
     {
       "id": "zoids:leo_blaze",
@@ -15446,7 +15755,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Leo Blaze"
+      ]
     },
     {
       "id": "zoids:unenlagia",
@@ -15601,7 +15913,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Unenlagia"
+      ]
     },
     {
       "id": "zoids:mosasledge",
@@ -15741,7 +16056,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Mosasledge"
+      ]
     },
     {
       "id": "zoids:nightwise",
@@ -15876,7 +16194,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Nightwise"
+      ]
     },
     {
       "id": "zoids:buster_eagle",
@@ -16011,7 +16332,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Buster Eagle"
+      ]
     },
     {
       "id": "zoids:flyscissors",
@@ -16161,7 +16485,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Flyscissors"
+      ]
     },
     {
       "id": "zoids:shell_karn",
@@ -16306,7 +16633,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Shell Karn"
+      ]
     },
     {
       "id": "zoids:diplo_gun",
@@ -16446,7 +16776,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Diplo Gun"
+      ]
     },
     {
       "id": "zoids:demon_s_head",
@@ -16591,7 +16924,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Demon's Head"
+      ]
     },
     {
       "id": "zoids:fire_phoenix",
@@ -16726,7 +17062,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Fire Phoenix"
+      ]
     },
     {
       "id": "zoids:jet_falcon",
@@ -16871,7 +17210,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Jet Falcon"
+      ]
     },
     {
       "id": "zoids:zero_phoenix",
@@ -17016,7 +17358,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Zero Phoenix"
+      ]
     },
     {
       "id": "zoids:zero_falcon",
@@ -17166,7 +17511,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Zero Falcon"
+      ]
     },
     {
       "id": "zoids:fuzor_dragon",
@@ -17311,7 +17659,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Fuzor Dragon"
+      ]
     },
     {
       "id": "zoids:chimera_dragon",
@@ -17451,7 +17802,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Chimera Dragon"
+      ]
     },
     {
       "id": "zoids:gojulox",
@@ -17601,7 +17955,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gojulox"
+      ]
     },
     {
       "id": "zoids:2_arm_lizard",
@@ -17751,7 +18108,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "2-Arm Lizard"
+      ]
     },
     {
       "id": "zoids:griffin",
@@ -17886,7 +18246,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Griffin"
+      ]
     },
     {
       "id": "zoids:lord_gale",
@@ -18021,7 +18384,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Lord Gale"
+      ]
     },
     {
       "id": "zoids:death_stinger",
@@ -18161,7 +18527,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Death Stinger"
+      ]
     },
     {
       "id": "zoids:jagged_stinger",
@@ -18301,7 +18670,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Jagged Stinger"
+      ]
     },
     {
       "id": "zoids:guysack",
@@ -18441,7 +18813,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Guysack"
+      ]
     },
     {
       "id": "zoids:guysack_stinger",
@@ -18586,7 +18961,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Guysack Stinger"
+      ]
     },
     {
       "id": "zoids:molga",
@@ -18726,7 +19104,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Molga"
+      ]
     },
     {
       "id": "zoids:molga_cannonry",
@@ -18872,7 +19253,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Molga Cannonry"
+      ]
     },
     {
       "id": "zoids:dark_poison",
@@ -19007,7 +19391,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Dark Poison"
+      ]
     },
     {
       "id": "zoids:saicurtis",
@@ -19152,7 +19539,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Saicurtis"
+      ]
     },
     {
       "id": "zoids:double_sworder",
@@ -19297,7 +19687,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Double Sworder"
+      ]
     },
     {
       "id": "zoids:killer_dome",
@@ -19442,7 +19835,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Killer Dome"
+      ]
     },
     {
       "id": "zoids:cannon_tortoise",
@@ -19577,7 +19973,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Cannon Tortoise"
+      ]
     },
     {
       "id": "zoids:cannon_tortoise_bc",
@@ -19717,7 +20116,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Cannon Tortoise BC"
+      ]
     },
     {
       "id": "zoids:gator",
@@ -19857,7 +20259,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gator"
+      ]
     },
     {
       "id": "zoids:barigator",
@@ -19992,7 +20397,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Barigator"
+      ]
     },
     {
       "id": "zoids:stealth_viper",
@@ -20142,7 +20550,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Stealth Viper"
+      ]
     },
     {
       "id": "zoids:hammer_head",
@@ -20282,7 +20693,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Hammer Head"
+      ]
     },
     {
       "id": "zoids:hammer_head_vl",
@@ -20417,7 +20831,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Hammer Head VL"
+      ]
     },
     {
       "id": "zoids:wardick",
@@ -20557,7 +20974,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Wardick"
+      ]
     },
     {
       "id": "zoids:sea_striker",
@@ -20697,7 +21117,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Sea Striker"
+      ]
     },
     {
       "id": "zoids:redler",
@@ -20837,7 +21260,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Redler"
+      ]
     },
     {
       "id": "zoids:redler_boostc",
@@ -20978,7 +21404,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Redler BoostC"
+      ]
     },
     {
       "id": "zoids:redler_interceptor",
@@ -21113,7 +21542,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Redler Interceptor"
+      ]
     },
     {
       "id": "zoids:bloodler",
@@ -21248,7 +21680,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Bloodler"
+      ]
     },
     {
       "id": "zoids:pteras",
@@ -21388,7 +21823,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Pteras"
+      ]
     },
     {
       "id": "zoids:pteras_bomber",
@@ -21528,7 +21966,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Pteras Bomber"
+      ]
     },
     {
       "id": "zoids:pteras_radome",
@@ -21668,7 +22109,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Pteras Radome"
+      ]
     },
     {
       "id": "zoids:storm_sworder",
@@ -21808,7 +22252,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Storm Sworder"
+      ]
     },
     {
       "id": "zoids:stormsworder_f",
@@ -21948,7 +22395,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Stormsworder F"
+      ]
     },
     {
       "id": "zoids:stormsworder_fx",
@@ -22093,7 +22543,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Stormsworder FX"
+      ]
     },
     {
       "id": "zoids:zabat",
@@ -22233,7 +22686,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Zabat"
+      ]
     },
     {
       "id": "zoids:raynos",
@@ -22368,7 +22824,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Raynos"
+      ]
     },
     {
       "id": "zoids:pteramander",
@@ -22508,7 +22967,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Pteramander"
+      ]
     },
     {
       "id": "zoids:buster_fury",
@@ -22648,7 +23110,10 @@
         null,
         null
       ],
-      "energy_source": "Owner-approved proposal"
+      "energy_source": "Owner-approved proposal",
+      "tracker_names": [
+        "Buster Fury (CAU)"
+      ]
     },
     {
       "id": "transports:gustav",
@@ -22779,7 +23244,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Gustav"
+      ]
     },
     {
       "id": "transports:hover_cargo",
@@ -22910,7 +23378,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Hover Cargo"
+      ]
     },
     {
       "id": "transports:dragoon_nest",
@@ -23035,7 +23506,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Dragon Nest"
+      ]
     },
     {
       "id": "transports:whale_king",
@@ -23159,7 +23633,10 @@
         null,
         null
       ],
-      "energy_source": "Energy_Addition.ods (matched by weapon name)"
+      "energy_source": "Energy_Addition.ods (matched by weapon name)",
+      "tracker_names": [
+        "Whale King"
+      ]
     }
   ],
   "excluded_rows": [

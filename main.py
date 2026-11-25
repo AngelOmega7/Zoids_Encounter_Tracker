@@ -44,17 +44,15 @@ def main(page: ft.Page):
     stats_type_list = []
     try:
         from data_paths import (
-            ZOIDS_CSV,
             ZOIDS_JSON,
-            STATS_CSV,
-            ABILITIES_CSV,
-            validate_csv as _validate_csv,
+            STATS_JSON,
+            ABILITIES_JSON,
+            validate_catalog,
         )
         enemy_data = enemy_stats.load_enemy_data(
-            _validate_csv(ZOIDS_CSV),
-            _validate_csv(STATS_CSV),
-            _validate_csv(ABILITIES_CSV),
-            zoids_json=ZOIDS_JSON,
+            validate_catalog(ZOIDS_JSON),
+            validate_catalog(STATS_JSON),
+            validate_catalog(ABILITIES_JSON),
         )
         enemy_name_list = list(enemy_data.zoid_names)
         ability_name_list = list(enemy_data.ability_names)
@@ -266,7 +264,7 @@ def main(page: ft.Page):
         game_categories = [cat for cat in loot.get_all_categories() if cat != "All"]
 
         if not game_categories:
-            page.overlay.append(ft.SnackBar(ft.Text("No categories found in LootDB.csv.")))
+            page.overlay.append(ft.SnackBar(ft.Text("No categories found in loot.json.")))
             page.update()
             return
 

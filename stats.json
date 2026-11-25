@@ -1,0 +1,3213 @@
+{
+  "schema_version": 1,
+  "styles": {
+    "Tank": [
+      {
+        "level": "1",
+        "health": "50.00%",
+        "armor": "10.00%",
+        "react": "10.00%",
+        "perception": "10.00%",
+        "to_hit": "10.00%"
+      },
+      {
+        "level": "2",
+        "health": "53.00%",
+        "armor": "13.00%",
+        "react": "11.00%",
+        "perception": "12.00%",
+        "to_hit": "11.00%"
+      },
+      {
+        "level": "3",
+        "health": "56.00%",
+        "armor": "16.00%",
+        "react": "12.00%",
+        "perception": "14.00%",
+        "to_hit": "12.00%"
+      },
+      {
+        "level": "4",
+        "health": "59.00%",
+        "armor": "19.00%",
+        "react": "13.00%",
+        "perception": "16.00%",
+        "to_hit": "13.00%"
+      },
+      {
+        "level": "5",
+        "health": "62.00%",
+        "armor": "22.00%",
+        "react": "14.00%",
+        "perception": "18.00%",
+        "to_hit": "14.00%"
+      },
+      {
+        "level": "6",
+        "health": "65.00%",
+        "armor": "25.00%",
+        "react": "15.00%",
+        "perception": "20.00%",
+        "to_hit": "15.00%"
+      },
+      {
+        "level": "7",
+        "health": "68.00%",
+        "armor": "28.00%",
+        "react": "16.00%",
+        "perception": "22.00%",
+        "to_hit": "16.00%"
+      },
+      {
+        "level": "8",
+        "health": "71.00%",
+        "armor": "31.00%",
+        "react": "17.00%",
+        "perception": "24.00%",
+        "to_hit": "17.00%"
+      },
+      {
+        "level": "9",
+        "health": "74.00%",
+        "armor": "34.00%",
+        "react": "18.00%",
+        "perception": "26.00%",
+        "to_hit": "18.00%"
+      },
+      {
+        "level": "10",
+        "health": "77.00%",
+        "armor": "37.00%",
+        "react": "19.00%",
+        "perception": "28.00%",
+        "to_hit": "19.00%"
+      },
+      {
+        "level": "11",
+        "health": "80.00%",
+        "armor": "40.00%",
+        "react": "20.00%",
+        "perception": "30.00%",
+        "to_hit": "20.00%"
+      },
+      {
+        "level": "12",
+        "health": "83.00%",
+        "armor": "43.00%",
+        "react": "21.00%",
+        "perception": "32.00%",
+        "to_hit": "21.00%"
+      },
+      {
+        "level": "13",
+        "health": "86.00%",
+        "armor": "47.00%",
+        "react": "22.00%",
+        "perception": "34.00%",
+        "to_hit": "22.00%"
+      },
+      {
+        "level": "14",
+        "health": "89.00%",
+        "armor": "50.00%",
+        "react": "23.00%",
+        "perception": "36.00%",
+        "to_hit": "23.00%"
+      },
+      {
+        "level": "15",
+        "health": "92.00%",
+        "armor": "53.00%",
+        "react": "24.00%",
+        "perception": "38.00%",
+        "to_hit": "24.00%"
+      },
+      {
+        "level": "16",
+        "health": "95.00%",
+        "armor": "56.00%",
+        "react": "25.00%",
+        "perception": "40.00%",
+        "to_hit": "25.00%"
+      },
+      {
+        "level": "17",
+        "health": "98.00%",
+        "armor": "59.00%",
+        "react": "26.00%",
+        "perception": "42.00%",
+        "to_hit": "26.00%"
+      },
+      {
+        "level": "18",
+        "health": "101.00%",
+        "armor": "62.00%",
+        "react": "27.00%",
+        "perception": "44.00%",
+        "to_hit": "27.00%"
+      },
+      {
+        "level": "19",
+        "health": "104.00%",
+        "armor": "65.00%",
+        "react": "28.00%",
+        "perception": "46.00%",
+        "to_hit": "28.00%"
+      },
+      {
+        "level": "20",
+        "health": "107.00%",
+        "armor": "68.00%",
+        "react": "29.00%",
+        "perception": "48.00%",
+        "to_hit": "29.00%"
+      },
+      {
+        "level": "21",
+        "health": "110.00%",
+        "armor": "71.00%",
+        "react": "30.00%",
+        "perception": "50.00%",
+        "to_hit": "30.00%"
+      },
+      {
+        "level": "22",
+        "health": "113.00%",
+        "armor": "74.00%",
+        "react": "31.00%",
+        "perception": "52.00%",
+        "to_hit": "31.00%"
+      },
+      {
+        "level": "23",
+        "health": "116.00%",
+        "armor": "77.00%",
+        "react": "32.00%",
+        "perception": "54.00%",
+        "to_hit": "32.00%"
+      },
+      {
+        "level": "24",
+        "health": "119.00%",
+        "armor": "80.00%",
+        "react": "33.00%",
+        "perception": "56.00%",
+        "to_hit": "33.00%"
+      },
+      {
+        "level": "25",
+        "health": "121.00%",
+        "armor": "83.00%",
+        "react": "34.00%",
+        "perception": "58.00%",
+        "to_hit": "34.00%"
+      },
+      {
+        "level": "26",
+        "health": "124.00%",
+        "armor": "86.00%",
+        "react": "35.00%",
+        "perception": "60.00%",
+        "to_hit": "35.00%"
+      },
+      {
+        "level": "27",
+        "health": "127.00%",
+        "armor": "89.00%",
+        "react": "36.00%",
+        "perception": "62.00%",
+        "to_hit": "36.00%"
+      },
+      {
+        "level": "28",
+        "health": "130.00%",
+        "armor": "92.00%",
+        "react": "37.00%",
+        "perception": "64.00%",
+        "to_hit": "37.00%"
+      },
+      {
+        "level": "29",
+        "health": "133.00%",
+        "armor": "95.00%",
+        "react": "38.00%",
+        "perception": "66.00%",
+        "to_hit": "38.00%"
+      },
+      {
+        "level": "30",
+        "health": "136.00%",
+        "armor": "98.00%",
+        "react": "39.00%",
+        "perception": "68.00%",
+        "to_hit": "39.00%"
+      },
+      {
+        "level": "31",
+        "health": "139.00%",
+        "armor": "101.00%",
+        "react": "40.00%",
+        "perception": "70.00%",
+        "to_hit": "40.00%"
+      },
+      {
+        "level": "32",
+        "health": "142.00%",
+        "armor": "104.00%",
+        "react": "41.00%",
+        "perception": "72.00%",
+        "to_hit": "41.00%"
+      },
+      {
+        "level": "33",
+        "health": "144.00%",
+        "armor": "107.00%",
+        "react": "42.00%",
+        "perception": "74.00%",
+        "to_hit": "42.00%"
+      },
+      {
+        "level": "34",
+        "health": "147.00%",
+        "armor": "110.00%",
+        "react": "43.00%",
+        "perception": "76.00%",
+        "to_hit": "43.00%"
+      },
+      {
+        "level": "35",
+        "health": "150.00%",
+        "armor": "113.00%",
+        "react": "44.00%",
+        "perception": "78.00%",
+        "to_hit": "44.00%"
+      },
+      {
+        "level": "36",
+        "health": "153.00%",
+        "armor": "116.00%",
+        "react": "45.00%",
+        "perception": "80.00%",
+        "to_hit": "45.00%"
+      },
+      {
+        "level": "37",
+        "health": "156.00%",
+        "armor": "119.00%",
+        "react": "46.00%",
+        "perception": "82.00%",
+        "to_hit": "46.00%"
+      },
+      {
+        "level": "38",
+        "health": "159.00%",
+        "armor": "122.00%",
+        "react": "47.00%",
+        "perception": "84.00%",
+        "to_hit": "47.00%"
+      },
+      {
+        "level": "39",
+        "health": "162.00%",
+        "armor": "125.00%",
+        "react": "48.00%",
+        "perception": "86.00%",
+        "to_hit": "48.00%"
+      },
+      {
+        "level": "40",
+        "health": "165.00%",
+        "armor": "128.00%",
+        "react": "49.00%",
+        "perception": "88.00%",
+        "to_hit": "49.00%"
+      },
+      {
+        "level": "41",
+        "health": "168.00%",
+        "armor": "131.00%",
+        "react": "50.00%",
+        "perception": "90.00%",
+        "to_hit": "50.00%"
+      },
+      {
+        "level": "42",
+        "health": "171.00%",
+        "armor": "134.00%",
+        "react": "51.00%",
+        "perception": "92.00%",
+        "to_hit": "51.00%"
+      },
+      {
+        "level": "43",
+        "health": "174.00%",
+        "armor": "137.00%",
+        "react": "52.00%",
+        "perception": "94.00%",
+        "to_hit": "52.00%"
+      },
+      {
+        "level": "44",
+        "health": "177.00%",
+        "armor": "140.00%",
+        "react": "53.00%",
+        "perception": "96.00%",
+        "to_hit": "53.00%"
+      },
+      {
+        "level": "45",
+        "health": "180.00%",
+        "armor": "143.00%",
+        "react": "54.00%",
+        "perception": "98.00%",
+        "to_hit": "54.00%"
+      },
+      {
+        "level": "46",
+        "health": "183.00%",
+        "armor": "146.00%",
+        "react": "55.00%",
+        "perception": "100.00%",
+        "to_hit": "55.00%"
+      },
+      {
+        "level": "47",
+        "health": "186.00%",
+        "armor": "149.00%",
+        "react": "56.00%",
+        "perception": "102.00%",
+        "to_hit": "56.00%"
+      },
+      {
+        "level": "48",
+        "health": "189.00%",
+        "armor": "152.00%",
+        "react": "57.00%",
+        "perception": "104.00%",
+        "to_hit": "57.00%"
+      },
+      {
+        "level": "49",
+        "health": "192.00%",
+        "armor": "155.00%",
+        "react": "58.00%",
+        "perception": "106.00%",
+        "to_hit": "58.00%"
+      },
+      {
+        "level": "50",
+        "health": "195.00%",
+        "armor": "158.00%",
+        "react": "59.00%",
+        "perception": "108.00%",
+        "to_hit": "59.00%"
+      },
+      {
+        "level": "51",
+        "health": "198.00%",
+        "armor": "161.00%",
+        "react": "60.00%",
+        "perception": "110.00%",
+        "to_hit": "60.00%"
+      },
+      {
+        "level": "52",
+        "health": "201.00%",
+        "armor": "165.00%",
+        "react": "61.00%",
+        "perception": "112.00%",
+        "to_hit": "61.00%"
+      },
+      {
+        "level": "53",
+        "health": "204.00%",
+        "armor": "168.00%",
+        "react": "62.00%",
+        "perception": "114.00%",
+        "to_hit": "62.00%"
+      },
+      {
+        "level": "54",
+        "health": "207.00%",
+        "armor": "171.00%",
+        "react": "63.00%",
+        "perception": "116.00%",
+        "to_hit": "63.00%"
+      },
+      {
+        "level": "55",
+        "health": "210.00%",
+        "armor": "174.00%",
+        "react": "64.00%",
+        "perception": "118.00%",
+        "to_hit": "64.00%"
+      },
+      {
+        "level": "56",
+        "health": "213.00%",
+        "armor": "177.00%",
+        "react": "65.00%",
+        "perception": "120.00%",
+        "to_hit": "65.00%"
+      },
+      {
+        "level": "57",
+        "health": "216.00%",
+        "armor": "180.00%",
+        "react": "66.00%",
+        "perception": "122.00%",
+        "to_hit": "66.00%"
+      },
+      {
+        "level": "58",
+        "health": "219.00%",
+        "armor": "183.00%",
+        "react": "67.00%",
+        "perception": "124.00%",
+        "to_hit": "67.00%"
+      },
+      {
+        "level": "59",
+        "health": "222.00%",
+        "armor": "186.00%",
+        "react": "68.00%",
+        "perception": "126.00%",
+        "to_hit": "68.00%"
+      },
+      {
+        "level": "60",
+        "health": "225.00%",
+        "armor": "189.00%",
+        "react": "69.00%",
+        "perception": "128.00%",
+        "to_hit": "69.00%"
+      },
+      {
+        "level": "61",
+        "health": "228.00%",
+        "armor": "192.00%",
+        "react": "70.00%",
+        "perception": "130.00%",
+        "to_hit": "70.00%"
+      },
+      {
+        "level": "62",
+        "health": "231.00%",
+        "armor": "195.00%",
+        "react": "71.00%",
+        "perception": "132.00%",
+        "to_hit": "71.00%"
+      },
+      {
+        "level": "63",
+        "health": "234.00%",
+        "armor": "198.00%",
+        "react": "72.00%",
+        "perception": "134.00%",
+        "to_hit": "72.00%"
+      },
+      {
+        "level": "64",
+        "health": "237.00%",
+        "armor": "201.00%",
+        "react": "73.00%",
+        "perception": "136.00%",
+        "to_hit": "73.00%"
+      },
+      {
+        "level": "65",
+        "health": "240.00%",
+        "armor": "204.00%",
+        "react": "74.00%",
+        "perception": "138.00%",
+        "to_hit": "74.00%"
+      },
+      {
+        "level": "66",
+        "health": "243.00%",
+        "armor": "207.00%",
+        "react": "75.00%",
+        "perception": "140.00%",
+        "to_hit": "75.00%"
+      },
+      {
+        "level": "67",
+        "health": "246.00%",
+        "armor": "210.00%",
+        "react": "76.00%",
+        "perception": "142.00%",
+        "to_hit": "76.00%"
+      },
+      {
+        "level": "68",
+        "health": "249.00%",
+        "armor": "213.00%",
+        "react": "77.00%",
+        "perception": "144.00%",
+        "to_hit": "77.00%"
+      },
+      {
+        "level": "69",
+        "health": "252.00%",
+        "armor": "216.00%",
+        "react": "78.00%",
+        "perception": "146.00%",
+        "to_hit": "78.00%"
+      },
+      {
+        "level": "70",
+        "health": "255.00%",
+        "armor": "219.00%",
+        "react": "79.00%",
+        "perception": "148.00%",
+        "to_hit": "79.00%"
+      },
+      {
+        "level": "71",
+        "health": "258.00%",
+        "armor": "222.00%",
+        "react": "80.00%",
+        "perception": "150.00%",
+        "to_hit": "80.00%"
+      },
+      {
+        "level": "72",
+        "health": "261.00%",
+        "armor": "225.00%",
+        "react": "81.00%",
+        "perception": "152.00%",
+        "to_hit": "81.00%"
+      },
+      {
+        "level": "73",
+        "health": "264.00%",
+        "armor": "228.00%",
+        "react": "82.00%",
+        "perception": "154.00%",
+        "to_hit": "82.00%"
+      },
+      {
+        "level": "74",
+        "health": "267.00%",
+        "armor": "231.00%",
+        "react": "83.00%",
+        "perception": "156.00%",
+        "to_hit": "83.00%"
+      },
+      {
+        "level": "75",
+        "health": "270.00%",
+        "armor": "234.00%",
+        "react": "84.00%",
+        "perception": "158.00%",
+        "to_hit": "84.00%"
+      },
+      {
+        "level": "76",
+        "health": "273.00%",
+        "armor": "237.00%",
+        "react": "85.00%",
+        "perception": "160.00%",
+        "to_hit": "85.00%"
+      },
+      {
+        "level": "77",
+        "health": "276.00%",
+        "armor": "240.00%",
+        "react": "86.00%",
+        "perception": "162.00%",
+        "to_hit": "86.00%"
+      },
+      {
+        "level": "78",
+        "health": "279.00%",
+        "armor": "243.00%",
+        "react": "87.00%",
+        "perception": "164.00%",
+        "to_hit": "87.00%"
+      },
+      {
+        "level": "79",
+        "health": "282.00%",
+        "armor": "246.00%",
+        "react": "88.00%",
+        "perception": "166.00%",
+        "to_hit": "88.00%"
+      },
+      {
+        "level": "80",
+        "health": "285.00%",
+        "armor": "249.00%",
+        "react": "89.00%",
+        "perception": "168.00%",
+        "to_hit": "89.00%"
+      },
+      {
+        "level": "81",
+        "health": "288.00%",
+        "armor": "252.00%",
+        "react": "90.00%",
+        "perception": "170.00%",
+        "to_hit": "90.00%"
+      },
+      {
+        "level": "82",
+        "health": "291.00%",
+        "armor": "255.00%",
+        "react": "91.00%",
+        "perception": "172.00%",
+        "to_hit": "91.00%"
+      },
+      {
+        "level": "83",
+        "health": "294.00%",
+        "armor": "258.00%",
+        "react": "92.00%",
+        "perception": "174.00%",
+        "to_hit": "92.00%"
+      },
+      {
+        "level": "84",
+        "health": "297.00%",
+        "armor": "261.00%",
+        "react": "93.00%",
+        "perception": "176.00%",
+        "to_hit": "93.00%"
+      },
+      {
+        "level": "85",
+        "health": "300.00%",
+        "armor": "264.00%",
+        "react": "94.00%",
+        "perception": "178.00%",
+        "to_hit": "94.00%"
+      },
+      {
+        "level": "86",
+        "health": "303.00%",
+        "armor": "267.00%",
+        "react": "95.00%",
+        "perception": "180.00%",
+        "to_hit": "95.00%"
+      },
+      {
+        "level": "87",
+        "health": "306.00%",
+        "armor": "270.00%",
+        "react": "96.00%",
+        "perception": "182.00%",
+        "to_hit": "96.00%"
+      },
+      {
+        "level": "88",
+        "health": "309.00%",
+        "armor": "273.00%",
+        "react": "97.00%",
+        "perception": "184.00%",
+        "to_hit": "97.00%"
+      },
+      {
+        "level": "89",
+        "health": "312.00%",
+        "armor": "276.00%",
+        "react": "98.00%",
+        "perception": "186.00%",
+        "to_hit": "98.00%"
+      },
+      {
+        "level": "90",
+        "health": "315.00%",
+        "armor": "279.00%",
+        "react": "99.00%",
+        "perception": "188.00%",
+        "to_hit": "99.00%"
+      },
+      {
+        "level": "91",
+        "health": "318.00%",
+        "armor": "282.00%",
+        "react": "100.00%",
+        "perception": "190.00%",
+        "to_hit": "100.00%"
+      },
+      {
+        "level": "92",
+        "health": "321.00%",
+        "armor": "285.00%",
+        "react": "101.00%",
+        "perception": "192.00%",
+        "to_hit": "101.00%"
+      },
+      {
+        "level": "93",
+        "health": "324.00%",
+        "armor": "288.00%",
+        "react": "102.00%",
+        "perception": "194.00%",
+        "to_hit": "102.00%"
+      },
+      {
+        "level": "94",
+        "health": "327.00%",
+        "armor": "291.00%",
+        "react": "103.00%",
+        "perception": "196.00%",
+        "to_hit": "103.00%"
+      },
+      {
+        "level": "95",
+        "health": "330.00%",
+        "armor": "294.00%",
+        "react": "104.00%",
+        "perception": "198.00%",
+        "to_hit": "104.00%"
+      },
+      {
+        "level": "96",
+        "health": "333.00%",
+        "armor": "297.00%",
+        "react": "105.00%",
+        "perception": "200.00%",
+        "to_hit": "105.00%"
+      },
+      {
+        "level": "97",
+        "health": "336.00%",
+        "armor": "300.00%",
+        "react": "106.00%",
+        "perception": "202.00%",
+        "to_hit": "106.00%"
+      },
+      {
+        "level": "98",
+        "health": "339.00%",
+        "armor": "303.00%",
+        "react": "107.00%",
+        "perception": "204.00%",
+        "to_hit": "107.00%"
+      },
+      {
+        "level": "99",
+        "health": "342.00%",
+        "armor": "306.00%",
+        "react": "108.00%",
+        "perception": "206.00%",
+        "to_hit": "108.00%"
+      },
+      {
+        "level": "100",
+        "health": "345.00%",
+        "armor": "309.00%",
+        "react": "109.00%",
+        "perception": "208.00%",
+        "to_hit": "109.00%"
+      }
+    ],
+    "Fighter": [
+      {
+        "level": "1",
+        "health": "50.00%",
+        "armor": "10.00%",
+        "react": "10.00%",
+        "perception": "10.00%",
+        "to_hit": "10.00%"
+      },
+      {
+        "level": "2",
+        "health": "52.00%",
+        "armor": "11.00%",
+        "react": "11.00%",
+        "perception": "13.00%",
+        "to_hit": "13.00%"
+      },
+      {
+        "level": "3",
+        "health": "54.00%",
+        "armor": "12.00%",
+        "react": "12.00%",
+        "perception": "16.00%",
+        "to_hit": "16.00%"
+      },
+      {
+        "level": "4",
+        "health": "56.00%",
+        "armor": "13.00%",
+        "react": "13.00%",
+        "perception": "19.00%",
+        "to_hit": "19.00%"
+      },
+      {
+        "level": "5",
+        "health": "58.00%",
+        "armor": "14.00%",
+        "react": "14.00%",
+        "perception": "22.00%",
+        "to_hit": "22.00%"
+      },
+      {
+        "level": "6",
+        "health": "60.00%",
+        "armor": "15.00%",
+        "react": "15.00%",
+        "perception": "25.00%",
+        "to_hit": "25.00%"
+      },
+      {
+        "level": "7",
+        "health": "62.00%",
+        "armor": "16.00%",
+        "react": "16.00%",
+        "perception": "28.00%",
+        "to_hit": "28.00%"
+      },
+      {
+        "level": "8",
+        "health": "64.00%",
+        "armor": "17.00%",
+        "react": "17.00%",
+        "perception": "31.00%",
+        "to_hit": "31.00%"
+      },
+      {
+        "level": "9",
+        "health": "66.00%",
+        "armor": "18.00%",
+        "react": "18.00%",
+        "perception": "34.00%",
+        "to_hit": "34.00%"
+      },
+      {
+        "level": "10",
+        "health": "68.00%",
+        "armor": "19.00%",
+        "react": "19.00%",
+        "perception": "37.00%",
+        "to_hit": "37.00%"
+      },
+      {
+        "level": "11",
+        "health": "70.00%",
+        "armor": "20.00%",
+        "react": "20.00%",
+        "perception": "40.00%",
+        "to_hit": "40.00%"
+      },
+      {
+        "level": "12",
+        "health": "72.00%",
+        "armor": "21.00%",
+        "react": "21.00%",
+        "perception": "43.00%",
+        "to_hit": "43.00%"
+      },
+      {
+        "level": "13",
+        "health": "74.00%",
+        "armor": "22.00%",
+        "react": "22.00%",
+        "perception": "47.00%",
+        "to_hit": "47.00%"
+      },
+      {
+        "level": "14",
+        "health": "76.00%",
+        "armor": "23.00%",
+        "react": "23.00%",
+        "perception": "50.00%",
+        "to_hit": "50.00%"
+      },
+      {
+        "level": "15",
+        "health": "78.00%",
+        "armor": "24.00%",
+        "react": "24.00%",
+        "perception": "53.00%",
+        "to_hit": "53.00%"
+      },
+      {
+        "level": "16",
+        "health": "80.00%",
+        "armor": "25.00%",
+        "react": "25.00%",
+        "perception": "56.00%",
+        "to_hit": "56.00%"
+      },
+      {
+        "level": "17",
+        "health": "82.00%",
+        "armor": "26.00%",
+        "react": "26.00%",
+        "perception": "59.00%",
+        "to_hit": "59.00%"
+      },
+      {
+        "level": "18",
+        "health": "84.00%",
+        "armor": "27.00%",
+        "react": "27.00%",
+        "perception": "62.00%",
+        "to_hit": "62.00%"
+      },
+      {
+        "level": "19",
+        "health": "86.00%",
+        "armor": "28.00%",
+        "react": "28.00%",
+        "perception": "65.00%",
+        "to_hit": "65.00%"
+      },
+      {
+        "level": "20",
+        "health": "88.00%",
+        "armor": "29.00%",
+        "react": "29.00%",
+        "perception": "68.00%",
+        "to_hit": "68.00%"
+      },
+      {
+        "level": "21",
+        "health": "90.00%",
+        "armor": "30.00%",
+        "react": "30.00%",
+        "perception": "71.00%",
+        "to_hit": "71.00%"
+      },
+      {
+        "level": "22",
+        "health": "92.00%",
+        "armor": "31.00%",
+        "react": "31.00%",
+        "perception": "74.00%",
+        "to_hit": "74.00%"
+      },
+      {
+        "level": "23",
+        "health": "94.00%",
+        "armor": "32.00%",
+        "react": "32.00%",
+        "perception": "77.00%",
+        "to_hit": "77.00%"
+      },
+      {
+        "level": "24",
+        "health": "96.00%",
+        "armor": "33.00%",
+        "react": "33.00%",
+        "perception": "80.00%",
+        "to_hit": "80.00%"
+      },
+      {
+        "level": "25",
+        "health": "98.00%",
+        "armor": "34.00%",
+        "react": "34.00%",
+        "perception": "83.00%",
+        "to_hit": "83.00%"
+      },
+      {
+        "level": "26",
+        "health": "100.00%",
+        "armor": "35.00%",
+        "react": "35.00%",
+        "perception": "86.00%",
+        "to_hit": "86.00%"
+      },
+      {
+        "level": "27",
+        "health": "102.00%",
+        "armor": "36.00%",
+        "react": "36.00%",
+        "perception": "89.00%",
+        "to_hit": "89.00%"
+      },
+      {
+        "level": "28",
+        "health": "104.00%",
+        "armor": "37.00%",
+        "react": "37.00%",
+        "perception": "92.00%",
+        "to_hit": "92.00%"
+      },
+      {
+        "level": "29",
+        "health": "106.00%",
+        "armor": "38.00%",
+        "react": "38.00%",
+        "perception": "95.00%",
+        "to_hit": "95.00%"
+      },
+      {
+        "level": "30",
+        "health": "108.00%",
+        "armor": "39.00%",
+        "react": "39.00%",
+        "perception": "98.00%",
+        "to_hit": "98.00%"
+      },
+      {
+        "level": "31",
+        "health": "110.00%",
+        "armor": "40.00%",
+        "react": "40.00%",
+        "perception": "101.00%",
+        "to_hit": "101.00%"
+      },
+      {
+        "level": "32",
+        "health": "112.00%",
+        "armor": "41.00%",
+        "react": "41.00%",
+        "perception": "104.00%",
+        "to_hit": "104.00%"
+      },
+      {
+        "level": "33",
+        "health": "114.00%",
+        "armor": "42.00%",
+        "react": "42.00%",
+        "perception": "107.00%",
+        "to_hit": "107.00%"
+      },
+      {
+        "level": "34",
+        "health": "116.00%",
+        "armor": "43.00%",
+        "react": "43.00%",
+        "perception": "110.00%",
+        "to_hit": "110.00%"
+      },
+      {
+        "level": "35",
+        "health": "118.00%",
+        "armor": "44.00%",
+        "react": "44.00%",
+        "perception": "113.00%",
+        "to_hit": "113.00%"
+      },
+      {
+        "level": "36",
+        "health": "120.00%",
+        "armor": "45.00%",
+        "react": "45.00%",
+        "perception": "116.00%",
+        "to_hit": "116.00%"
+      },
+      {
+        "level": "37",
+        "health": "122.00%",
+        "armor": "46.00%",
+        "react": "46.00%",
+        "perception": "119.00%",
+        "to_hit": "119.00%"
+      },
+      {
+        "level": "38",
+        "health": "124.00%",
+        "armor": "47.00%",
+        "react": "47.00%",
+        "perception": "122.00%",
+        "to_hit": "122.00%"
+      },
+      {
+        "level": "39",
+        "health": "126.00%",
+        "armor": "48.00%",
+        "react": "48.00%",
+        "perception": "125.00%",
+        "to_hit": "125.00%"
+      },
+      {
+        "level": "40",
+        "health": "128.00%",
+        "armor": "49.00%",
+        "react": "49.00%",
+        "perception": "128.00%",
+        "to_hit": "128.00%"
+      },
+      {
+        "level": "41",
+        "health": "130.00%",
+        "armor": "50.00%",
+        "react": "50.00%",
+        "perception": "131.00%",
+        "to_hit": "131.00%"
+      },
+      {
+        "level": "42",
+        "health": "132.00%",
+        "armor": "51.00%",
+        "react": "51.00%",
+        "perception": "134.00%",
+        "to_hit": "134.00%"
+      },
+      {
+        "level": "43",
+        "health": "134.00%",
+        "armor": "52.00%",
+        "react": "52.00%",
+        "perception": "137.00%",
+        "to_hit": "137.00%"
+      },
+      {
+        "level": "44",
+        "health": "136.00%",
+        "armor": "53.00%",
+        "react": "53.00%",
+        "perception": "140.00%",
+        "to_hit": "140.00%"
+      },
+      {
+        "level": "45",
+        "health": "138.00%",
+        "armor": "54.00%",
+        "react": "54.00%",
+        "perception": "143.00%",
+        "to_hit": "143.00%"
+      },
+      {
+        "level": "46",
+        "health": "140.00%",
+        "armor": "55.00%",
+        "react": "55.00%",
+        "perception": "146.00%",
+        "to_hit": "146.00%"
+      },
+      {
+        "level": "47",
+        "health": "142.00%",
+        "armor": "56.00%",
+        "react": "56.00%",
+        "perception": "149.00%",
+        "to_hit": "149.00%"
+      },
+      {
+        "level": "48",
+        "health": "144.00%",
+        "armor": "57.00%",
+        "react": "57.00%",
+        "perception": "152.00%",
+        "to_hit": "152.00%"
+      },
+      {
+        "level": "49",
+        "health": "146.00%",
+        "armor": "58.00%",
+        "react": "58.00%",
+        "perception": "155.00%",
+        "to_hit": "155.00%"
+      },
+      {
+        "level": "50",
+        "health": "148.00%",
+        "armor": "59.00%",
+        "react": "59.00%",
+        "perception": "158.00%",
+        "to_hit": "158.00%"
+      },
+      {
+        "level": "51",
+        "health": "150.00%",
+        "armor": "60.00%",
+        "react": "60.00%",
+        "perception": "161.00%",
+        "to_hit": "161.00%"
+      },
+      {
+        "level": "52",
+        "health": "152.00%",
+        "armor": "61.00%",
+        "react": "61.00%",
+        "perception": "165.00%",
+        "to_hit": "165.00%"
+      },
+      {
+        "level": "53",
+        "health": "154.00%",
+        "armor": "62.00%",
+        "react": "62.00%",
+        "perception": "168.00%",
+        "to_hit": "168.00%"
+      },
+      {
+        "level": "54",
+        "health": "156.00%",
+        "armor": "63.00%",
+        "react": "63.00%",
+        "perception": "171.00%",
+        "to_hit": "171.00%"
+      },
+      {
+        "level": "55",
+        "health": "158.00%",
+        "armor": "64.00%",
+        "react": "64.00%",
+        "perception": "174.00%",
+        "to_hit": "174.00%"
+      },
+      {
+        "level": "56",
+        "health": "160.00%",
+        "armor": "65.00%",
+        "react": "65.00%",
+        "perception": "177.00%",
+        "to_hit": "177.00%"
+      },
+      {
+        "level": "57",
+        "health": "162.00%",
+        "armor": "66.00%",
+        "react": "66.00%",
+        "perception": "180.00%",
+        "to_hit": "180.00%"
+      },
+      {
+        "level": "58",
+        "health": "164.00%",
+        "armor": "67.00%",
+        "react": "67.00%",
+        "perception": "183.00%",
+        "to_hit": "183.00%"
+      },
+      {
+        "level": "59",
+        "health": "166.00%",
+        "armor": "68.00%",
+        "react": "68.00%",
+        "perception": "186.00%",
+        "to_hit": "186.00%"
+      },
+      {
+        "level": "60",
+        "health": "168.00%",
+        "armor": "69.00%",
+        "react": "69.00%",
+        "perception": "189.00%",
+        "to_hit": "189.00%"
+      },
+      {
+        "level": "61",
+        "health": "170.00%",
+        "armor": "70.00%",
+        "react": "70.00%",
+        "perception": "192.00%",
+        "to_hit": "192.00%"
+      },
+      {
+        "level": "62",
+        "health": "172.00%",
+        "armor": "71.00%",
+        "react": "71.00%",
+        "perception": "195.00%",
+        "to_hit": "195.00%"
+      },
+      {
+        "level": "63",
+        "health": "174.00%",
+        "armor": "72.00%",
+        "react": "72.00%",
+        "perception": "198.00%",
+        "to_hit": "198.00%"
+      },
+      {
+        "level": "64",
+        "health": "176.00%",
+        "armor": "73.00%",
+        "react": "73.00%",
+        "perception": "201.00%",
+        "to_hit": "201.00%"
+      },
+      {
+        "level": "65",
+        "health": "178.00%",
+        "armor": "74.00%",
+        "react": "74.00%",
+        "perception": "204.00%",
+        "to_hit": "204.00%"
+      },
+      {
+        "level": "66",
+        "health": "180.00%",
+        "armor": "75.00%",
+        "react": "75.00%",
+        "perception": "207.00%",
+        "to_hit": "207.00%"
+      },
+      {
+        "level": "67",
+        "health": "182.00%",
+        "armor": "76.00%",
+        "react": "76.00%",
+        "perception": "210.00%",
+        "to_hit": "210.00%"
+      },
+      {
+        "level": "68",
+        "health": "184.00%",
+        "armor": "77.00%",
+        "react": "77.00%",
+        "perception": "213.00%",
+        "to_hit": "213.00%"
+      },
+      {
+        "level": "69",
+        "health": "186.00%",
+        "armor": "78.00%",
+        "react": "78.00%",
+        "perception": "216.00%",
+        "to_hit": "216.00%"
+      },
+      {
+        "level": "70",
+        "health": "188.00%",
+        "armor": "79.00%",
+        "react": "79.00%",
+        "perception": "219.00%",
+        "to_hit": "219.00%"
+      },
+      {
+        "level": "71",
+        "health": "190.00%",
+        "armor": "80.00%",
+        "react": "80.00%",
+        "perception": "222.00%",
+        "to_hit": "222.00%"
+      },
+      {
+        "level": "72",
+        "health": "192.00%",
+        "armor": "81.00%",
+        "react": "81.00%",
+        "perception": "225.00%",
+        "to_hit": "225.00%"
+      },
+      {
+        "level": "73",
+        "health": "194.00%",
+        "armor": "82.00%",
+        "react": "82.00%",
+        "perception": "228.00%",
+        "to_hit": "228.00%"
+      },
+      {
+        "level": "74",
+        "health": "196.00%",
+        "armor": "83.00%",
+        "react": "83.00%",
+        "perception": "231.00%",
+        "to_hit": "231.00%"
+      },
+      {
+        "level": "75",
+        "health": "198.00%",
+        "armor": "84.00%",
+        "react": "84.00%",
+        "perception": "234.00%",
+        "to_hit": "234.00%"
+      },
+      {
+        "level": "76",
+        "health": "200.00%",
+        "armor": "85.00%",
+        "react": "85.00%",
+        "perception": "237.00%",
+        "to_hit": "237.00%"
+      },
+      {
+        "level": "77",
+        "health": "202.00%",
+        "armor": "86.00%",
+        "react": "86.00%",
+        "perception": "240.00%",
+        "to_hit": "240.00%"
+      },
+      {
+        "level": "78",
+        "health": "204.00%",
+        "armor": "87.00%",
+        "react": "87.00%",
+        "perception": "243.00%",
+        "to_hit": "243.00%"
+      },
+      {
+        "level": "79",
+        "health": "206.00%",
+        "armor": "88.00%",
+        "react": "88.00%",
+        "perception": "246.00%",
+        "to_hit": "246.00%"
+      },
+      {
+        "level": "80",
+        "health": "208.00%",
+        "armor": "89.00%",
+        "react": "89.00%",
+        "perception": "249.00%",
+        "to_hit": "249.00%"
+      },
+      {
+        "level": "81",
+        "health": "210.00%",
+        "armor": "90.00%",
+        "react": "90.00%",
+        "perception": "252.00%",
+        "to_hit": "252.00%"
+      },
+      {
+        "level": "82",
+        "health": "212.00%",
+        "armor": "91.00%",
+        "react": "91.00%",
+        "perception": "255.00%",
+        "to_hit": "255.00%"
+      },
+      {
+        "level": "83",
+        "health": "214.00%",
+        "armor": "92.00%",
+        "react": "92.00%",
+        "perception": "258.00%",
+        "to_hit": "258.00%"
+      },
+      {
+        "level": "84",
+        "health": "216.00%",
+        "armor": "93.00%",
+        "react": "93.00%",
+        "perception": "261.00%",
+        "to_hit": "261.00%"
+      },
+      {
+        "level": "85",
+        "health": "218.00%",
+        "armor": "94.00%",
+        "react": "94.00%",
+        "perception": "264.00%",
+        "to_hit": "264.00%"
+      },
+      {
+        "level": "86",
+        "health": "220.00%",
+        "armor": "95.00%",
+        "react": "95.00%",
+        "perception": "267.00%",
+        "to_hit": "267.00%"
+      },
+      {
+        "level": "87",
+        "health": "222.00%",
+        "armor": "96.00%",
+        "react": "96.00%",
+        "perception": "270.00%",
+        "to_hit": "270.00%"
+      },
+      {
+        "level": "88",
+        "health": "224.00%",
+        "armor": "97.00%",
+        "react": "97.00%",
+        "perception": "273.00%",
+        "to_hit": "273.00%"
+      },
+      {
+        "level": "89",
+        "health": "226.00%",
+        "armor": "98.00%",
+        "react": "98.00%",
+        "perception": "276.00%",
+        "to_hit": "276.00%"
+      },
+      {
+        "level": "90",
+        "health": "228.00%",
+        "armor": "99.00%",
+        "react": "99.00%",
+        "perception": "279.00%",
+        "to_hit": "279.00%"
+      },
+      {
+        "level": "91",
+        "health": "230.00%",
+        "armor": "100.00%",
+        "react": "100.00%",
+        "perception": "282.00%",
+        "to_hit": "282.00%"
+      },
+      {
+        "level": "92",
+        "health": "232.00%",
+        "armor": "101.00%",
+        "react": "101.00%",
+        "perception": "285.00%",
+        "to_hit": "285.00%"
+      },
+      {
+        "level": "93",
+        "health": "234.00%",
+        "armor": "102.00%",
+        "react": "102.00%",
+        "perception": "288.00%",
+        "to_hit": "288.00%"
+      },
+      {
+        "level": "94",
+        "health": "236.00%",
+        "armor": "103.00%",
+        "react": "103.00%",
+        "perception": "291.00%",
+        "to_hit": "291.00%"
+      },
+      {
+        "level": "95",
+        "health": "238.00%",
+        "armor": "104.00%",
+        "react": "104.00%",
+        "perception": "294.00%",
+        "to_hit": "294.00%"
+      },
+      {
+        "level": "96",
+        "health": "240.00%",
+        "armor": "105.00%",
+        "react": "105.00%",
+        "perception": "297.00%",
+        "to_hit": "297.00%"
+      },
+      {
+        "level": "97",
+        "health": "242.00%",
+        "armor": "106.00%",
+        "react": "106.00%",
+        "perception": "300.00%",
+        "to_hit": "300.00%"
+      },
+      {
+        "level": "98",
+        "health": "244.00%",
+        "armor": "107.00%",
+        "react": "107.00%",
+        "perception": "303.00%",
+        "to_hit": "303.00%"
+      },
+      {
+        "level": "99",
+        "health": "246.00%",
+        "armor": "108.00%",
+        "react": "108.00%",
+        "perception": "306.00%",
+        "to_hit": "306.00%"
+      },
+      {
+        "level": "100",
+        "health": "248.00%",
+        "armor": "109.00%",
+        "react": "109.00%",
+        "perception": "309.00%",
+        "to_hit": "309.00%"
+      }
+    ],
+    "Scout": [
+      {
+        "level": "1",
+        "health": "50.00%",
+        "armor": "10.00%",
+        "react": "10.00%",
+        "perception": "10.00%",
+        "to_hit": "10.00%"
+      },
+      {
+        "level": "2",
+        "health": "51.00%",
+        "armor": "13.00%",
+        "react": "13.00%",
+        "perception": "12.00%",
+        "to_hit": "11.00%"
+      },
+      {
+        "level": "3",
+        "health": "52.00%",
+        "armor": "16.00%",
+        "react": "16.00%",
+        "perception": "14.00%",
+        "to_hit": "12.00%"
+      },
+      {
+        "level": "4",
+        "health": "53.00%",
+        "armor": "19.00%",
+        "react": "19.00%",
+        "perception": "16.00%",
+        "to_hit": "13.00%"
+      },
+      {
+        "level": "5",
+        "health": "54.00%",
+        "armor": "22.00%",
+        "react": "22.00%",
+        "perception": "18.00%",
+        "to_hit": "14.00%"
+      },
+      {
+        "level": "6",
+        "health": "55.00%",
+        "armor": "25.00%",
+        "react": "25.00%",
+        "perception": "20.00%",
+        "to_hit": "15.00%"
+      },
+      {
+        "level": "7",
+        "health": "56.00%",
+        "armor": "28.00%",
+        "react": "28.00%",
+        "perception": "22.00%",
+        "to_hit": "16.00%"
+      },
+      {
+        "level": "8",
+        "health": "57.00%",
+        "armor": "31.00%",
+        "react": "31.00%",
+        "perception": "24.00%",
+        "to_hit": "17.00%"
+      },
+      {
+        "level": "9",
+        "health": "58.00%",
+        "armor": "34.00%",
+        "react": "34.00%",
+        "perception": "26.00%",
+        "to_hit": "18.00%"
+      },
+      {
+        "level": "10",
+        "health": "59.00%",
+        "armor": "37.00%",
+        "react": "37.00%",
+        "perception": "28.00%",
+        "to_hit": "19.00%"
+      },
+      {
+        "level": "11",
+        "health": "60.00%",
+        "armor": "40.00%",
+        "react": "40.00%",
+        "perception": "30.00%",
+        "to_hit": "20.00%"
+      },
+      {
+        "level": "12",
+        "health": "61.00%",
+        "armor": "43.00%",
+        "react": "43.00%",
+        "perception": "32.00%",
+        "to_hit": "21.00%"
+      },
+      {
+        "level": "13",
+        "health": "62.00%",
+        "armor": "47.00%",
+        "react": "47.00%",
+        "perception": "34.00%",
+        "to_hit": "22.00%"
+      },
+      {
+        "level": "14",
+        "health": "63.00%",
+        "armor": "50.00%",
+        "react": "50.00%",
+        "perception": "36.00%",
+        "to_hit": "23.00%"
+      },
+      {
+        "level": "15",
+        "health": "64.00%",
+        "armor": "53.00%",
+        "react": "53.00%",
+        "perception": "38.00%",
+        "to_hit": "24.00%"
+      },
+      {
+        "level": "16",
+        "health": "65.00%",
+        "armor": "56.00%",
+        "react": "56.00%",
+        "perception": "40.00%",
+        "to_hit": "25.00%"
+      },
+      {
+        "level": "17",
+        "health": "66.00%",
+        "armor": "59.00%",
+        "react": "59.00%",
+        "perception": "42.00%",
+        "to_hit": "26.00%"
+      },
+      {
+        "level": "18",
+        "health": "66.00%",
+        "armor": "62.00%",
+        "react": "62.00%",
+        "perception": "44.00%",
+        "to_hit": "27.00%"
+      },
+      {
+        "level": "19",
+        "health": "67.00%",
+        "armor": "65.00%",
+        "react": "65.00%",
+        "perception": "46.00%",
+        "to_hit": "28.00%"
+      },
+      {
+        "level": "20",
+        "health": "68.00%",
+        "armor": "68.00%",
+        "react": "68.00%",
+        "perception": "48.00%",
+        "to_hit": "29.00%"
+      },
+      {
+        "level": "21",
+        "health": "69.00%",
+        "armor": "71.00%",
+        "react": "71.00%",
+        "perception": "50.00%",
+        "to_hit": "30.00%"
+      },
+      {
+        "level": "22",
+        "health": "70.00%",
+        "armor": "74.00%",
+        "react": "74.00%",
+        "perception": "52.00%",
+        "to_hit": "31.00%"
+      },
+      {
+        "level": "23",
+        "health": "71.00%",
+        "armor": "77.00%",
+        "react": "77.00%",
+        "perception": "54.00%",
+        "to_hit": "32.00%"
+      },
+      {
+        "level": "24",
+        "health": "72.00%",
+        "armor": "80.00%",
+        "react": "80.00%",
+        "perception": "56.00%",
+        "to_hit": "33.00%"
+      },
+      {
+        "level": "25",
+        "health": "73.00%",
+        "armor": "83.00%",
+        "react": "83.00%",
+        "perception": "58.00%",
+        "to_hit": "34.00%"
+      },
+      {
+        "level": "26",
+        "health": "74.00%",
+        "armor": "86.00%",
+        "react": "86.00%",
+        "perception": "60.00%",
+        "to_hit": "35.00%"
+      },
+      {
+        "level": "27",
+        "health": "75.00%",
+        "armor": "89.00%",
+        "react": "89.00%",
+        "perception": "62.00%",
+        "to_hit": "36.00%"
+      },
+      {
+        "level": "28",
+        "health": "76.00%",
+        "armor": "92.00%",
+        "react": "92.00%",
+        "perception": "64.00%",
+        "to_hit": "37.00%"
+      },
+      {
+        "level": "29",
+        "health": "77.00%",
+        "armor": "95.00%",
+        "react": "95.00%",
+        "perception": "66.00%",
+        "to_hit": "38.00%"
+      },
+      {
+        "level": "30",
+        "health": "78.00%",
+        "armor": "98.00%",
+        "react": "98.00%",
+        "perception": "68.00%",
+        "to_hit": "39.00%"
+      },
+      {
+        "level": "31",
+        "health": "79.00%",
+        "armor": "101.00%",
+        "react": "101.00%",
+        "perception": "70.00%",
+        "to_hit": "40.00%"
+      },
+      {
+        "level": "32",
+        "health": "80.00%",
+        "armor": "104.00%",
+        "react": "104.00%",
+        "perception": "72.00%",
+        "to_hit": "41.00%"
+      },
+      {
+        "level": "33",
+        "health": "81.00%",
+        "armor": "107.00%",
+        "react": "107.00%",
+        "perception": "74.00%",
+        "to_hit": "42.00%"
+      },
+      {
+        "level": "34",
+        "health": "82.00%",
+        "armor": "110.00%",
+        "react": "110.00%",
+        "perception": "76.00%",
+        "to_hit": "43.00%"
+      },
+      {
+        "level": "35",
+        "health": "83.00%",
+        "armor": "113.00%",
+        "react": "113.00%",
+        "perception": "78.00%",
+        "to_hit": "44.00%"
+      },
+      {
+        "level": "36",
+        "health": "84.00%",
+        "armor": "116.00%",
+        "react": "116.00%",
+        "perception": "80.00%",
+        "to_hit": "45.00%"
+      },
+      {
+        "level": "37",
+        "health": "85.00%",
+        "armor": "119.00%",
+        "react": "119.00%",
+        "perception": "82.00%",
+        "to_hit": "46.00%"
+      },
+      {
+        "level": "38",
+        "health": "86.00%",
+        "armor": "122.00%",
+        "react": "122.00%",
+        "perception": "84.00%",
+        "to_hit": "47.00%"
+      },
+      {
+        "level": "39",
+        "health": "87.00%",
+        "armor": "125.00%",
+        "react": "125.00%",
+        "perception": "86.00%",
+        "to_hit": "48.00%"
+      },
+      {
+        "level": "40",
+        "health": "88.00%",
+        "armor": "128.00%",
+        "react": "128.00%",
+        "perception": "88.00%",
+        "to_hit": "49.00%"
+      },
+      {
+        "level": "41",
+        "health": "89.00%",
+        "armor": "131.00%",
+        "react": "131.00%",
+        "perception": "90.00%",
+        "to_hit": "50.00%"
+      },
+      {
+        "level": "42",
+        "health": "90.00%",
+        "armor": "134.00%",
+        "react": "134.00%",
+        "perception": "92.00%",
+        "to_hit": "51.00%"
+      },
+      {
+        "level": "43",
+        "health": "91.00%",
+        "armor": "137.00%",
+        "react": "137.00%",
+        "perception": "94.00%",
+        "to_hit": "52.00%"
+      },
+      {
+        "level": "44",
+        "health": "92.00%",
+        "armor": "140.00%",
+        "react": "140.00%",
+        "perception": "96.00%",
+        "to_hit": "53.00%"
+      },
+      {
+        "level": "45",
+        "health": "93.00%",
+        "armor": "143.00%",
+        "react": "143.00%",
+        "perception": "98.00%",
+        "to_hit": "54.00%"
+      },
+      {
+        "level": "46",
+        "health": "94.00%",
+        "armor": "146.00%",
+        "react": "146.00%",
+        "perception": "100.00%",
+        "to_hit": "55.00%"
+      },
+      {
+        "level": "47",
+        "health": "95.00%",
+        "armor": "149.00%",
+        "react": "149.00%",
+        "perception": "102.00%",
+        "to_hit": "56.00%"
+      },
+      {
+        "level": "48",
+        "health": "96.00%",
+        "armor": "152.00%",
+        "react": "152.00%",
+        "perception": "104.00%",
+        "to_hit": "57.00%"
+      },
+      {
+        "level": "49",
+        "health": "97.00%",
+        "armor": "155.00%",
+        "react": "155.00%",
+        "perception": "106.00%",
+        "to_hit": "58.00%"
+      },
+      {
+        "level": "50",
+        "health": "98.00%",
+        "armor": "158.00%",
+        "react": "158.00%",
+        "perception": "108.00%",
+        "to_hit": "59.00%"
+      },
+      {
+        "level": "51",
+        "health": "99.00%",
+        "armor": "161.00%",
+        "react": "161.00%",
+        "perception": "110.00%",
+        "to_hit": "60.00%"
+      },
+      {
+        "level": "52",
+        "health": "100.00%",
+        "armor": "165.00%",
+        "react": "165.00%",
+        "perception": "112.00%",
+        "to_hit": "61.00%"
+      },
+      {
+        "level": "53",
+        "health": "101.00%",
+        "armor": "168.00%",
+        "react": "168.00%",
+        "perception": "114.00%",
+        "to_hit": "62.00%"
+      },
+      {
+        "level": "54",
+        "health": "102.00%",
+        "armor": "171.00%",
+        "react": "171.00%",
+        "perception": "116.00%",
+        "to_hit": "63.00%"
+      },
+      {
+        "level": "55",
+        "health": "103.00%",
+        "armor": "174.00%",
+        "react": "174.00%",
+        "perception": "118.00%",
+        "to_hit": "64.00%"
+      },
+      {
+        "level": "56",
+        "health": "104.00%",
+        "armor": "177.00%",
+        "react": "177.00%",
+        "perception": "120.00%",
+        "to_hit": "65.00%"
+      },
+      {
+        "level": "57",
+        "health": "105.00%",
+        "armor": "180.00%",
+        "react": "180.00%",
+        "perception": "122.00%",
+        "to_hit": "66.00%"
+      },
+      {
+        "level": "58",
+        "health": "106.00%",
+        "armor": "183.00%",
+        "react": "183.00%",
+        "perception": "124.00%",
+        "to_hit": "67.00%"
+      },
+      {
+        "level": "59",
+        "health": "107.00%",
+        "armor": "186.00%",
+        "react": "186.00%",
+        "perception": "126.00%",
+        "to_hit": "68.00%"
+      },
+      {
+        "level": "60",
+        "health": "108.00%",
+        "armor": "189.00%",
+        "react": "189.00%",
+        "perception": "128.00%",
+        "to_hit": "69.00%"
+      },
+      {
+        "level": "61",
+        "health": "109.00%",
+        "armor": "192.00%",
+        "react": "192.00%",
+        "perception": "130.00%",
+        "to_hit": "70.00%"
+      },
+      {
+        "level": "62",
+        "health": "110.00%",
+        "armor": "195.00%",
+        "react": "195.00%",
+        "perception": "132.00%",
+        "to_hit": "71.00%"
+      },
+      {
+        "level": "63",
+        "health": "111.00%",
+        "armor": "198.00%",
+        "react": "198.00%",
+        "perception": "134.00%",
+        "to_hit": "72.00%"
+      },
+      {
+        "level": "64",
+        "health": "112.00%",
+        "armor": "201.00%",
+        "react": "201.00%",
+        "perception": "136.00%",
+        "to_hit": "73.00%"
+      },
+      {
+        "level": "65",
+        "health": "113.00%",
+        "armor": "204.00%",
+        "react": "204.00%",
+        "perception": "138.00%",
+        "to_hit": "74.00%"
+      },
+      {
+        "level": "66",
+        "health": "114.00%",
+        "armor": "207.00%",
+        "react": "207.00%",
+        "perception": "140.00%",
+        "to_hit": "75.00%"
+      },
+      {
+        "level": "67",
+        "health": "115.00%",
+        "armor": "210.00%",
+        "react": "210.00%",
+        "perception": "142.00%",
+        "to_hit": "76.00%"
+      },
+      {
+        "level": "68",
+        "health": "116.00%",
+        "armor": "213.00%",
+        "react": "213.00%",
+        "perception": "144.00%",
+        "to_hit": "77.00%"
+      },
+      {
+        "level": "69",
+        "health": "117.00%",
+        "armor": "216.00%",
+        "react": "216.00%",
+        "perception": "146.00%",
+        "to_hit": "78.00%"
+      },
+      {
+        "level": "70",
+        "health": "118.00%",
+        "armor": "219.00%",
+        "react": "219.00%",
+        "perception": "148.00%",
+        "to_hit": "79.00%"
+      },
+      {
+        "level": "71",
+        "health": "119.00%",
+        "armor": "222.00%",
+        "react": "222.00%",
+        "perception": "150.00%",
+        "to_hit": "80.00%"
+      },
+      {
+        "level": "72",
+        "health": "120.00%",
+        "armor": "225.00%",
+        "react": "225.00%",
+        "perception": "152.00%",
+        "to_hit": "81.00%"
+      },
+      {
+        "level": "73",
+        "health": "121.00%",
+        "armor": "228.00%",
+        "react": "228.00%",
+        "perception": "154.00%",
+        "to_hit": "82.00%"
+      },
+      {
+        "level": "74",
+        "health": "122.00%",
+        "armor": "231.00%",
+        "react": "231.00%",
+        "perception": "156.00%",
+        "to_hit": "83.00%"
+      },
+      {
+        "level": "75",
+        "health": "123.00%",
+        "armor": "234.00%",
+        "react": "234.00%",
+        "perception": "158.00%",
+        "to_hit": "84.00%"
+      },
+      {
+        "level": "76",
+        "health": "124.00%",
+        "armor": "237.00%",
+        "react": "237.00%",
+        "perception": "160.00%",
+        "to_hit": "85.00%"
+      },
+      {
+        "level": "77",
+        "health": "125.00%",
+        "armor": "240.00%",
+        "react": "240.00%",
+        "perception": "162.00%",
+        "to_hit": "86.00%"
+      },
+      {
+        "level": "78",
+        "health": "126.00%",
+        "armor": "243.00%",
+        "react": "243.00%",
+        "perception": "164.00%",
+        "to_hit": "87.00%"
+      },
+      {
+        "level": "79",
+        "health": "127.00%",
+        "armor": "246.00%",
+        "react": "246.00%",
+        "perception": "166.00%",
+        "to_hit": "88.00%"
+      },
+      {
+        "level": "80",
+        "health": "128.00%",
+        "armor": "249.00%",
+        "react": "249.00%",
+        "perception": "168.00%",
+        "to_hit": "89.00%"
+      },
+      {
+        "level": "81",
+        "health": "129.00%",
+        "armor": "252.00%",
+        "react": "252.00%",
+        "perception": "170.00%",
+        "to_hit": "90.00%"
+      },
+      {
+        "level": "82",
+        "health": "130.00%",
+        "armor": "255.00%",
+        "react": "255.00%",
+        "perception": "172.00%",
+        "to_hit": "91.00%"
+      },
+      {
+        "level": "83",
+        "health": "131.00%",
+        "armor": "258.00%",
+        "react": "258.00%",
+        "perception": "174.00%",
+        "to_hit": "92.00%"
+      },
+      {
+        "level": "84",
+        "health": "132.00%",
+        "armor": "261.00%",
+        "react": "261.00%",
+        "perception": "176.00%",
+        "to_hit": "93.00%"
+      },
+      {
+        "level": "85",
+        "health": "133.00%",
+        "armor": "264.00%",
+        "react": "264.00%",
+        "perception": "178.00%",
+        "to_hit": "94.00%"
+      },
+      {
+        "level": "86",
+        "health": "134.00%",
+        "armor": "267.00%",
+        "react": "267.00%",
+        "perception": "180.00%",
+        "to_hit": "95.00%"
+      },
+      {
+        "level": "87",
+        "health": "135.00%",
+        "armor": "270.00%",
+        "react": "270.00%",
+        "perception": "182.00%",
+        "to_hit": "96.00%"
+      },
+      {
+        "level": "88",
+        "health": "136.00%",
+        "armor": "273.00%",
+        "react": "273.00%",
+        "perception": "184.00%",
+        "to_hit": "97.00%"
+      },
+      {
+        "level": "89",
+        "health": "137.00%",
+        "armor": "276.00%",
+        "react": "276.00%",
+        "perception": "186.00%",
+        "to_hit": "98.00%"
+      },
+      {
+        "level": "90",
+        "health": "138.00%",
+        "armor": "279.00%",
+        "react": "279.00%",
+        "perception": "188.00%",
+        "to_hit": "99.00%"
+      },
+      {
+        "level": "91",
+        "health": "139.00%",
+        "armor": "282.00%",
+        "react": "282.00%",
+        "perception": "190.00%",
+        "to_hit": "100.00%"
+      },
+      {
+        "level": "92",
+        "health": "140.00%",
+        "armor": "285.00%",
+        "react": "285.00%",
+        "perception": "192.00%",
+        "to_hit": "101.00%"
+      },
+      {
+        "level": "93",
+        "health": "141.00%",
+        "armor": "288.00%",
+        "react": "288.00%",
+        "perception": "194.00%",
+        "to_hit": "102.00%"
+      },
+      {
+        "level": "94",
+        "health": "142.00%",
+        "armor": "291.00%",
+        "react": "291.00%",
+        "perception": "196.00%",
+        "to_hit": "103.00%"
+      },
+      {
+        "level": "95",
+        "health": "143.00%",
+        "armor": "294.00%",
+        "react": "294.00%",
+        "perception": "198.00%",
+        "to_hit": "104.00%"
+      },
+      {
+        "level": "96",
+        "health": "144.00%",
+        "armor": "297.00%",
+        "react": "297.00%",
+        "perception": "200.00%",
+        "to_hit": "105.00%"
+      },
+      {
+        "level": "97",
+        "health": "145.00%",
+        "armor": "300.00%",
+        "react": "300.00%",
+        "perception": "202.00%",
+        "to_hit": "106.00%"
+      },
+      {
+        "level": "98",
+        "health": "146.00%",
+        "armor": "303.00%",
+        "react": "303.00%",
+        "perception": "204.00%",
+        "to_hit": "107.00%"
+      },
+      {
+        "level": "99",
+        "health": "147.00%",
+        "armor": "306.00%",
+        "react": "306.00%",
+        "perception": "206.00%",
+        "to_hit": "108.00%"
+      },
+      {
+        "level": "100",
+        "health": "148.00%",
+        "armor": "309.00%",
+        "react": "309.00%",
+        "perception": "208.00%",
+        "to_hit": "109.00%"
+      }
+    ],
+    "Almighty": [
+      {
+        "level": "1",
+        "health": "50.00%",
+        "armor": "10.00%",
+        "react": "10.00%",
+        "perception": "10.00%",
+        "to_hit": "10.00%"
+      },
+      {
+        "level": "2",
+        "health": "52.00%",
+        "armor": "12.00%",
+        "react": "12.00%",
+        "perception": "12.00%",
+        "to_hit": "12.00%"
+      },
+      {
+        "level": "3",
+        "health": "54.00%",
+        "armor": "14.00%",
+        "react": "14.00%",
+        "perception": "14.00%",
+        "to_hit": "14.00%"
+      },
+      {
+        "level": "4",
+        "health": "56.00%",
+        "armor": "16.00%",
+        "react": "16.00%",
+        "perception": "16.00%",
+        "to_hit": "16.00%"
+      },
+      {
+        "level": "5",
+        "health": "58.00%",
+        "armor": "18.00%",
+        "react": "18.00%",
+        "perception": "18.00%",
+        "to_hit": "18.00%"
+      },
+      {
+        "level": "6",
+        "health": "60.00%",
+        "armor": "20.00%",
+        "react": "20.00%",
+        "perception": "20.00%",
+        "to_hit": "20.00%"
+      },
+      {
+        "level": "7",
+        "health": "62.00%",
+        "armor": "22.00%",
+        "react": "22.00%",
+        "perception": "22.00%",
+        "to_hit": "22.00%"
+      },
+      {
+        "level": "8",
+        "health": "64.00%",
+        "armor": "24.00%",
+        "react": "24.00%",
+        "perception": "24.00%",
+        "to_hit": "24.00%"
+      },
+      {
+        "level": "9",
+        "health": "66.00%",
+        "armor": "26.00%",
+        "react": "26.00%",
+        "perception": "26.00%",
+        "to_hit": "26.00%"
+      },
+      {
+        "level": "10",
+        "health": "68.00%",
+        "armor": "28.00%",
+        "react": "28.00%",
+        "perception": "28.00%",
+        "to_hit": "28.00%"
+      },
+      {
+        "level": "11",
+        "health": "70.00%",
+        "armor": "30.00%",
+        "react": "30.00%",
+        "perception": "30.00%",
+        "to_hit": "30.00%"
+      },
+      {
+        "level": "12",
+        "health": "72.00%",
+        "armor": "32.00%",
+        "react": "32.00%",
+        "perception": "32.00%",
+        "to_hit": "32.00%"
+      },
+      {
+        "level": "13",
+        "health": "74.00%",
+        "armor": "34.00%",
+        "react": "34.00%",
+        "perception": "34.00%",
+        "to_hit": "34.00%"
+      },
+      {
+        "level": "14",
+        "health": "76.00%",
+        "armor": "36.00%",
+        "react": "36.00%",
+        "perception": "36.00%",
+        "to_hit": "36.00%"
+      },
+      {
+        "level": "15",
+        "health": "78.00%",
+        "armor": "38.00%",
+        "react": "38.00%",
+        "perception": "38.00%",
+        "to_hit": "38.00%"
+      },
+      {
+        "level": "16",
+        "health": "80.00%",
+        "armor": "40.00%",
+        "react": "40.00%",
+        "perception": "40.00%",
+        "to_hit": "40.00%"
+      },
+      {
+        "level": "17",
+        "health": "82.00%",
+        "armor": "42.00%",
+        "react": "42.00%",
+        "perception": "42.00%",
+        "to_hit": "42.00%"
+      },
+      {
+        "level": "18",
+        "health": "84.00%",
+        "armor": "44.00%",
+        "react": "44.00%",
+        "perception": "44.00%",
+        "to_hit": "44.00%"
+      },
+      {
+        "level": "19",
+        "health": "86.00%",
+        "armor": "46.00%",
+        "react": "46.00%",
+        "perception": "46.00%",
+        "to_hit": "46.00%"
+      },
+      {
+        "level": "20",
+        "health": "88.00%",
+        "armor": "48.00%",
+        "react": "48.00%",
+        "perception": "48.00%",
+        "to_hit": "48.00%"
+      },
+      {
+        "level": "21",
+        "health": "90.00%",
+        "armor": "50.00%",
+        "react": "50.00%",
+        "perception": "50.00%",
+        "to_hit": "50.00%"
+      },
+      {
+        "level": "22",
+        "health": "92.00%",
+        "armor": "52.00%",
+        "react": "52.00%",
+        "perception": "52.00%",
+        "to_hit": "52.00%"
+      },
+      {
+        "level": "23",
+        "health": "94.00%",
+        "armor": "54.00%",
+        "react": "54.00%",
+        "perception": "54.00%",
+        "to_hit": "54.00%"
+      },
+      {
+        "level": "24",
+        "health": "96.00%",
+        "armor": "56.00%",
+        "react": "56.00%",
+        "perception": "56.00%",
+        "to_hit": "56.00%"
+      },
+      {
+        "level": "25",
+        "health": "98.00%",
+        "armor": "58.00%",
+        "react": "58.00%",
+        "perception": "58.00%",
+        "to_hit": "58.00%"
+      },
+      {
+        "level": "26",
+        "health": "100.00%",
+        "armor": "60.00%",
+        "react": "60.00%",
+        "perception": "60.00%",
+        "to_hit": "60.00%"
+      },
+      {
+        "level": "27",
+        "health": "102.00%",
+        "armor": "62.00%",
+        "react": "62.00%",
+        "perception": "62.00%",
+        "to_hit": "62.00%"
+      },
+      {
+        "level": "28",
+        "health": "104.00%",
+        "armor": "64.00%",
+        "react": "64.00%",
+        "perception": "64.00%",
+        "to_hit": "64.00%"
+      },
+      {
+        "level": "29",
+        "health": "106.00%",
+        "armor": "66.00%",
+        "react": "66.00%",
+        "perception": "66.00%",
+        "to_hit": "66.00%"
+      },
+      {
+        "level": "30",
+        "health": "108.00%",
+        "armor": "68.00%",
+        "react": "68.00%",
+        "perception": "68.00%",
+        "to_hit": "68.00%"
+      },
+      {
+        "level": "31",
+        "health": "110.00%",
+        "armor": "70.00%",
+        "react": "70.00%",
+        "perception": "70.00%",
+        "to_hit": "70.00%"
+      },
+      {
+        "level": "32",
+        "health": "112.00%",
+        "armor": "72.00%",
+        "react": "72.00%",
+        "perception": "72.00%",
+        "to_hit": "72.00%"
+      },
+      {
+        "level": "33",
+        "health": "114.00%",
+        "armor": "74.00%",
+        "react": "74.00%",
+        "perception": "74.00%",
+        "to_hit": "74.00%"
+      },
+      {
+        "level": "34",
+        "health": "116.00%",
+        "armor": "76.00%",
+        "react": "76.00%",
+        "perception": "76.00%",
+        "to_hit": "76.00%"
+      },
+      {
+        "level": "35",
+        "health": "118.00%",
+        "armor": "78.00%",
+        "react": "78.00%",
+        "perception": "78.00%",
+        "to_hit": "78.00%"
+      },
+      {
+        "level": "36",
+        "health": "120.00%",
+        "armor": "80.00%",
+        "react": "80.00%",
+        "perception": "80.00%",
+        "to_hit": "80.00%"
+      },
+      {
+        "level": "37",
+        "health": "122.00%",
+        "armor": "82.00%",
+        "react": "82.00%",
+        "perception": "82.00%",
+        "to_hit": "82.00%"
+      },
+      {
+        "level": "38",
+        "health": "124.00%",
+        "armor": "84.00%",
+        "react": "84.00%",
+        "perception": "84.00%",
+        "to_hit": "84.00%"
+      },
+      {
+        "level": "39",
+        "health": "126.00%",
+        "armor": "86.00%",
+        "react": "86.00%",
+        "perception": "86.00%",
+        "to_hit": "86.00%"
+      },
+      {
+        "level": "40",
+        "health": "128.00%",
+        "armor": "88.00%",
+        "react": "88.00%",
+        "perception": "88.00%",
+        "to_hit": "88.00%"
+      },
+      {
+        "level": "41",
+        "health": "130.00%",
+        "armor": "90.00%",
+        "react": "90.00%",
+        "perception": "90.00%",
+        "to_hit": "90.00%"
+      },
+      {
+        "level": "42",
+        "health": "132.00%",
+        "armor": "92.00%",
+        "react": "92.00%",
+        "perception": "92.00%",
+        "to_hit": "92.00%"
+      },
+      {
+        "level": "43",
+        "health": "134.00%",
+        "armor": "94.00%",
+        "react": "94.00%",
+        "perception": "94.00%",
+        "to_hit": "94.00%"
+      },
+      {
+        "level": "44",
+        "health": "136.00%",
+        "armor": "96.00%",
+        "react": "96.00%",
+        "perception": "96.00%",
+        "to_hit": "96.00%"
+      },
+      {
+        "level": "45",
+        "health": "138.00%",
+        "armor": "98.00%",
+        "react": "98.00%",
+        "perception": "98.00%",
+        "to_hit": "98.00%"
+      },
+      {
+        "level": "46",
+        "health": "140.00%",
+        "armor": "100.00%",
+        "react": "100.00%",
+        "perception": "100.00%",
+        "to_hit": "100.00%"
+      },
+      {
+        "level": "47",
+        "health": "142.00%",
+        "armor": "102.00%",
+        "react": "102.00%",
+        "perception": "102.00%",
+        "to_hit": "102.00%"
+      },
+      {
+        "level": "48",
+        "health": "144.00%",
+        "armor": "104.00%",
+        "react": "104.00%",
+        "perception": "104.00%",
+        "to_hit": "104.00%"
+      },
+      {
+        "level": "49",
+        "health": "146.00%",
+        "armor": "106.00%",
+        "react": "106.00%",
+        "perception": "106.00%",
+        "to_hit": "106.00%"
+      },
+      {
+        "level": "50",
+        "health": "148.00%",
+        "armor": "108.00%",
+        "react": "108.00%",
+        "perception": "108.00%",
+        "to_hit": "108.00%"
+      },
+      {
+        "level": "51",
+        "health": "150.00%",
+        "armor": "110.00%",
+        "react": "110.00%",
+        "perception": "110.00%",
+        "to_hit": "110.00%"
+      },
+      {
+        "level": "52",
+        "health": "152.00%",
+        "armor": "112.00%",
+        "react": "112.00%",
+        "perception": "112.00%",
+        "to_hit": "112.00%"
+      },
+      {
+        "level": "53",
+        "health": "154.00%",
+        "armor": "114.00%",
+        "react": "114.00%",
+        "perception": "114.00%",
+        "to_hit": "114.00%"
+      },
+      {
+        "level": "54",
+        "health": "156.00%",
+        "armor": "116.00%",
+        "react": "116.00%",
+        "perception": "116.00%",
+        "to_hit": "116.00%"
+      },
+      {
+        "level": "55",
+        "health": "158.00%",
+        "armor": "118.00%",
+        "react": "118.00%",
+        "perception": "118.00%",
+        "to_hit": "118.00%"
+      },
+      {
+        "level": "56",
+        "health": "160.00%",
+        "armor": "120.00%",
+        "react": "120.00%",
+        "perception": "120.00%",
+        "to_hit": "120.00%"
+      },
+      {
+        "level": "57",
+        "health": "162.00%",
+        "armor": "122.00%",
+        "react": "122.00%",
+        "perception": "122.00%",
+        "to_hit": "122.00%"
+      },
+      {
+        "level": "58",
+        "health": "164.00%",
+        "armor": "124.00%",
+        "react": "124.00%",
+        "perception": "124.00%",
+        "to_hit": "124.00%"
+      },
+      {
+        "level": "59",
+        "health": "166.00%",
+        "armor": "126.00%",
+        "react": "126.00%",
+        "perception": "126.00%",
+        "to_hit": "126.00%"
+      },
+      {
+        "level": "60",
+        "health": "168.00%",
+        "armor": "128.00%",
+        "react": "128.00%",
+        "perception": "128.00%",
+        "to_hit": "128.00%"
+      },
+      {
+        "level": "61",
+        "health": "170.00%",
+        "armor": "130.00%",
+        "react": "130.00%",
+        "perception": "130.00%",
+        "to_hit": "130.00%"
+      },
+      {
+        "level": "62",
+        "health": "172.00%",
+        "armor": "132.00%",
+        "react": "132.00%",
+        "perception": "132.00%",
+        "to_hit": "132.00%"
+      },
+      {
+        "level": "63",
+        "health": "174.00%",
+        "armor": "134.00%",
+        "react": "134.00%",
+        "perception": "134.00%",
+        "to_hit": "134.00%"
+      },
+      {
+        "level": "64",
+        "health": "176.00%",
+        "armor": "136.00%",
+        "react": "136.00%",
+        "perception": "136.00%",
+        "to_hit": "136.00%"
+      },
+      {
+        "level": "65",
+        "health": "178.00%",
+        "armor": "138.00%",
+        "react": "138.00%",
+        "perception": "138.00%",
+        "to_hit": "138.00%"
+      },
+      {
+        "level": "66",
+        "health": "180.00%",
+        "armor": "140.00%",
+        "react": "140.00%",
+        "perception": "140.00%",
+        "to_hit": "140.00%"
+      },
+      {
+        "level": "67",
+        "health": "182.00%",
+        "armor": "142.00%",
+        "react": "142.00%",
+        "perception": "142.00%",
+        "to_hit": "142.00%"
+      },
+      {
+        "level": "68",
+        "health": "184.00%",
+        "armor": "144.00%",
+        "react": "144.00%",
+        "perception": "144.00%",
+        "to_hit": "144.00%"
+      },
+      {
+        "level": "69",
+        "health": "186.00%",
+        "armor": "146.00%",
+        "react": "146.00%",
+        "perception": "146.00%",
+        "to_hit": "146.00%"
+      },
+      {
+        "level": "70",
+        "health": "188.00%",
+        "armor": "148.00%",
+        "react": "148.00%",
+        "perception": "148.00%",
+        "to_hit": "148.00%"
+      },
+      {
+        "level": "71",
+        "health": "190.00%",
+        "armor": "150.00%",
+        "react": "150.00%",
+        "perception": "150.00%",
+        "to_hit": "150.00%"
+      },
+      {
+        "level": "72",
+        "health": "192.00%",
+        "armor": "152.00%",
+        "react": "152.00%",
+        "perception": "152.00%",
+        "to_hit": "152.00%"
+      },
+      {
+        "level": "73",
+        "health": "194.00%",
+        "armor": "154.00%",
+        "react": "154.00%",
+        "perception": "154.00%",
+        "to_hit": "154.00%"
+      },
+      {
+        "level": "74",
+        "health": "196.00%",
+        "armor": "156.00%",
+        "react": "156.00%",
+        "perception": "156.00%",
+        "to_hit": "156.00%"
+      },
+      {
+        "level": "75",
+        "health": "198.00%",
+        "armor": "158.00%",
+        "react": "158.00%",
+        "perception": "158.00%",
+        "to_hit": "158.00%"
+      },
+      {
+        "level": "76",
+        "health": "200.00%",
+        "armor": "160.00%",
+        "react": "160.00%",
+        "perception": "160.00%",
+        "to_hit": "160.00%"
+      },
+      {
+        "level": "77",
+        "health": "202.00%",
+        "armor": "162.00%",
+        "react": "162.00%",
+        "perception": "162.00%",
+        "to_hit": "162.00%"
+      },
+      {
+        "level": "78",
+        "health": "204.00%",
+        "armor": "164.00%",
+        "react": "164.00%",
+        "perception": "164.00%",
+        "to_hit": "164.00%"
+      },
+      {
+        "level": "79",
+        "health": "206.00%",
+        "armor": "166.00%",
+        "react": "166.00%",
+        "perception": "166.00%",
+        "to_hit": "166.00%"
+      },
+      {
+        "level": "80",
+        "health": "208.00%",
+        "armor": "168.00%",
+        "react": "168.00%",
+        "perception": "168.00%",
+        "to_hit": "168.00%"
+      },
+      {
+        "level": "81",
+        "health": "210.00%",
+        "armor": "170.00%",
+        "react": "170.00%",
+        "perception": "170.00%",
+        "to_hit": "170.00%"
+      },
+      {
+        "level": "82",
+        "health": "212.00%",
+        "armor": "172.00%",
+        "react": "172.00%",
+        "perception": "172.00%",
+        "to_hit": "172.00%"
+      },
+      {
+        "level": "83",
+        "health": "214.00%",
+        "armor": "174.00%",
+        "react": "174.00%",
+        "perception": "174.00%",
+        "to_hit": "174.00%"
+      },
+      {
+        "level": "84",
+        "health": "216.00%",
+        "armor": "176.00%",
+        "react": "176.00%",
+        "perception": "176.00%",
+        "to_hit": "176.00%"
+      },
+      {
+        "level": "85",
+        "health": "218.00%",
+        "armor": "178.00%",
+        "react": "178.00%",
+        "perception": "178.00%",
+        "to_hit": "178.00%"
+      },
+      {
+        "level": "86",
+        "health": "220.00%",
+        "armor": "180.00%",
+        "react": "180.00%",
+        "perception": "180.00%",
+        "to_hit": "180.00%"
+      },
+      {
+        "level": "87",
+        "health": "222.00%",
+        "armor": "182.00%",
+        "react": "182.00%",
+        "perception": "182.00%",
+        "to_hit": "182.00%"
+      },
+      {
+        "level": "88",
+        "health": "224.00%",
+        "armor": "184.00%",
+        "react": "184.00%",
+        "perception": "184.00%",
+        "to_hit": "184.00%"
+      },
+      {
+        "level": "89",
+        "health": "226.00%",
+        "armor": "186.00%",
+        "react": "186.00%",
+        "perception": "186.00%",
+        "to_hit": "186.00%"
+      },
+      {
+        "level": "90",
+        "health": "228.00%",
+        "armor": "188.00%",
+        "react": "188.00%",
+        "perception": "188.00%",
+        "to_hit": "188.00%"
+      },
+      {
+        "level": "91",
+        "health": "230.00%",
+        "armor": "190.00%",
+        "react": "190.00%",
+        "perception": "190.00%",
+        "to_hit": "190.00%"
+      },
+      {
+        "level": "92",
+        "health": "232.00%",
+        "armor": "192.00%",
+        "react": "192.00%",
+        "perception": "192.00%",
+        "to_hit": "192.00%"
+      },
+      {
+        "level": "93",
+        "health": "234.00%",
+        "armor": "194.00%",
+        "react": "194.00%",
+        "perception": "194.00%",
+        "to_hit": "194.00%"
+      },
+      {
+        "level": "94",
+        "health": "236.00%",
+        "armor": "196.00%",
+        "react": "196.00%",
+        "perception": "196.00%",
+        "to_hit": "196.00%"
+      },
+      {
+        "level": "95",
+        "health": "238.00%",
+        "armor": "198.00%",
+        "react": "198.00%",
+        "perception": "198.00%",
+        "to_hit": "198.00%"
+      },
+      {
+        "level": "96",
+        "health": "240.00%",
+        "armor": "200.00%",
+        "react": "200.00%",
+        "perception": "200.00%",
+        "to_hit": "200.00%"
+      },
+      {
+        "level": "97",
+        "health": "242.00%",
+        "armor": "202.00%",
+        "react": "202.00%",
+        "perception": "202.00%",
+        "to_hit": "202.00%"
+      },
+      {
+        "level": "98",
+        "health": "244.00%",
+        "armor": "204.00%",
+        "react": "204.00%",
+        "perception": "204.00%",
+        "to_hit": "204.00%"
+      },
+      {
+        "level": "99",
+        "health": "246.00%",
+        "armor": "206.00%",
+        "react": "206.00%",
+        "perception": "206.00%",
+        "to_hit": "206.00%"
+      },
+      {
+        "level": "100",
+        "health": "248.00%",
+        "armor": "208.00%",
+        "react": "208.00%",
+        "perception": "208.00%",
+        "to_hit": "208.00%"
+      }
+    ]
+  }
+}

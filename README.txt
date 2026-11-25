@@ -1,5 +1,25 @@
 CREDIT TO u/AdChemical1651 for the building blocks of this
 
+Runtime catalogs (JSON only):
+- zoids.json: corrected enemy stats/equipment, required levels, and tracker
+  display names retained for compatibility with saved enemy sets.
+- stats.json: named Tank/Fighter/Scout/Almighty progression tables.
+- abilities.json: ability descriptions and numeric modifiers.
+- encounters.json: random encounter candidates and their original generator
+  stats/levels, preserved separately from the corrected enemy-card stats.
+- loot.json: loot items, categories, tiers, weights, and BLOX flags.
+
+The app no longer loads CSVs or requires pandas. Catalog paths are relative to
+the application, so running from another working directory is supported.
+The original four CSVs and generated required-level reference were moved into
+source/. Tracked Python bytecode and IDE settings were archived there as well.
+source/, caches, environments, and IDE state are ignored by Git and excluded
+from builds. Local archived files are not included in fresh GitHub clones.
+The optional tools/convert_csv_catalogs.py rebuilds the migrated catalogs from
+archived CSVs; ordinary use, tests, builds, and Character Sheet syncing do not
+require those files. Conversion is an explicit maintenance operation and can
+overwrite later JSON edits.
+
 Enemy Energy:
 Each enemy has editable Current Energy, Maximum Energy, and EPT (Energy Per
 Turn). Selecting a Zoid starts it at half maximum Energy, rounded down.
@@ -91,7 +111,7 @@ Installing Release:
 Download release and extract
 
 To Build:
-Uses Python3 with Pandas and Flet
+Uses Python3 and Flet
 
 Automatic Builds:
 Pushes to the default branch (master) build Windows, macOS, and Linux,

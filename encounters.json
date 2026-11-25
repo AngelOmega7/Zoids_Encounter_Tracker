@@ -1,0 +1,1269 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "name": "Hellrunner",
+      "type": "Raptor",
+      "level": "1",
+      "health": "30",
+      "armor": "20",
+      "defense": "9"
+    },
+    {
+      "name": "Molga",
+      "type": "Insect",
+      "level": "1",
+      "health": "50",
+      "armor": "28",
+      "defense": "12"
+    },
+    {
+      "name": "Gator",
+      "type": "Reptile",
+      "level": "1",
+      "health": "40",
+      "armor": "22",
+      "defense": "8"
+    },
+    {
+      "name": "Godos",
+      "type": "Dinosaur",
+      "level": "2",
+      "health": "80",
+      "armor": "22",
+      "defense": "8"
+    },
+    {
+      "name": "Iguan",
+      "type": "Dinosaur",
+      "level": "2",
+      "health": "80",
+      "armor": "21",
+      "defense": "9"
+    },
+    {
+      "name": "Molga Cannonry",
+      "type": "Insect",
+      "level": "2",
+      "health": "50",
+      "armor": "28",
+      "defense": "12"
+    },
+    {
+      "name": "Saicurtis ",
+      "type": "Insect",
+      "level": "2",
+      "health": "50",
+      "armor": "22",
+      "defense": "8"
+    },
+    {
+      "name": "Double Sworder",
+      "type": "Insect",
+      "level": "2",
+      "health": "50",
+      "armor": "22",
+      "defense": "9"
+    },
+    {
+      "name": "Cannon Tortoise ",
+      "type": "Reptile",
+      "level": "2",
+      "health": "90",
+      "armor": "28",
+      "defense": "13"
+    },
+    {
+      "name": "Barigator",
+      "type": "Reptile",
+      "level": "2",
+      "health": "70",
+      "armor": "23",
+      "defense": "8"
+    },
+    {
+      "name": "Sea Striker",
+      "type": "Reptile",
+      "level": "2",
+      "health": "60",
+      "armor": "22",
+      "defense": "10"
+    },
+    {
+      "name": "Pteras",
+      "type": "Flying",
+      "level": "2",
+      "health": "55",
+      "armor": "20",
+      "defense": "10"
+    },
+    {
+      "name": "Gun Tiger",
+      "type": "Tiger",
+      "level": "3",
+      "health": "85",
+      "armor": "18",
+      "defense": "8"
+    },
+    {
+      "name": "Saberlion",
+      "type": "Lion",
+      "level": "3",
+      "health": "90",
+      "armor": "18",
+      "defense": "8"
+    },
+    {
+      "name": "Black Rhimos",
+      "type": "Mammal",
+      "level": "3",
+      "health": "150",
+      "armor": "27",
+      "defense": "11"
+    },
+    {
+      "name": "Brachios",
+      "type": "Dinosaur",
+      "level": "3",
+      "health": "130",
+      "armor": "25",
+      "defense": "10"
+    },
+    {
+      "name": "Cannon Tortoise BC",
+      "type": "Reptile",
+      "level": "3",
+      "health": "100",
+      "armor": "28",
+      "defense": "13"
+    },
+    {
+      "name": "Stealth Viper",
+      "type": "Reptile",
+      "level": "3",
+      "health": "80",
+      "armor": "23",
+      "defense": "3"
+    },
+    {
+      "name": "Zabat",
+      "type": "Flying",
+      "level": "3",
+      "health": "60",
+      "armor": "14",
+      "defense": "10"
+    },
+    {
+      "name": "Command Wolf",
+      "type": "Wolf",
+      "level": "4",
+      "health": "120",
+      "armor": "22",
+      "defense": "10"
+    },
+    {
+      "name": "Guysack",
+      "type": "Insect",
+      "level": "4",
+      "health": "60",
+      "armor": "22",
+      "defense": "8"
+    },
+    {
+      "name": "Killer Dome",
+      "type": "Insect",
+      "level": "4",
+      "health": "80",
+      "armor": "28",
+      "defense": "12"
+    },
+    {
+      "name": "Pteras Bomber",
+      "type": "Flying",
+      "level": "4",
+      "health": "60",
+      "armor": "20",
+      "defense": "10"
+    },
+    {
+      "name": "Command Wolf Town",
+      "type": "Wolf",
+      "level": "5",
+      "health": "140",
+      "armor": "22",
+      "defense": "12"
+    },
+    {
+      "name": "Gun Sniper",
+      "type": "Raptor",
+      "level": "5",
+      "health": "130",
+      "armor": "20",
+      "defense": "10"
+    },
+    {
+      "name": "Rev Raptor",
+      "type": "Raptor",
+      "level": "5",
+      "health": "120",
+      "armor": "20",
+      "defense": "10"
+    },
+    {
+      "name": "Rev Raptor Pile Bunker",
+      "type": "Raptor",
+      "level": "5",
+      "health": "120",
+      "armor": "22",
+      "defense": "13"
+    },
+    {
+      "name": "Redler",
+      "type": "Flying",
+      "level": "5",
+      "health": "80",
+      "armor": "16",
+      "defense": "9"
+    },
+    {
+      "name": "Pteras Radome",
+      "type": "Flying",
+      "level": "5",
+      "health": "140",
+      "armor": "18",
+      "defense": "10"
+    },
+    {
+      "name": "Zaber Fang Old",
+      "type": "Tiger",
+      "level": "6",
+      "health": "200",
+      "armor": "22",
+      "defense": "10"
+    },
+    {
+      "name": "Hammer Rock",
+      "type": "Gorilla",
+      "level": "6",
+      "health": "110",
+      "armor": "26",
+      "defense": "13"
+    },
+    {
+      "name": "Gun Sniper Weasel",
+      "type": "Raptor",
+      "level": "6",
+      "health": "150",
+      "armor": "22",
+      "defense": "17"
+    },
+    {
+      "name": "Unenlagia",
+      "type": "BLOX",
+      "level": "6",
+      "health": "140",
+      "armor": "20",
+      "defense": "18"
+    },
+    {
+      "name": "Mosasledge",
+      "type": "BLOX",
+      "level": "6",
+      "health": "140",
+      "armor": "22",
+      "defense": "18"
+    },
+    {
+      "name": "Nightwise",
+      "type": "BLOX",
+      "level": "6",
+      "health": "140",
+      "armor": "18",
+      "defense": "27"
+    },
+    {
+      "name": "Gustav",
+      "type": "Insect",
+      "level": "6",
+      "health": "200",
+      "armor": "28",
+      "defense": "15"
+    },
+    {
+      "name": "Atak Kat",
+      "type": "Tiger",
+      "level": "7",
+      "health": "100",
+      "armor": "20",
+      "defense": "9"
+    },
+    {
+      "name": "Shield Liger",
+      "type": "Lion",
+      "level": "7",
+      "health": "210",
+      "armor": "22",
+      "defense": "13"
+    },
+    {
+      "name": "Allosaurer",
+      "type": "Dinosaur",
+      "level": "7",
+      "health": "120",
+      "armor": "22",
+      "defense": "10"
+    },
+    {
+      "name": "Flyscissors",
+      "type": "BLOX",
+      "level": "7",
+      "health": "150",
+      "armor": "18",
+      "defense": "15"
+    },
+    {
+      "name": "Shell Karn",
+      "type": "BLOX",
+      "level": "7",
+      "health": "150",
+      "armor": "27",
+      "defense": "18"
+    },
+    {
+      "name": "Diplo Gun",
+      "type": "BLOX",
+      "level": "7",
+      "health": "150",
+      "armor": "22",
+      "defense": "18"
+    },
+    {
+      "name": "Demon's Head",
+      "type": "BLOX",
+      "level": "7",
+      "health": "150",
+      "armor": "24",
+      "defense": "18"
+    },
+    {
+      "name": "Zaber Fang",
+      "type": "Tiger",
+      "level": "8",
+      "health": "220",
+      "armor": "23",
+      "defense": "15"
+    },
+    {
+      "name": "Zaber Fang TS",
+      "type": "Tiger",
+      "level": "8",
+      "health": "230",
+      "armor": "23",
+      "defense": "20"
+    },
+    {
+      "name": "Shield Liger DCS",
+      "type": "Lion",
+      "level": "8",
+      "health": "210",
+      "armor": "22",
+      "defense": "13"
+    },
+    {
+      "name": "Command Wolf AC",
+      "type": "Wolf",
+      "level": "8",
+      "health": "170",
+      "armor": "22",
+      "defense": "12"
+    },
+    {
+      "name": "Climber Wolf",
+      "type": "Wolf",
+      "level": "8",
+      "health": "130",
+      "armor": "22",
+      "defense": "10"
+    },
+    {
+      "name": "Snipe Master",
+      "type": "Raptor",
+      "level": "8",
+      "health": "150",
+      "armor": "21",
+      "defense": "15"
+    },
+    {
+      "name": "Gordos",
+      "type": "Dinosaur",
+      "level": "8",
+      "health": "250",
+      "armor": "22",
+      "defense": "14"
+    },
+    {
+      "name": "Red Horn",
+      "type": "Dinosaur",
+      "level": "8",
+      "health": "240",
+      "armor": "28",
+      "defense": "15"
+    },
+    {
+      "name": "Leo Blaze",
+      "type": "BLOX",
+      "level": "8",
+      "health": "140",
+      "armor": "21",
+      "defense": "18"
+    },
+    {
+      "name": "Dark Poison",
+      "type": "Insect",
+      "level": "8",
+      "health": "130",
+      "armor": "28",
+      "defense": "15"
+    },
+    {
+      "name": "Raynos",
+      "type": "Flying",
+      "level": "8",
+      "health": "160",
+      "armor": "21",
+      "defense": "10"
+    },
+    {
+      "name": "Gorhecks",
+      "type": "Dinosaur",
+      "level": "9",
+      "health": "150",
+      "armor": "11",
+      "defense": "8"
+    },
+    {
+      "name": "Redler BoostC",
+      "type": "Flying",
+      "level": "9",
+      "health": "150",
+      "armor": "17",
+      "defense": "10"
+    },
+    {
+      "name": "Zaber Fang AT",
+      "type": "Tiger",
+      "level": "10",
+      "health": "230",
+      "armor": "23",
+      "defense": "17"
+    },
+    {
+      "name": "Iron Kong",
+      "type": "Gorilla",
+      "level": "10",
+      "health": "240",
+      "armor": "23",
+      "defense": "25"
+    },
+    {
+      "name": "Snipe Master FB",
+      "type": "Raptor",
+      "level": "10",
+      "health": "170",
+      "armor": "23",
+      "defense": "16"
+    },
+    {
+      "name": "Snipe Master AS",
+      "type": "Raptor",
+      "level": "10",
+      "health": "170",
+      "armor": "26",
+      "defense": "18"
+    },
+    {
+      "name": "Gordos LR",
+      "type": "Dinosaur",
+      "level": "10",
+      "health": "250",
+      "armor": "22",
+      "defense": "24"
+    },
+    {
+      "name": "Red Horn BG",
+      "type": "Dinosaur",
+      "level": "10",
+      "health": "240",
+      "armor": "28",
+      "defense": "20"
+    },
+    {
+      "name": "Fire Phoenix",
+      "type": "BLOX",
+      "level": "10",
+      "health": "200",
+      "armor": "18",
+      "defense": "16"
+    },
+    {
+      "name": "Jet Falcon",
+      "type": "BLOX",
+      "level": "10",
+      "health": "300",
+      "armor": "18",
+      "defense": "10"
+    },
+    {
+      "name": "Guysack Stinger",
+      "type": "Insect",
+      "level": "10",
+      "health": "180",
+      "armor": "24",
+      "defense": "18"
+    },
+    {
+      "name": "Hammer Head",
+      "type": "Reptile",
+      "level": "10",
+      "health": "200",
+      "armor": "24",
+      "defense": "15"
+    },
+    {
+      "name": "Redler Interceptor ",
+      "type": "Flying",
+      "level": "10",
+      "health": "200",
+      "armor": "18",
+      "defense": "13"
+    },
+    {
+      "name": "Hover Cargo",
+      "type": "Insect",
+      "level": "10",
+      "health": "350",
+      "armor": "25",
+      "defense": "30"
+    },
+    {
+      "name": "Zaber Fang SS",
+      "type": "Tiger",
+      "level": "11",
+      "health": "220",
+      "armor": "23",
+      "defense": "20"
+    },
+    {
+      "name": "Command Wolf IS",
+      "type": "Wolf",
+      "level": "11",
+      "health": "180",
+      "armor": "22",
+      "defense": "16"
+    },
+    {
+      "name": "Rev Hunter",
+      "type": "Raptor",
+      "level": "11",
+      "health": "200",
+      "armor": "20",
+      "defense": "20"
+    },
+    {
+      "name": "Buster Eagle",
+      "type": "BLOX",
+      "level": "11",
+      "health": "210",
+      "armor": "21",
+      "defense": "20"
+    },
+    {
+      "name": "Lightning Saix",
+      "type": "Tiger",
+      "level": "12",
+      "health": "230",
+      "armor": "22",
+      "defense": "17"
+    },
+    {
+      "name": "Shadow Fox",
+      "type": "Wolf ",
+      "level": "12",
+      "health": "220",
+      "armor": "22",
+      "defense": "20"
+    },
+    {
+      "name": "Iron Kong Maneuver",
+      "type": "Gorilla",
+      "level": "12",
+      "health": "260",
+      "armor": "23",
+      "defense": "30"
+    },
+    {
+      "name": "Gun sniper LS",
+      "type": "Raptor",
+      "level": "12",
+      "health": "180",
+      "armor": "22",
+      "defense": "20"
+    },
+    {
+      "name": "Gun Sniper NS",
+      "type": "Raptor",
+      "level": "12",
+      "health": "160",
+      "armor": "22",
+      "defense": "20"
+    },
+    {
+      "name": "2-Arm Lizard",
+      "type": "BLOX",
+      "level": "12",
+      "health": "240",
+      "armor": "22",
+      "defense": "28"
+    },
+    {
+      "name": "Lord Gale",
+      "type": "BLOX",
+      "level": "12",
+      "health": "250",
+      "armor": "21",
+      "defense": "28"
+    },
+    {
+      "name": "Hammer Head VL",
+      "type": "Reptile",
+      "level": "12",
+      "health": "200",
+      "armor": "24",
+      "defense": "25"
+    },
+    {
+      "name": "Zaber Fang RS",
+      "type": "Tiger",
+      "level": "13",
+      "health": "250",
+      "armor": "23",
+      "defense": "22"
+    },
+    {
+      "name": "Lightning Saix BS",
+      "type": "Tiger",
+      "level": "13",
+      "health": "230",
+      "armor": "22",
+      "defense": "17"
+    },
+    {
+      "name": "Shield Liger DCS-J",
+      "type": "Lion",
+      "level": "13",
+      "health": "250",
+      "armor": "23",
+      "defense": "23"
+    },
+    {
+      "name": "Blade Liger",
+      "type": "Lion",
+      "level": "13",
+      "health": "280",
+      "armor": "21",
+      "defense": "25"
+    },
+    {
+      "name": "Liger Aero",
+      "type": "Lion",
+      "level": "13",
+      "health": "230",
+      "armor": "22",
+      "defense": "23"
+    },
+    {
+      "name": "Konig Wolf",
+      "type": "Wolf",
+      "level": "13",
+      "health": "250",
+      "armor": "22",
+      "defense": "28"
+    },
+    {
+      "name": "Konig Wolf DSR",
+      "type": "Wolf",
+      "level": "13",
+      "health": "280",
+      "armor": "22",
+      "defense": "28"
+    },
+    {
+      "name": "Dark Horn ",
+      "type": "Dinosaur",
+      "level": "13",
+      "health": "300",
+      "armor": "28",
+      "defense": "35"
+    },
+    {
+      "name": "Fuzor Dragon",
+      "type": "BLOX",
+      "level": "13",
+      "health": "300",
+      "armor": "20",
+      "defense": "30"
+    },
+    {
+      "name": "Chimera Dragon",
+      "type": "BLOX",
+      "level": "13",
+      "health": "320",
+      "armor": "22",
+      "defense": "30"
+    },
+    {
+      "name": "Storm Sworder",
+      "type": "Flying",
+      "level": "13",
+      "health": "220",
+      "armor": "21",
+      "defense": "20"
+    },
+    {
+      "name": "Iron Kong SS",
+      "type": "Gorilla",
+      "level": "14",
+      "health": "300",
+      "armor": "23",
+      "defense": "50"
+    },
+    {
+      "name": "Dibison",
+      "type": "Mammal",
+      "level": "14",
+      "health": "300",
+      "armor": "24",
+      "defense": "25"
+    },
+    {
+      "name": "Elephander",
+      "type": "Mammal",
+      "level": "14",
+      "health": "350",
+      "armor": "25",
+      "defense": "50"
+    },
+    {
+      "name": "Dark Spiner",
+      "type": "Dinosaur",
+      "level": "14",
+      "health": "310",
+      "armor": "23",
+      "defense": "43"
+    },
+    {
+      "name": "Dark Horn HS",
+      "type": "Dinosaur",
+      "level": "14",
+      "health": "320",
+      "armor": "28",
+      "defense": "35"
+    },
+    {
+      "name": "Wardick",
+      "type": "Reptile",
+      "level": "14",
+      "health": "250",
+      "armor": "25",
+      "defense": "33"
+    },
+    {
+      "name": "Stormsworder F",
+      "type": "Flying",
+      "level": "14",
+      "health": "220",
+      "armor": "20",
+      "defense": "18"
+    },
+    {
+      "name": "Liger Zero",
+      "type": "Lion",
+      "level": "15",
+      "health": "260",
+      "armor": "23",
+      "defense": "28"
+    },
+    {
+      "name": "Zero Empire (CAU)",
+      "type": "Lion",
+      "level": "15",
+      "health": "260",
+      "armor": "22",
+      "defense": "28"
+    },
+    {
+      "name": "Zero X (CAU)",
+      "type": "Lion",
+      "level": "15",
+      "health": "280",
+      "armor": "24",
+      "defense": "30"
+    },
+    {
+      "name": "Spark Liger ",
+      "type": "Lion",
+      "level": "15",
+      "health": "240",
+      "armor": "23",
+      "defense": "23"
+    },
+    {
+      "name": "Iron Kong PK",
+      "type": "Gorilla",
+      "level": "15",
+      "health": "330",
+      "armor": "25",
+      "defense": "60"
+    },
+    {
+      "name": "Iron Drill",
+      "type": "Gorilla",
+      "level": "15",
+      "health": "350",
+      "armor": "23",
+      "defense": "50"
+    },
+    {
+      "name": "Geno Saurer",
+      "type": "T-Rex",
+      "level": "15",
+      "health": "300",
+      "armor": "23",
+      "defense": "40"
+    },
+    {
+      "name": "Psycho Geno Saurer",
+      "type": "T-Rex",
+      "level": "15",
+      "health": "320",
+      "armor": "23",
+      "defense": "40"
+    },
+    {
+      "name": "Geno Breaker",
+      "type": "T-Rex",
+      "level": "15",
+      "health": "400",
+      "armor": "24",
+      "defense": "50"
+    },
+    {
+      "name": "Zero Phoenix",
+      "type": "BLOX ",
+      "level": "15",
+      "health": "452",
+      "armor": "24",
+      "defense": "25"
+    },
+    {
+      "name": "Griffin",
+      "type": "BLOX",
+      "level": "15",
+      "health": "400",
+      "armor": "19",
+      "defense": "30"
+    },
+    {
+      "name": "Bloodler",
+      "type": "Flying",
+      "level": "15",
+      "health": "250",
+      "armor": "18",
+      "defense": "15"
+    },
+    {
+      "name": "Blade Liger AB",
+      "type": "Lion",
+      "level": "16",
+      "health": "300",
+      "armor": "23",
+      "defense": "25"
+    },
+    {
+      "name": "Cerberus",
+      "type": "Wolf",
+      "level": "16",
+      "health": "200",
+      "armor": "23",
+      "defense": "20"
+    },
+    {
+      "name": "Gravity Bison",
+      "type": "Mammal",
+      "level": "16",
+      "health": "320",
+      "armor": "25",
+      "defense": "33"
+    },
+    {
+      "name": "Elephander AG",
+      "type": "Mammal",
+      "level": "16",
+      "health": "350",
+      "armor": "25",
+      "defense": "20"
+    },
+    {
+      "name": "Proto Breaker",
+      "type": "T-Rex",
+      "level": "16",
+      "health": "350",
+      "armor": "22",
+      "defense": "50"
+    },
+    {
+      "name": "Zero Falcon",
+      "type": "BLOX",
+      "level": "16",
+      "health": "494",
+      "armor": "24",
+      "defense": "28"
+    },
+    {
+      "name": "Dragon Nest",
+      "type": "Reptile",
+      "level": "16",
+      "health": "800",
+      "armor": "28",
+      "defense": "35"
+    },
+    {
+      "name": "Zero Schneider (CAU)",
+      "type": "Lion",
+      "level": "17",
+      "health": "290",
+      "armor": "24",
+      "defense": "28"
+    },
+    {
+      "name": "Zero Jeager (CAU)",
+      "type": "Lion",
+      "level": "17",
+      "health": "260",
+      "armor": "24",
+      "defense": "28"
+    },
+    {
+      "name": "Stormsworder FX",
+      "type": "Flying",
+      "level": "17",
+      "health": "280",
+      "armor": "20",
+      "defense": "28"
+    },
+    {
+      "name": "Proto Zaber",
+      "type": "Tiger",
+      "level": "18",
+      "health": "260",
+      "armor": "22",
+      "defense": "25"
+    },
+    {
+      "name": "Geno Scissors",
+      "type": "T-Rex",
+      "level": "18",
+      "health": "380",
+      "armor": "23",
+      "defense": "50"
+    },
+    {
+      "name": "Geno Trooper",
+      "type": "T-Rex",
+      "level": "18",
+      "health": "370",
+      "armor": "22",
+      "defense": "45"
+    },
+    {
+      "name": "Gojulas",
+      "type": "T-Rex",
+      "level": "18",
+      "health": "350",
+      "armor": "25",
+      "defense": "35"
+    },
+    {
+      "name": "Whale King",
+      "type": "Reptile",
+      "level": "18",
+      "health": "1000",
+      "armor": "28",
+      "defense": "35"
+    },
+    {
+      "name": "Gun Blaster",
+      "type": "Dinosaur",
+      "level": "19",
+      "health": "400",
+      "armor": "28",
+      "defense": "60"
+    },
+    {
+      "name": "Zero Panzer (CAU)",
+      "type": "Lion",
+      "level": "20",
+      "health": "300",
+      "armor": "26",
+      "defense": "40"
+    },
+    {
+      "name": "Trinity Liger",
+      "type": "Lion ",
+      "level": "20",
+      "health": "300",
+      "armor": "23",
+      "defense": "28"
+    },
+    {
+      "name": "Berserk Fury",
+      "type": "T-Rex",
+      "level": "20",
+      "health": "380",
+      "armor": "24",
+      "defense": "50"
+    },
+    {
+      "name": "Strum Fury (CAU)",
+      "type": "T-Rex",
+      "level": "20",
+      "health": "420",
+      "armor": "25",
+      "defense": "65"
+    },
+    {
+      "name": "Jagd Fury (CAU)",
+      "type": "T-Rex",
+      "level": "20",
+      "health": "420",
+      "armor": "26",
+      "defense": "65"
+    },
+    {
+      "name": "Berserk Fury Z (CAU)",
+      "type": "T-Rex",
+      "level": "20",
+      "health": "530",
+      "armor": "25",
+      "defense": "75"
+    },
+    {
+      "name": "Gojulas the Ogre",
+      "type": "T-Rex",
+      "level": "20",
+      "health": "500",
+      "armor": "27",
+      "defense": "60"
+    },
+    {
+      "name": "Gojulas Gunner",
+      "type": "T-Rex",
+      "level": "20",
+      "health": "350",
+      "armor": "25",
+      "defense": "38"
+    },
+    {
+      "name": "Pteramander",
+      "type": "Flying",
+      "level": "20",
+      "health": "450",
+      "armor": "21",
+      "defense": "33"
+    },
+    {
+      "name": "Killer Spiner",
+      "type": "Dinosaur",
+      "level": "21",
+      "health": "380",
+      "armor": "23",
+      "defense": "75"
+    },
+    {
+      "name": "Trinity Liger BA",
+      "type": "Lion",
+      "level": "22",
+      "health": "350",
+      "armor": "23",
+      "defense": "28"
+    },
+    {
+      "name": "Gojulas Giga",
+      "type": "T-Rex",
+      "level": "22",
+      "health": "500",
+      "armor": "26",
+      "defense": "75"
+    },
+    {
+      "name": "Geno Flame",
+      "type": "T-Rex",
+      "level": "24",
+      "health": "450",
+      "armor": "26",
+      "defense": "60"
+    },
+    {
+      "name": "Geno Hydra",
+      "type": "T-Rex",
+      "level": "24",
+      "health": "370",
+      "armor": "24",
+      "defense": "43"
+    },
+    {
+      "name": "Gojulas Giga Cannon",
+      "type": "T-Rex",
+      "level": "24",
+      "health": "700",
+      "armor": "26",
+      "defense": "75"
+    },
+    {
+      "name": "Gojulox",
+      "type": "BLOX",
+      "level": "24",
+      "health": "450",
+      "armor": "24",
+      "defense": "90"
+    },
+    {
+      "name": "Diablo Tiger",
+      "type": "Tiger",
+      "level": "25",
+      "health": "350",
+      "armor": "23",
+      "defense": "75"
+    },
+    {
+      "name": "Cyclops",
+      "type": "Mammal",
+      "level": "25",
+      "health": "400",
+      "armor": "28",
+      "defense": "65"
+    },
+    {
+      "name": "Cyclops 2",
+      "type": "Mammal",
+      "level": "25",
+      "health": "380",
+      "armor": "29",
+      "defense": "65"
+    },
+    {
+      "name": "Mad Thunder",
+      "type": "Dinosaur",
+      "level": "25",
+      "health": "800",
+      "armor": "29",
+      "defense": "125"
+    },
+    {
+      "name": "Geno Hydra KA",
+      "type": "T-Rex",
+      "level": "26",
+      "health": "430",
+      "armor": "25",
+      "defense": "60"
+    },
+    {
+      "name": "Death Stinger",
+      "type": "Insect",
+      "level": "27",
+      "health": "600",
+      "armor": "28",
+      "defense": "75"
+    },
+    {
+      "name": "Ultra Saurus",
+      "type": "Dinosaur",
+      "level": "28",
+      "health": "1300",
+      "armor": "28",
+      "defense": "100"
+    },
+    {
+      "name": "Jagged Stinger",
+      "type": "Insect",
+      "level": "29",
+      "health": "700",
+      "armor": "28",
+      "defense": "80"
+    },
+    {
+      "name": "Ultra Phalanx",
+      "type": "Dinosaur",
+      "level": "30",
+      "health": "1500",
+      "armor": "28",
+      "defense": "100"
+    },
+    {
+      "name": "Death Saurer ",
+      "type": "T-Rex",
+      "level": "30",
+      "health": "1000",
+      "armor": "29",
+      "defense": "100"
+    },
+    {
+      "name": "Bloody Demon ",
+      "type": "T-Rex",
+      "level": "30",
+      "health": "500",
+      "armor": "17",
+      "defense": "40"
+    },
+    {
+      "name": "Gilvader",
+      "type": "Flying",
+      "level": "33",
+      "health": "1200",
+      "armor": "25",
+      "defense": "90"
+    },
+    {
+      "name": "Death Meteor",
+      "type": "T-Rex",
+      "level": "33",
+      "health": "1500",
+      "armor": "29",
+      "defense": "35"
+    },
+    {
+      "name": "King Gojulas",
+      "type": "T-Rex",
+      "level": "40",
+      "health": "2000",
+      "armor": "28",
+      "defense": "150"
+    },
+    {
+      "name": "Blitz Tiger",
+      "type": "Tiger",
+      "level": "",
+      "health": "400",
+      "armor": "23",
+      "defense": "75"
+    },
+    {
+      "name": "Great Zaber",
+      "type": "Tiger",
+      "level": "20",
+      "health": "300",
+      "armor": "24",
+      "defense": "40"
+    }
+  ]
+}
